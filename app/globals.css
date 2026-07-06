@@ -76,3 +76,82 @@ img {
   border-radius: 8px;
   margin: 1rem 0;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #262626;
+}
+
+th {
+  color: #a0a0a0;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+td {
+  color: #ededed;
+}
+
+svg.report-chart {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.pos { color: #60a5fa; }
+.neg { color: #f87171; }
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 8px;
+}
+
+.summary-label {
+  display: block;
+  font-size: 0.72rem;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.summary-value {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ededed;
+  margin-top: 0.25rem;
+}
+
+.callout {
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  border-left: 4px solid;
+  color: #ededed;
+}
+
+.callout-issue {
+  background: rgba(248, 113, 113, 0.08);
+  border-color: #f87171;
+}
+
+.callout-win {
+  background: rgba(96, 165, 250, 0.08);
+  border-color: #60a5fa;
+}
