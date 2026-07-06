@@ -3,21 +3,21 @@ title: "Weekly performance: Dassiesridge (29 Jun - 5 Jul)"
 date: "2026-07-06"
 ---
 
-Dassiesridge Hybrid (Wind + BESS) exported 3.85 GWh this week. The penalty-adjusted net position kept improving (+1,399.7 MWh, best of the last 7 weeks), even though raw exported volume dipped slightly from last week.
+Dassiesridge Hybrid (Wind + BESS) exported 4.74 GWh this week, up from 4.12 GWh last week. The penalty-adjusted net position improved sharply alongside it (+1,932.3 MWh, best of the last 7 weeks).
 
 <div class="summary-grid">
-  <div class="summary-item"><span class="summary-label">Week 29 Exported</span><span class="summary-value">3.85 GWh</span></div>
-  <div class="summary-item"><span class="summary-label">MTD Exported</span><span class="summary-value">3.24 GWh</span></div>
-  <div class="summary-item"><span class="summary-label">YTD Exported</span><span class="summary-value">76.86 GWh</span></div>
-  <div class="summary-item"><span class="summary-label">Weighting factor</span><span class="summary-value">65% @1.0x&nbsp;/&nbsp;29% @2.0x</span></div>
+  <div class="summary-item"><span class="summary-label">Week 29 Exported</span><span class="summary-value">4.74 GWh</span></div>
+  <div class="summary-item"><span class="summary-label">MTD Exported</span><span class="summary-value">4.13 GWh</span></div>
+  <div class="summary-item"><span class="summary-label">YTD Exported</span><span class="summary-value">77.75 GWh</span></div>
+  <div class="summary-item"><span class="summary-label">Weighting factor</span><span class="summary-value">66% @1.0x&nbsp;/&nbsp;29% @2.0x</span></div>
 </div>
 
 <div class="callout callout-issue">
-<strong>Major issue:</strong> an active critical alarm is outstanding — combustible gas detection on the battery container, raised today (6 Jul) and not yet acknowledged. Also worth watching: exported volume fell 6.6% week-on-week (4.12 &rarr; 3.85 GWh) even though the penalty-adjusted net position improved.
+<strong>Major issue:</strong> an active critical alarm is outstanding — combustible gas detection on the battery container, raised today (6 Jul) and not yet acknowledged.
 </div>
 
 <div class="callout callout-win">
-<strong>Top performer:</strong> this week's net position (+1,399.7 MWh) and 98.5% declared utilisation are the best of the last 7 weeks.
+<strong>Top performer:</strong> this week's net position (+1,932.3 MWh) and 98.7% declared utilisation are the best of the last 7 weeks, on the highest exported volume since early May.
 </div>
 
 ## Exported Production — last ~2 months
@@ -58,37 +58,37 @@ Dassiesridge Hybrid (Wind + BESS) exported 3.85 GWh this week. The penalty-adjus
   <text x="616" y="46" fill="#a0a0a0" font-size="11" text-anchor="middle">4.12</text>
   <text x="616" y="205" fill="#6b6b6b" font-size="10" text-anchor="middle">22 Jun</text>
 
-  <rect x="667" y="62" width="50" height="128" fill="#3b82f6"/>
-  <text x="692" y="55" fill="#ededed" font-size="11" text-anchor="middle">3.85</text>
+  <rect x="667" y="33" width="50" height="157" fill="#3b82f6"/>
+  <text x="692" y="26" fill="#ededed" font-size="11" text-anchor="middle">4.74</text>
   <text x="692" y="205" fill="#a0a0a0" font-size="10" text-anchor="middle">29 Jun (this wk)</text>
 </svg>
 
-The week of 01 Jun was a full outage — zero exported production, flagged above. Output recovered through June and has held between 2.9-4.1 GWh/week since, though this week's total came in below the two preceding weeks.
+The week of 01 Jun was a full outage — zero exported production, flagged above. Output recovered through June and has climbed for three straight weeks, with this week's 4.74 GWh the highest since early May.
 
 ## This week vs. last week
 
 | Metric | This week (29 Jun-5 Jul) | Last week (22-28 Jun) | Change |
 |---|---|---|---|
-| Exported production | 3.85 GWh | 4.12 GWh | <span class="neg">-0.27 GWh (-6.6%)</span> |
-| Net MWh (penalty-adjusted) | <span class="pos">+1,399.7</span> | <span class="pos">+496.5</span> | <span class="pos">+903.2</span> |
-| Net gain / net loss (MWh) | +2,997.3 / -1,597.6 | +2,744.2 / -2,247.7 | Loss shrank by 650.1 |
-| Positive net periods | 61.0% | 58.5% | +2.5pp |
-| Declared utilisation | 98.5% | 89.8% | +8.7pp |
-| Export vs. declared ratio | 97.7% | 100.2% | -2.5pp |
+| Exported production | 4.74 GWh | 4.12 GWh | <span class="pos">+0.62 GWh (+15.0%)</span> |
+| Net MWh (penalty-adjusted) | <span class="pos">+1,932.3</span> | <span class="pos">+496.5</span> | <span class="pos">+1,435.8</span> |
+| Net gain / net loss (MWh) | +3,732.4 / -1,800.2 | +2,744.2 / -2,247.7 | Gain +988.2, loss shrank 447.5 |
+| Positive net periods | 63.3% | 58.5% | +4.9pp |
+| Declared utilisation | 98.7% | 89.8% | +8.8pp |
+| Export vs. declared ratio | 97.9% | 100.2% | -2.2pp |
 | Wind availability (declared) | 100% | 100% | flat |
 | BESS availability (declared) | 100% | 99.4% | +0.6pp |
-| BESS contribution to exports | 15.1% | 22.6% | -7.5pp |
-| BESS charge / discharge (MWh) | 659.7 / 582.2 | 982.4 / 934.1 | Less cycling |
-| Avg. hours to recover from a loss period | 10.7h | 7.3h | <span class="neg">+3.4h (slower)</span> |
+| BESS contribution to exports | 15.2% | 22.6% | -7.4pp |
+| BESS charge / discharge (MWh) | 836.0 / 721.3 | 982.4 / 934.1 | Less cycling |
+| Avg. hours to recover from a loss period | 9.9h | 7.3h | <span class="neg">+2.6h (slower)</span> |
 
-**Is under-delivery an efficiency problem?** No — both wind and BESS declared availability sat at (or near) 100% in both weeks, so the assets were available to perform. The dip in export-vs-declared ratio (100.2% &rarr; 97.7%) instead reflects a lower wind resource this week, not underused or poorly-dispatched equipment. When the site did dip into a loss period this week, it also took longer to recover (10.7h vs 7.3h) — worth watching if that keeps trending up.
+**Is under-delivery an efficiency problem?** No — both wind and BESS declared availability sat at (or near) 100% in both weeks, so the assets were available to perform. The small dip in export-vs-declared ratio (100.2% &rarr; 97.9%) reflects a slightly lower wind resource this week, not underused or poorly-dispatched equipment — exported volume and net position both rose regardless. When the site did dip into a loss period this week, it still took longer to recover (9.9h vs 7.3h) — worth watching if that keeps trending up.
 
 ## Month- and year-to-date
 
 | Period | Exported production | Declared utilisation | Wind contribution | BESS contribution |
 |---|---|---|---|---|
-| MTD (1-5 Jul) | 3.24 GWh | 98.7% | 103.9% | 12.3% |
-| YTD (Jan-5 Jul) | 76.86 GWh | 86.5% | 104.2% | 19.0% |
+| MTD (1-5 Jul) | 4.13 GWh | 98.9% | 103.7% | 13.0% |
+| YTD (Jan-5 Jul) | 77.75 GWh | 86.6% | 104.1% | 18.9% |
 
 ## Monthly trend
 
@@ -126,11 +126,11 @@ The week of 01 Jun was a full outage — zero exported production, flagged above
   <text x="602" y="117.1" fill="#a0a0a0" font-size="10" text-anchor="middle">10.7</text>
   <text x="602" y="205" fill="#6b6b6b" font-size="10" text-anchor="middle">Jun</text>
 
-  <rect x="660" y="170.0" width="55" height="20.0" fill="#3b82f6"/>
-  <text x="687" y="164" fill="#ededed" font-size="10" text-anchor="middle">3.2</text>
+  <rect x="660" y="164" width="55" height="26" fill="#3b82f6"/>
+  <text x="687" y="158" fill="#ededed" font-size="10" text-anchor="middle">4.1</text>
   <text x="687" y="205" fill="#a0a0a0" font-size="10" text-anchor="middle">Jul (MTD)</text>
 
-  <polyline points="92,50.5 177,51.5 262,66.9 347,52.9 432,28.4 517,36.9 602,53.9 687,46.5" fill="none" stroke="#fbbf24" stroke-width="2"/>
+  <polyline points="92,50.5 177,51.5 262,66.9 347,52.9 432,28.4 517,36.9 602,53.9 687,47.4" fill="none" stroke="#fbbf24" stroke-width="2"/>
   <circle cx="92" cy="50.5" r="3" fill="#fbbf24"/>
   <text x="92" y="42.5" fill="#fbbf24" font-size="10" text-anchor="middle">1.27x</text>
   <circle cx="177" cy="51.5" r="3" fill="#fbbf24"/>
@@ -145,8 +145,8 @@ The week of 01 Jun was a full outage — zero exported production, flagged above
   <text x="517" y="28.9" fill="#fbbf24" font-size="10" text-anchor="middle">1.37x</text>
   <circle cx="602" cy="53.9" r="3" fill="#fbbf24"/>
   <text x="602" y="45.9" fill="#fbbf24" font-size="10" text-anchor="middle">1.24x</text>
-  <circle cx="687" cy="46.5" r="3" fill="#fbbf24"/>
-  <text x="687" y="38.5" fill="#fbbf24" font-size="10" text-anchor="middle">1.30x</text>
+  <circle cx="687" cy="47.4" r="3" fill="#fbbf24"/>
+  <text x="687" y="39.4" fill="#fbbf24" font-size="10" text-anchor="middle">1.29x</text>
 
   <rect x="560" y="222" width="10" height="10" fill="#60a5fa"/>
   <text x="575" y="231" fill="#a0a0a0" font-size="10">Exported GWh</text>
@@ -154,20 +154,20 @@ The week of 01 Jun was a full outage — zero exported production, flagged above
   <text x="680" y="231" fill="#a0a0a0" font-size="10">Avg weighting factor</text>
 </svg>
 
-The average weighting factor stayed range-bound all year: lowest in February (1.14x) and highest in April (1.44x), with July's month-to-date average (1.30x) sitting mid-pack. There's no clean correlation between a high average weighting factor and a low exported total — April combined the highest average factor with the highest export volume of the year.
+The average weighting factor stayed range-bound all year: lowest in February (1.14x) and highest in April (1.44x), with July's month-to-date average (1.29x) sitting mid-pack. There's no clean correlation between a high average weighting factor and a low exported total — April combined the highest average factor with the highest export volume of the year.
 
 ## Weighting (ALP penalty factor) this week
 
-Declared periods are weighted by a penalty factor that varies by period type. This week's 145 recorded hours split as:
+Declared periods are weighted by a penalty factor that varies by period type. This week's 168 recorded hours split as:
 
 | Penalty factor | Hours | Share |
 |---|---|---|
-| 1.00x | 94 | 64.8% |
-| 1.25x | 3 | 2.1% |
-| 1.75x | 6 | 4.1% |
-| 2.00x | 42 | 29.0% |
+| 1.00x | 111 | 66.1% |
+| 1.25x | 3 | 1.8% |
+| 1.75x | 6 | 3.6% |
+| 2.00x | 48 | 28.6% |
 
-42 of this week's hours (29.0%) were declared with under 2 hours' notice before execution — and every single one of those short-notice hours also landed in the highest 2.00x penalty tier. Short-notice declarations aren't just a minority case this week; they line up exactly with where the penalty weighting is harshest.
+48 of this week's hours (28.6%) were declared with under 2 hours' notice before execution — and every single one of those short-notice hours also landed in the highest 2.00x penalty tier. Short-notice declarations aren't just a minority case this week; they line up exactly with where the penalty weighting is harshest.
 
 ## Operational context (Unity portal)
 
