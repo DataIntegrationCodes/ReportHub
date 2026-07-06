@@ -6,7 +6,7 @@ date: "2026-07-06"
 Dassiesridge Hybrid (Wind + BESS) exported 3.85 GWh this week. The penalty-adjusted net position kept improving (+1,399.7 MWh, best of the last 7 weeks), even though raw exported volume dipped slightly from last week.
 
 <div class="summary-grid">
-  <div class="summary-item"><span class="summary-label">This Week Exported</span><span class="summary-value">3.85 GWh</span></div>
+  <div class="summary-item"><span class="summary-label">Week 29 Exported</span><span class="summary-value">3.85 GWh</span></div>
   <div class="summary-item"><span class="summary-label">MTD Exported</span><span class="summary-value">3.24 GWh</span></div>
   <div class="summary-item"><span class="summary-label">YTD Exported</span><span class="summary-value">76.86 GWh</span></div>
   <div class="summary-item"><span class="summary-label">Weighting factor</span><span class="summary-value">65% @1.0x&nbsp;/&nbsp;29% @2.0x</span></div>
