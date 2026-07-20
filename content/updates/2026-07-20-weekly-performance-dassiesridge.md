@@ -179,10 +179,53 @@ Declared periods are weighted by a penalty factor that varies by period type. Th
 
 31 of this week's hours (18.5%) were declared with under 2 hours' notice before execution, and — for the third week running — every one of those short-notice hours also fell in the highest 2.00x tier. This is no longer a one-off pattern; short-notice declarations have landed exclusively in the harshest penalty tier every week we've tracked it.
 
+### Short-notice declaration rate — trend
+
+New this week, and tracked going forward: the share of each week's hours declared with under 2 hours' notice.
+
+<svg class="report-chart" viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="16" fill="#a0a0a0" font-size="12">Share of hours declared &lt;2h before execution (%)</text>
+  <line x1="50" y1="190" x2="730" y2="190" stroke="#4a4a4a" stroke-width="1"/>
+
+  <rect x="63" y="41" width="50" height="149" rx="4" fill="#60a5fa"/>
+  <text x="88" y="35" fill="#a0a0a0" font-size="11" text-anchor="middle">39.3%</text>
+  <text x="88" y="205" fill="#6b6b6b" font-size="10" text-anchor="middle">18 May</text>
+
+  <rect x="138" y="114" width="50" height="76" rx="4" fill="#60a5fa"/>
+  <text x="163" y="108" fill="#a0a0a0" font-size="11" text-anchor="middle">20.2%</text>
+  <text x="163" y="205" fill="#6b6b6b" font-size="10" text-anchor="middle">25 May</text>
+
+  <rect x="214" y="188" width="50" height="2" rx="1" fill="#6b6b6b"/>
+  <text x="239" y="182" fill="#6b6b6b" font-size="11" text-anchor="middle">0.0% &#9888;</text>
+  <text x="239" y="205" fill="#6b6b6b" font-size="10" text-anchor="middle">01 Jun</text>
+
+  <rect x="289" y="71" width="50" height="119" rx="4" fill="#60a5fa"/>
+  <text x="314" y="65" fill="#a0a0a0" font-size="11" text-anchor="middle">31.5%</text>
+  <text x="314" y="205" fill="#6b6b6b" font-size="10" text-anchor="middle">08 Jun</text>
+
+  <rect x="365" y="109" width="50" height="81" rx="4" fill="#60a5fa"/>
+  <text x="390" y="103" fill="#a0a0a0" font-size="11" text-anchor="middle">21.4%</text>
+  <text x="390" y="205" fill="#6b6b6b" font-size="10" text-anchor="middle">15 Jun</text>
+
+  <rect x="441" y="84" width="50" height="106" rx="4" fill="#60a5fa"/>
+  <text x="466" y="78" fill="#a0a0a0" font-size="11" text-anchor="middle">28.0%</text>
+  <text x="466" y="205" fill="#6b6b6b" font-size="10" text-anchor="middle">22 Jun</text>
+
+  <rect x="516" y="82" width="50" height="108" rx="4" fill="#60a5fa"/>
+  <text x="541" y="76" fill="#a0a0a0" font-size="11" text-anchor="middle">28.6%</text>
+  <text x="541" y="205" fill="#6b6b6b" font-size="10" text-anchor="middle">29 Jun</text>
+
+  <rect x="592" y="105" width="50" height="85" rx="4" fill="#60a5fa"/>
+  <text x="617" y="99" fill="#a0a0a0" font-size="11" text-anchor="middle">22.6%</text>
+  <text x="617" y="205" fill="#6b6b6b" font-size="10" text-anchor="middle">06 Jul</text>
+
+  <rect x="667" y="120" width="50" height="70" rx="4" fill="#3b82f6"/>
+  <text x="692" y="114" fill="#ededed" font-size="11" text-anchor="middle">18.5%</text>
+  <text x="692" y="205" fill="#a0a0a0" font-size="10" text-anchor="middle">13 Jul (this wk)</text>
+</svg>
+
+Yes, there's improvement: from 39.3% of hours on under-2-hour notice in mid-May down to 18.5% this week — the lowest of the last two months. It hasn't been a straight line (it bounced back up to ~28% across the two peak-performance weeks in late June), but the trend across the full window is downward. The 01 Jun reading (0.0%) is the same outage week flagged elsewhere in this report and isn't a real data point for this trend — there was next to no declared activity that week to measure.
+
 ## Operational context (Unity portal)
 
 The turbine fault is easing but not resolved: where all 14 turbines were flagged two weeks ago, 12 remain in Warning state now (2 have recovered), with the active alarm now centered on turbine WTG21 specifically rather than the whole fleet. Wind performance was 5.2% this week against a normal ~3 m/s wind speed. On the BESS side, the picture has fully turned around — the battery array heatmap is all-green, SOC has recovered to ~40%, and availability is back to 100%, with no PCS units in warning.
-
-## Data note
-
-The "avg. hours to recover" figure for last week (6-12 Jul) has changed since that report was published — it originally read 11.3h and now recalculates to 127.7h from the same underlying model, consistent with the retroactive backfilling we've seen before (e.g. Week 29's figures). The 127.7h value is used here for the week-over-week comparison; the previously-published report has not been edited.
