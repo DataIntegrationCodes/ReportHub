@@ -1,6 +1,7 @@
 ---
 title: "Weekly performance: Dassiesridge (13 Jul - 19 Jul)"
 date: "2026-07-20"
+layout: "tabs"
 ---
 
 Dassiesridge Hybrid (Wind + BESS) exported just 0.53 GWh this week, down again from an already-bad 1.24 GWh last week. The wind turbine fault from last week is easing but not resolved: 12 of 14 turbines remain flagged, down from all 14. The penalty-adjusted net position hit -3,633.1 MWh, the worst week yet.

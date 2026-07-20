@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getAllUpdates, getUpdateBySlug } from '../../../lib/updates';
+import TabbedReport from './TabbedReport';
 
 export async function generateStaticParams() {
   const updates = getAllUpdates();
@@ -14,7 +15,11 @@ export default function UpdatePage({ params }) {
       <Link href="/" className="back-link">&larr; All updates</Link>
       <span className="update-date">{update.date}</span>
       <h1>{update.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: update.contentHtml }} />
+      {update.sections ? (
+        <TabbedReport sections={update.sections} />
+      ) : (
+        <div dangerouslySetInnerHTML={{ __html: update.contentHtml }} />
+      )}
     </main>
   );
 }
