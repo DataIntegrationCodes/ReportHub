@@ -1,12 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { marked } from 'marked';
 
-export default function NotesEditor({ slug, initialContent, initialStatus }) {
-  const [content, setContent] = useState(initialContent);
+export default function EditableSection({ slug, sectionTitle, initialRaw, initialHtml, hasStatus, initialStatus }) {
+  const [raw, setRaw] = useState(initialRaw);
+  const [html, setHtml] = useState(initialHtml);
   const [status, setStatus] = useState(initialStatus);
   const [editing, setEditing] = useState(false);
-  const [draftContent, setDraftContent] = useState(initialContent);
+  const [draftRaw, setDraftRaw] = useState(initialRaw);
   const [draftStatus, setDraftStatus] = useState(initialStatus);
   const [password, setPassword] = useState('');
   const [saving, setSaving] = useState(false);
@@ -14,7 +16,7 @@ export default function NotesEditor({ slug, initialContent, initialStatus }) {
   const [savedMessage, setSavedMessage] = useState('');
 
   function startEditing() {
-    setDraftContent(content);
+    setDraftRaw(raw);
     setDraftStatus(status);
     setPassword('');
     setError('');
@@ -32,10 +34,16 @@ export default function NotesEditor({ slug, initialContent, initialStatus }) {
     setError('');
 
     try {
-      const res = await fetch('/api/notes', {
+      const res = await fetch('/api/sections', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slug, content: draftContent, status: draftStatus, password }),
+        body: JSON.stringify({
+          slug,
+          sectionTitle,
+          content: draftRaw,
+          status: hasStatus ? draftStatus : undefined,
+          password,
+        }),
       });
       const data = await res.json();
 
@@ -45,8 +53,9 @@ export default function NotesEditor({ slug, initialContent, initialStatus }) {
         return;
       }
 
-      setContent(draftContent);
-      setStatus(draftStatus);
+      setRaw(draftRaw);
+      setHtml(marked.parse(draftRaw));
+      if (hasStatus) setStatus(draftStatus);
       setEditing(false);
       setSavedMessage('Saved. The live site will reflect this after the next deploy (usually under a minute).');
     } catch (err) {
@@ -57,11 +66,13 @@ export default function NotesEditor({ slug, initialContent, initialStatus }) {
   }
 
   return (
-    <div className="tab-panel">
+    <div className="tab-panel" role="tabpanel">
       <div className="notes-header">
-        <span className={`badge ${status === 'final' ? 'badge-final' : 'badge-draft'}`}>
-          {status === 'final' ? 'Final' : 'Draft'}
-        </span>
+        {hasStatus && (
+          <span className={`badge ${status === 'final' ? 'badge-final' : 'badge-draft'}`}>
+            {status === 'final' ? 'Final' : 'Draft'}
+          </span>
+        )}
         {!editing && (
           <button type="button" className="tab-button" onClick={startEditing}>
             Edit
@@ -71,20 +82,25 @@ export default function NotesEditor({ slug, initialContent, initialStatus }) {
 
       {editing ? (
         <div className="notes-editor">
+          <p className="notes-hint">
+            Editing the raw Markdown for this section, including any embedded HTML (tables, charts, layout blocks) — not a simplified text box.
+          </p>
           <textarea
             className="notes-textarea"
-            value={draftContent}
-            onChange={(e) => setDraftContent(e.target.value)}
-            rows={8}
+            value={draftRaw}
+            onChange={(e) => setDraftRaw(e.target.value)}
+            rows={16}
           />
-          <label className="notes-status-toggle">
-            <input
-              type="checkbox"
-              checked={draftStatus === 'final'}
-              onChange={(e) => setDraftStatus(e.target.checked ? 'final' : 'draft')}
-            />
-            Mark as final
-          </label>
+          {hasStatus && (
+            <label className="notes-status-toggle">
+              <input
+                type="checkbox"
+                checked={draftStatus === 'final'}
+                onChange={(e) => setDraftStatus(e.target.checked ? 'final' : 'draft')}
+              />
+              Mark as final
+            </label>
+          )}
           <input
             type="password"
             className="notes-password"
@@ -103,7 +119,7 @@ export default function NotesEditor({ slug, initialContent, initialStatus }) {
           </div>
         </div>
       ) : (
-        <p className="notes-content">{content || 'No notes yet.'}</p>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       )}
 
       {savedMessage && <p className="notes-saved">{savedMessage}</p>}

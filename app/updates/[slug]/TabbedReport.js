@@ -1,38 +1,37 @@
 'use client';
 
 import { useState } from 'react';
-import NotesEditor from './NotesEditor';
+import EditableSection from './EditableSection';
 
-export default function TabbedReport({ sections, notes, slug }) {
-  const tabs = notes ? [...sections, { title: 'Reviewer Notes', isNotes: true }] : sections;
+export default function TabbedReport({ sections, slug }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeTab = tabs[activeIndex];
+  const activeSection = sections[activeIndex];
 
   return (
     <div>
       <div className="tab-bar" role="tablist">
-        {tabs.map((tab, index) => (
+        {sections.map((section, index) => (
           <button
-            key={tab.title}
+            key={section.title}
             type="button"
             role="tab"
             aria-selected={index === activeIndex}
             className={`tab-button${index === activeIndex ? ' active' : ''}`}
             onClick={() => setActiveIndex(index)}
           >
-            {tab.title}
+            {section.title}
           </button>
         ))}
       </div>
-      {activeTab.isNotes ? (
-        <NotesEditor slug={slug} initialContent={notes.content} initialStatus={notes.status} />
-      ) : (
-        <div
-          className="tab-panel"
-          role="tabpanel"
-          dangerouslySetInnerHTML={{ __html: activeTab.contentHtml }}
-        />
-      )}
+      <EditableSection
+        key={activeSection.title}
+        slug={slug}
+        sectionTitle={activeSection.title}
+        initialRaw={activeSection.raw}
+        initialHtml={activeSection.contentHtml}
+        hasStatus={activeSection.hasStatus}
+        initialStatus={activeSection.status}
+      />
     </div>
   );
 }

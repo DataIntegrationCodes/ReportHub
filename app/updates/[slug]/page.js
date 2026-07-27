@@ -16,7 +16,7 @@ export default function UpdatePage({ params }) {
       <span className="update-date">{update.date}</span>
       <h1>{update.title}</h1>
       {update.sections ? (
-        <TabbedReport sections={update.sections} notes={update.notes} slug={update.slug} />
+        <TabbedReport sections={update.sections} slug={update.slug} />
       ) : (
         <div dangerouslySetInnerHTML={{ __html: update.contentHtml }} />
       )}

@@ -214,9 +214,10 @@ svg.report-chart {
   color: #60a5fa;
 }
 
-.notes-content {
-  white-space: pre-wrap;
-  color: #ededed;
+.notes-hint {
+  font-size: 0.8rem;
+  color: #6b6b6b;
+  margin: 0;
 }
 
 .notes-editor {
