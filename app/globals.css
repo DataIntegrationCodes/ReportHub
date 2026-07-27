@@ -2,8 +2,8 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: system-ui, -apple-system, sans-serif;
-  background: #0a0a0a;
-  color: #ededed;
+  background: #ffffff;
+  color: #171717;
 }
 
 main {
@@ -19,7 +19,7 @@ h1 {
 }
 
 p {
-  color: #a0a0a0;
+  color: #52525b;
   line-height: 1.6;
 }
 
@@ -28,24 +28,24 @@ p {
 }
 
 a {
-  color: #3b82f6;
+  color: #2563eb;
 }
 
 .back-link {
   display: inline-block;
   margin-bottom: 1.5rem;
   text-decoration: none;
-  color: #a0a0a0;
+  color: #52525b;
 }
 
 .back-link:hover {
-  color: #ededed;
+  color: #171717;
 }
 
 .update-date {
   display: block;
   font-size: 0.85rem;
-  color: #a0a0a0;
+  color: #52525b;
   margin-bottom: 0.25rem;
 }
 
@@ -56,7 +56,7 @@ a {
 }
 
 .update-list li {
-  border-bottom: 1px solid #262626;
+  border-bottom: 1px solid #e5e7eb;
   padding: 1rem 0;
 }
 
@@ -68,7 +68,7 @@ a {
 .update-title {
   display: block;
   font-size: 1.1rem;
-  color: #ededed;
+  color: #171717;
 }
 
 img {
@@ -87,17 +87,17 @@ table {
 th, td {
   text-align: left;
   padding: 0.5rem 0.75rem;
-  border-bottom: 1px solid #262626;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 th {
-  color: #a0a0a0;
+  color: #52525b;
   font-weight: 600;
   white-space: nowrap;
 }
 
 td {
-  color: #ededed;
+  color: #171717;
 }
 
 svg.report-chart {
@@ -106,8 +106,8 @@ svg.report-chart {
   margin: 1rem 0;
 }
 
-.pos { color: #60a5fa; }
-.neg { color: #f87171; }
+.pos { color: #2563eb; }
+.neg { color: #dc2626; }
 
 .summary-grid {
   display: grid;
@@ -115,15 +115,15 @@ svg.report-chart {
   gap: 1rem;
   margin: 1.5rem 0;
   padding: 1rem;
-  background: #141414;
-  border: 1px solid #262626;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
 }
 
 .summary-label {
   display: block;
   font-size: 0.72rem;
-  color: #a0a0a0;
+  color: #6b7280;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
@@ -132,7 +132,7 @@ svg.report-chart {
   display: block;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #ededed;
+  color: #111827;
   margin-top: 0.25rem;
 }
 
@@ -143,33 +143,33 @@ svg.report-chart {
   font-size: 0.92rem;
   line-height: 1.5;
   border-left: 4px solid;
-  color: #ededed;
+  color: #171717;
 }
 
 .callout-issue {
-  background: rgba(248, 113, 113, 0.08);
-  border-color: #f87171;
+  background: rgba(220, 38, 38, 0.06);
+  border-color: #dc2626;
 }
 
 .callout-win {
-  background: rgba(96, 165, 250, 0.08);
-  border-color: #60a5fa;
+  background: rgba(37, 99, 235, 0.06);
+  border-color: #2563eb;
 }
 
 .tab-bar {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  border-bottom: 1px solid #262626;
+  border-bottom: 1px solid #e5e7eb;
   margin: 1.5rem 0;
   padding-bottom: 1rem;
 }
 
 .tab-button {
   background: transparent;
-  border: 1px solid #262626;
+  border: 1px solid #d1d5db;
   border-radius: 6px;
-  color: #a0a0a0;
+  color: #52525b;
   font-size: 0.85rem;
   font-family: inherit;
   padding: 0.4rem 0.75rem;
@@ -177,13 +177,13 @@ svg.report-chart {
 }
 
 .tab-button:hover {
-  color: #ededed;
-  border-color: #3b3b3b;
+  color: #171717;
+  border-color: #9ca3af;
 }
 
 .tab-button.active {
-  background: #3b82f6;
-  border-color: #3b82f6;
+  background: #2563eb;
+  border-color: #2563eb;
   color: #ffffff;
 }
 
@@ -205,18 +205,18 @@ svg.report-chart {
 }
 
 .badge-draft {
-  background: rgba(160, 160, 160, 0.15);
-  color: #a0a0a0;
+  background: rgba(107, 114, 128, 0.12);
+  color: #52525b;
 }
 
 .badge-final {
-  background: rgba(96, 165, 250, 0.15);
-  color: #60a5fa;
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563eb;
 }
 
 .notes-hint {
   font-size: 0.8rem;
-  color: #6b6b6b;
+  color: #6b7280;
   margin: 0;
 }
 
@@ -228,10 +228,10 @@ svg.report-chart {
 
 .notes-textarea {
   width: 100%;
-  background: #141414;
-  border: 1px solid #262626;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
   border-radius: 6px;
-  color: #ededed;
+  color: #171717;
   font-family: inherit;
   font-size: 0.9rem;
   padding: 0.6rem;
@@ -243,15 +243,15 @@ svg.report-chart {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #a0a0a0;
+  color: #52525b;
   font-size: 0.85rem;
 }
 
 .notes-password {
-  background: #141414;
-  border: 1px solid #262626;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
   border-radius: 6px;
-  color: #ededed;
+  color: #171717;
   font-family: inherit;
   font-size: 0.85rem;
   padding: 0.5rem 0.6rem;
@@ -265,13 +265,13 @@ svg.report-chart {
 }
 
 .notes-error {
-  color: #f87171;
+  color: #dc2626;
   font-size: 0.85rem;
   margin: 0;
 }
 
 .notes-saved {
-  color: #60a5fa;
+  color: #2563eb;
   font-size: 0.85rem;
   margin-top: 0.75rem;
 }
