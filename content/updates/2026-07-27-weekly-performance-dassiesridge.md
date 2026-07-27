@@ -68,7 +68,7 @@ Dassiesridge Hybrid (Wind + BESS) exported 2.12 GWh this week, nearly quadruplin
 Two straight weeks of decline bottomed out at 13 Jul (0.53 GWh). This week's 2.12 GWh is the third straight week of directional change, but in the opposite direction — a clear recovery signal, though still well below the 29 Jun peak of 4.74 GWh.
 ## This week vs. last week
 
-| Metric | This week (20-26 Jul) | Last week (13-19 Jul) | Change |
+| Metric |Week (20-26 Jul) | Last week (13-19 Jul) | Change |
 |---|---|---|---|
 | Exported production | <span class="pos">2.12 GWh</span> | 0.53 GWh | <span class="pos">+1.59 GWh (+297.7%)</span> |
 | Net MWh (penalty-adjusted) | <span class="neg">-932.3</span> | <span class="neg">-3,633.1</span> | <span class="pos">+2,700.8</span> |
@@ -83,7 +83,6 @@ Two straight weeks of decline bottomed out at 13 Jul (0.53 GWh). This week's 2.1
 | Avg. hours to recover from a loss period | 17.9h | 78.6h | <span class="pos">-60.7h (much faster)</span> |
 
 Recovery is broad-based, not just a lucky day or two: positive-net periods nearly tripled as a share of the week, and the export-vs-declared ratio gained 31 points. One open question worth watching: as output recovers, more real-time adjustment seems to be happening — which may be why the declaration-timing metrics (next tab) got worse even as production improved. That's plausible but not confirmed; treat it as a hypothesis, not a finding.
-
 ## Month- and year-to-date
 
 | Period | Exported production | Declared utilisation | Wind contribution | BESS contribution |
