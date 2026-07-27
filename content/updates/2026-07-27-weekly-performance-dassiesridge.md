@@ -227,4 +227,4 @@ Recomputed consistently with the new exclusion, the trend tells a different stor
 Wind performance recovered sharply to 28.4% this week (from 5.2%). A new "Plant curtailment" alert (severity 20, source Hybrid PPC) appeared today — low severity, reads as a grid-side event rather than a site fault. BESS remains healthy: only 1 PCS unit flagged (down from 6 two weeks ago), SOC at 23.2% reflecting the much heavier charge/discharge cycling this week rather than any equipment concern.
 ## Reviewer Notes
 
-No notes yet.
+Testing...
