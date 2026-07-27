@@ -4,7 +4,6 @@ date: '2026-07-20'
 layout: tabs
 notesStatus: draft
 ---
-
 Dassiesridge Hybrid (Wind + BESS) exported just 0.53 GWh this week, down again from an already-bad 1.24 GWh last week. The wind turbine fault from last week is easing but not resolved: 12 of 14 turbines remain flagged, down from all 14. The penalty-adjusted net position hit -3,633.1 MWh, the worst week yet.
 
 <div class="summary-grid">
@@ -15,7 +14,7 @@ Dassiesridge Hybrid (Wind + BESS) exported just 0.53 GWh this week, down again f
 </div>
 
 <div class="callout callout-issue">
-<strong>Major issue:</strong> the wind turbine fault continues. 12 of 14 turbines are still in Warning state with an active "Operating state: Unknown" alarm (now centered on WTG21), and wind performance managed only 5.2% this week (up from 0.0% last week, but still far below normal) despite unchanged ~3 m/s wind speeds. Only 2.7% of this week's declared hours were net-beneficial — the lowest yet.
+<strong>Major issue:</strong> the wind turbine fault continues. 12 of 14 turbines are still in Warning state with an active "Operating state: Unknown" alarm (now centered on WTG21), and wind performance managed only 5.2% this week (up from 0.0% last week, but still far below normal) despite unchanged ~3 m/s wind speeds. Only 2.7% of this week's declared hours were net-beneficial — the lowest yet1000.
 </div>
 
 <div class="callout callout-win">
