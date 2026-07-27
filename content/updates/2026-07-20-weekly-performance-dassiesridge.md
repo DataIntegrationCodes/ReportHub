@@ -2,6 +2,7 @@
 title: "Weekly performance: Dassiesridge (13 Jul - 19 Jul)"
 date: "2026-07-20"
 layout: "tabs"
+notesStatus: "draft"
 ---
 
 Dassiesridge Hybrid (Wind + BESS) exported just 0.53 GWh this week, down again from an already-bad 1.24 GWh last week. The wind turbine fault from last week is easing but not resolved: 12 of 14 turbines remain flagged, down from all 14. The penalty-adjusted net position hit -3,633.1 MWh, the worst week yet.
@@ -230,3 +231,7 @@ Yes, there's improvement: from 39.3% of hours on under-2-hour notice in mid-May 
 ## Operational context (Unity portal)
 
 The turbine fault is easing but not resolved: where all 14 turbines were flagged two weeks ago, 12 remain in Warning state now (2 have recovered), with the active alarm now centered on turbine WTG21 specifically rather than the whole fleet. Wind performance was 5.2% this week against a normal ~3 m/s wind speed. On the BESS side, the picture has fully turned around — the battery array heatmap is all-green, SOC has recovered to ~40%, and availability is back to 100%, with no PCS units in warning.
+
+## Reviewer Notes
+
+No notes yet.

@@ -186,3 +186,91 @@ svg.report-chart {
   border-color: #3b82f6;
   color: #ffffff;
 }
+
+.notes-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge-draft {
+  background: rgba(160, 160, 160, 0.15);
+  color: #a0a0a0;
+}
+
+.badge-final {
+  background: rgba(96, 165, 250, 0.15);
+  color: #60a5fa;
+}
+
+.notes-content {
+  white-space: pre-wrap;
+  color: #ededed;
+}
+
+.notes-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.notes-textarea {
+  width: 100%;
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 6px;
+  color: #ededed;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.6rem;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.notes-status-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a0a0a0;
+  font-size: 0.85rem;
+}
+
+.notes-password {
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 6px;
+  color: #ededed;
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.6rem;
+  max-width: 240px;
+  box-sizing: border-box;
+}
+
+.notes-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.notes-error {
+  color: #f87171;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.notes-saved {
+  color: #60a5fa;
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+}
