@@ -1,8 +1,8 @@
 ---
-title: "Weekly performance: Dassiesridge (20 Jul - 26 Jul)"
-date: "2026-07-27"
-layout: "tabs"
-notesStatus: "draft"
+title: 'Weekly performance: Dassiesridge (20 Jul - 26 Jul)'
+date: '2026-07-27'
+layout: tabs
+notesStatus: draft
 ---
 
 Dassiesridge Hybrid (Wind + BESS) exported 2.12 GWh this week, nearly quadrupling last week's 0.53 GWh as the turbine fault continues to ease. But a new way of looking at declaration timing this week shows the highest share of harshly-penalized hours of the last two months — a different concern from the hardware fault.
@@ -62,11 +62,10 @@ Dassiesridge Hybrid (Wind + BESS) exported 2.12 GWh this week, nearly quadruplin
 
   <rect x="667" y="118" width="50" height="72" rx="4" fill="#1d4ed8"/>
   <text x="692" y="112" fill="#111827" font-size="11" text-anchor="middle">2.12</text>
-  <text x="692" y="205" fill="#52525b" font-size="10" text-anchor="middle">20 Jul (this wk)</text>
+  <text x="692" y="205" fill="#52525b" font-size="10" text-anchor="middle">20 Jul </text>
 </svg>
 
 Two straight weeks of decline bottomed out at 13 Jul (0.53 GWh). This week's 2.12 GWh is the third straight week of directional change, but in the opposite direction — a clear recovery signal, though still well below the 29 Jun peak of 4.74 GWh.
-
 ## This week vs. last week
 
 | Metric | This week (20-26 Jul) | Last week (13-19 Jul) | Change |
