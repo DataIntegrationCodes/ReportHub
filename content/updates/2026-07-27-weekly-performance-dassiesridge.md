@@ -4,7 +4,7 @@ date: '2026-07-27'
 layout: tabs
 notesStatus: draft
 ---
-Dassiesridge Hybrid (Wind + BESS) exported 2.12 GWh (week 20 -26), nearly quadrupling previous week's 0.53 GWh as the turbine fault continues to ease. But a new way of looking at declaration timing this week shows the highest share of harshly-penalized hours of the last two months — a different concern from the hardware fault.
+Dassiesridge Hybrid (Wind + BESS) exported 2.12 GWh (week 20 -26), nearly quadrupling previous week's 0.53 GWh. But a new way of looking at declaration timing this week shows the highest share of harshly-penalized hours of the last two months — a different concern from the hardware fault.
 
 <div class="summary-grid">
   <div class="summary-item"><span class="summary-label">Week 20 Exported</span><span class="summary-value">2.12 GWh</span></div>
