@@ -219,11 +219,10 @@ This week's 119 relevant hours split as:
 
   <rect x="667" y="127" width="50" height="63" rx="4" fill="#dc2626"/>
   <text x="692" y="121" fill="#111827" font-size="11" text-anchor="middle">35.3% &#9888;</text>
-  <text x="692" y="205" fill="#52525b" font-size="10" text-anchor="middle">20 Jul (this wk)</text>
+  <text x="692" y="205" fill="#52525b" font-size="10" text-anchor="middle">20 Jul </text>
 </svg>
 
 Recomputed consistently with the new exclusion, the trend tells a different story than before: this week's 35.3% is the **highest** of the whole window, not a continuation of improvement. The prior six weeks (08 Jun-13 Jul) had actually been fairly flat, in the 23-28% range; this week is a clear step up, not noise. The 01 Jun reading is the known outage week and isn't a real data point.
-
 ## Operational context (Unity portal)
 
 Wind performance recovered sharply to 28.4% this week (from 5.2%) on the same ~3 m/s wind speeds as every other week — the turbines are converting wind into power again even though the turbine count still shows 12 of 14 in Warning state on the heatmap (unchanged from last week). The specific "Operating state: Unknown" alarm no longer appears in the active alerts list. A new "Plant curtailment" alert (severity 20, source Hybrid PPC) appeared today — low severity, reads as a grid-side event rather than a site fault. BESS remains healthy: only 1 PCS unit flagged (down from 6 two weeks ago), SOC at 23.2% reflecting the much heavier charge/discharge cycling this week rather than any equipment concern.
