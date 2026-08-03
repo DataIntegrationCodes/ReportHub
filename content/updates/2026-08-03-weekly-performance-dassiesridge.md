@@ -1,8 +1,8 @@
 ---
-title: "Weekly performance: Dassiesridge (27 Jul - 2 Aug)"
-date: "2026-08-03"
-layout: "tabs"
-notesStatus: "draft"
+title: 'Weekly performance: Dassiesridge (27 Jul - 2 Aug)'
+date: '2026-08-03'
+layout: tabs
+notesStatus: draft
 ---
 
 Dassiesridge Hybrid (Wind + BESS) exported 2.67 GWh this week, up 25.7% on last week and the third straight week of recovery. But two things stand out that aren't part of that recovery story: a new severity-100 critical alarm appeared today, and the short-notice declaration rate hit a record high for the second week running.
@@ -239,4 +239,4 @@ Wind performance eased slightly to 21.2% this week (from 28.4%) on the same ~3 m
 
 ## Reviewer Notes
 
-No notes yet.
+Planned Eskom outages between 2026/07/28 to 2026/07/31. During outages the system incorrectly declared zero which caused a loss of revenue.
