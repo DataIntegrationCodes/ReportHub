@@ -1,11 +1,10 @@
 ---
-title: "Weekly performance: Dassiesridge (20 Jul - 26 Jul)"
-date: "2026-07-27"
-layout: "tabs"
-notesStatus: "draft"
+title: 'Weekly performance: Dassiesridge (20 Jul - 26 Jul)'
+date: '2026-07-27'
+layout: tabs
+notesStatus: draft
 ---
-
-Dassiesridge Hybrid (Wind + BESS) exported 2.12 GWh this week, nearly quadrupling last week's 0.53 GWh as the turbine fault continues to ease. But a new way of looking at declaration timing this week shows the highest share of harshly-penalized hours of the last two months — a different concern from the hardware fault.
+Dassiesridge Hybrid (Wind + BESS) exported 2.12 GWh (week 20 -26), nearly quadrupling previous week's 0.53 GWh. But a new way of looking at declaration timing this week shows the highest share of harshly-penalized hours of the last two months — a different concern from the hardware fault.
 
 <div class="summary-grid">
   <div class="summary-item"><span class="summary-label">Week 20 Exported</span><span class="summary-value">2.12 GWh</span></div>
@@ -62,14 +61,13 @@ Dassiesridge Hybrid (Wind + BESS) exported 2.12 GWh this week, nearly quadruplin
 
   <rect x="667" y="118" width="50" height="72" rx="4" fill="#1d4ed8"/>
   <text x="692" y="112" fill="#111827" font-size="11" text-anchor="middle">2.12</text>
-  <text x="692" y="205" fill="#52525b" font-size="10" text-anchor="middle">20 Jul (this wk)</text>
+  <text x="692" y="205" fill="#52525b" font-size="10" text-anchor="middle">20 Jul</text>
 </svg>
 
 Two straight weeks of decline bottomed out at 13 Jul (0.53 GWh). This week's 2.12 GWh is the third straight week of directional change, but in the opposite direction — a clear recovery signal, though still well below the 29 Jun peak of 4.74 GWh.
-
 ## This week vs. last week
 
-| Metric | This week (20-26 Jul) | Last week (13-19 Jul) | Change |
+| Metric |Week (20-26 Jul) | Last week (13-19 Jul) | Change |
 |---|---|---|---|
 | Exported production | <span class="pos">2.12 GWh</span> | 0.53 GWh | <span class="pos">+1.59 GWh (+297.7%)</span> |
 | Net MWh (penalty-adjusted) | <span class="neg">-932.3</span> | <span class="neg">-3,633.1</span> | <span class="pos">+2,700.8</span> |
@@ -84,7 +82,6 @@ Two straight weeks of decline bottomed out at 13 Jul (0.53 GWh). This week's 2.1
 | Avg. hours to recover from a loss period | 17.9h | 78.6h | <span class="pos">-60.7h (much faster)</span> |
 
 Recovery is broad-based, not just a lucky day or two: positive-net periods nearly tripled as a share of the week, and the export-vs-declared ratio gained 31 points. One open question worth watching: as output recovers, more real-time adjustment seems to be happening — which may be why the declaration-timing metrics (next tab) got worse even as production improved. That's plausible but not confirmed; treat it as a hypothesis, not a finding.
-
 ## Month- and year-to-date
 
 | Period | Exported production | Declared utilisation | Wind contribution | BESS contribution |
@@ -221,15 +218,13 @@ This week's 119 relevant hours split as:
 
   <rect x="667" y="127" width="50" height="63" rx="4" fill="#dc2626"/>
   <text x="692" y="121" fill="#111827" font-size="11" text-anchor="middle">35.3% &#9888;</text>
-  <text x="692" y="205" fill="#52525b" font-size="10" text-anchor="middle">20 Jul (this wk)</text>
+  <text x="692" y="205" fill="#52525b" font-size="10" text-anchor="middle">20 Jul </text>
 </svg>
 
 Recomputed consistently with the new exclusion, the trend tells a different story than before: this week's 35.3% is the **highest** of the whole window, not a continuation of improvement. The prior six weeks (08 Jun-13 Jul) had actually been fairly flat, in the 23-28% range; this week is a clear step up, not noise. The 01 Jun reading is the known outage week and isn't a real data point.
-
 ## Operational context (Unity portal)
 
-Wind performance recovered sharply to 28.4% this week (from 5.2%) on the same ~3 m/s wind speeds as every other week — the turbines are converting wind into power again even though the turbine count still shows 12 of 14 in Warning state on the heatmap (unchanged from last week). The specific "Operating state: Unknown" alarm no longer appears in the active alerts list. A new "Plant curtailment" alert (severity 20, source Hybrid PPC) appeared today — low severity, reads as a grid-side event rather than a site fault. BESS remains healthy: only 1 PCS unit flagged (down from 6 two weeks ago), SOC at 23.2% reflecting the much heavier charge/discharge cycling this week rather than any equipment concern.
-
+Wind performance recovered sharply to 28.4% this week (from 5.2%). A new "Plant curtailment" alert (severity 20, source Hybrid PPC) appeared today — low severity, reads as a grid-side event rather than a site fault. BESS remains healthy: only 1 PCS unit flagged (down from 6 two weeks ago), SOC at 23.2% reflecting the much heavier charge/discharge cycling this week rather than any equipment concern.
 ## Reviewer Notes
 
-No notes yet.
+Testing...
