@@ -239,4 +239,4 @@ Wind performance eased slightly to 21.2% this week (from 28.4%) on the same ~3 m
 
 ## Reviewer Notes
 
-Planned Eskom outages between 2026/07/28 to 2026/07/31. During outages the system incorrectly declared zero which caused a loss of revenue.
+HB: Planned Eskom outages between 2026/07/28 to 2026/07/31. During outages the system incorrectly declared zero which caused a loss of revenue.
