@@ -231,8 +231,7 @@ This week's 119 relevant hours (excluding 21:30-05:00) split as:
   <text x="692" y="205" fill="#52525b" font-size="10" text-anchor="middle">27 Jul (this wk)</text>
 </svg>
 
-This is now two weeks of new highs in a row (35.3%, then 48.7%), on top of a prior six weeks that were flat in the 23-28% range. That's a real escalating pattern, not noise from the methodology change — worth raising with whoever manages declarations, independent of the turbine/production story.
-
+HR: Short notice declaration for week 27 largely affected by outage between 2026/07/28 and 2026/07/31.
 ## Operational context (Unity portal)
 
 Wind performance eased slightly to 21.2% this week (from 28.4%) on the same ~3 m/s wind speeds as always. Turbines remain at 12 of 14 flagged — unchanged for three straight weeks now regardless of performance swinging from 5.2% to 28.4% to 21.2%, which suggests the flag count itself isn't a reliable real-time performance indicator at this point. The currently-flagged unit is WTG01 (previously WTG21 two weeks ago). BESS is fully healthy: all 14 PCS units and the full battery array heatmap are green, no warnings. Two active alerts: a new critical "Combustible gas detecting device communication fault" (severity 100, Battery system Container 11.4) raised today, and the ongoing low-severity "Plant curtailment" (severity 20, Hybrid PPC) first seen last week.
