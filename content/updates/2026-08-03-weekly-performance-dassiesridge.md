@@ -79,14 +79,11 @@ Production keeps improving, but net MWh didn't follow this week — both gain an
 ## BESS Daily View
 
 <svg class="report-chart" viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg">
-  <text x="10" y="16" fill="#52525b" font-size="12">Daily hours charging vs. discharging (bars, left axis) and average SOC (line, right axis)</text>
+  <text x="10" y="16" fill="#52525b" font-size="12">Daily hours charging vs. discharging, vs. weekly average discharge (7.1h)</text>
   <line x1="55" y1="190" x2="705" y2="190" stroke="#d1d5db" stroke-width="1"/>
   <text x="50" y="193" fill="#6b7280" font-size="9" text-anchor="end">0h</text>
   <text x="50" y="108" fill="#6b7280" font-size="9" text-anchor="end">12h</text>
   <text x="50" y="24" fill="#6b7280" font-size="9" text-anchor="end">24h</text>
-  <text x="710" y="193" fill="#059669" font-size="9" text-anchor="start">0%</text>
-  <text x="710" y="108" fill="#059669" font-size="9" text-anchor="start">50%</text>
-  <text x="710" y="24" fill="#059669" font-size="9" text-anchor="start">100%</text>
   <rect x="81" y="70" width="40" height="120" fill="#3b82f6"/>
   <rect x="81" y="20" width="40" height="50" fill="#b45309"/>
   <rect x="174" y="77" width="40" height="113" fill="#3b82f6"/>
@@ -101,9 +98,8 @@ Production keeps improving, but net MWh didn't follow this week — both gain an
   <rect x="546" y="20" width="40" height="64" fill="#b45309"/>
   <rect x="639" y="62" width="40" height="128" fill="#3b82f6"/>
   <rect x="639" y="20" width="40" height="42" fill="#b45309"/>
-  <polyline points="101,123 194,122 287,126 380,170 473,151 566,135 659,173" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.85"/>
-  <polyline points="101,123 194,122 287,126 380,170 473,151 566,135 659,173" fill="none" stroke="#059669" stroke-width="2.5"/>
-  <circle cx="101" cy="123" r="3.5" fill="#059669"/><circle cx="194" cy="122" r="3.5" fill="#059669"/><circle cx="287" cy="126" r="3.5" fill="#059669"/><circle cx="380" cy="170" r="3.5" fill="#059669"/><circle cx="473" cy="151" r="3.5" fill="#059669"/><circle cx="566" cy="135" r="3.5" fill="#059669"/><circle cx="659" cy="173" r="3.5" fill="#059669"/>
+  <line x1="55" y1="139" x2="705" y2="139" stroke="#111827" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="710" y="142" fill="#111827" font-size="9" text-anchor="start">avg 7.1h</text>
   <text x="101" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Mon</text>
   <text x="194" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Tue</text>
   <text x="287" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Wed</text>
@@ -115,8 +111,8 @@ Production keeps improving, but net MWh didn't follow this week — both gain an
   <text x="106" y="231" fill="#52525b" font-size="10">Charging hours</text>
   <rect x="260" y="222" width="12" height="10" fill="#b45309"/>
   <text x="276" y="231" fill="#52525b" font-size="10">Discharging hours</text>
-  <line x1="430" y1="227" x2="452" y2="227" stroke="#059669" stroke-width="2.5"/>
-  <text x="458" y="231" fill="#52525b" font-size="10">Avg SOC %</text>
+  <line x1="430" y1="227" x2="452" y2="227" stroke="#111827" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="458" y="231" fill="#52525b" font-size="10">Weekly avg discharge</text>
 </svg>
 
 <svg class="report-chart" viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg">
@@ -127,6 +123,13 @@ Production keeps improving, but net MWh didn't follow this week — both gain an
   <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">80%</text>
   <polyline points="99,154 196,142 293,108 390,137 487,176 584,37 681,157" fill="none" stroke="#3b82f6" stroke-width="2"/>
   <circle cx="99" cy="154" r="3" fill="#3b82f6"/><circle cx="196" cy="142" r="3" fill="#3b82f6"/><circle cx="293" cy="108" r="3" fill="#3b82f6"/><circle cx="390" cy="137" r="3" fill="#3b82f6"/><circle cx="487" cy="176" r="3" fill="#3b82f6"/><circle cx="584" cy="37" r="3" fill="#3b82f6"/><circle cx="681" cy="157" r="3" fill="#3b82f6"/>
+  <text x="99" y="146" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">17.1%</text>
+  <text x="196" y="134" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">22.7%</text>
+  <text x="293" y="100" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">38.5%</text>
+  <text x="390" y="129" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">25.1%</text>
+  <text x="487" y="168" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">6.8%</text>
+  <text x="584" y="29" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">71.8%</text>
+  <text x="681" y="149" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">15.7%</text>
   <text x="99" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Mon</text>
   <text x="196" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Tue</text>
   <text x="293" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Wed</text>
@@ -136,7 +139,44 @@ Production keeps improving, but net MWh didn't follow this week — both gain an
   <text x="681" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Sun</text>
 </svg>
 
-Duration and SOC tell different stories. Friday spent 22 of 24 hours charging and just 2 discharging, yet SOC still only reached 23.1% — consistent with light, low-power charging rather than a strong bank-up. More strikingly, Sunday spent more hours charging than discharging (18h vs 6h) but ended the day at the week's lowest average SOC (10.0%), meaning the charging that did happen wasn't enough to offset a small number of high-power discharge hours. Hours spent in each state and how full the battery actually is are two different questions — this is why both are shown together. Separately, BESS's contribution to exports swung from 6.8% (Fri) to 71.8% (Sat) depending on how much wind was available to lean on it that day.
+<svg class="report-chart" viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="16" fill="#52525b" font-size="12">Daily exported production vs. declared (MWh) — BESS stacks on Wind only on days BESS was net positive</text>
+  <line x1="55" y1="190" x2="705" y2="190" stroke="#d1d5db" stroke-width="1"/>
+  <text x="50" y="193" fill="#6b7280" font-size="9" text-anchor="end">0</text>
+  <text x="50" y="108" fill="#6b7280" font-size="9" text-anchor="end">500</text>
+  <text x="50" y="24" fill="#6b7280" font-size="9" text-anchor="end">1000</text>
+  <rect x="81" y="40" width="40" height="150" fill="#3b82f6"/>
+  <line x1="77" y1="32" x2="125" y2="32" stroke="#111827" stroke-width="2"/>
+  <rect x="174" y="98" width="40" height="92" fill="#3b82f6"/>
+  <line x1="170" y1="95" x2="218" y2="95" stroke="#111827" stroke-width="2"/>
+  <rect x="267" y="141" width="40" height="49" fill="#3b82f6"/>
+  <rect x="267" y="126" width="40" height="15" fill="#059669"/>
+  <line x1="263" y1="122" x2="311" y2="122" stroke="#111827" stroke-width="2"/>
+  <rect x="360" y="164" width="40" height="26" fill="#3b82f6"/>
+  <line x1="356" y1="164" x2="404" y2="164" stroke="#111827" stroke-width="2"/>
+  <rect x="453" y="162" width="40" height="28" fill="#3b82f6"/>
+  <line x1="449" y1="145" x2="497" y2="145" stroke="#111827" stroke-width="2"/>
+  <rect x="546" y="179" width="40" height="11" fill="#3b82f6"/>
+  <rect x="546" y="156" width="40" height="23" fill="#059669"/>
+  <line x1="542" y1="146" x2="590" y2="146" stroke="#111827" stroke-width="2"/>
+  <rect x="639" y="128" width="40" height="62" fill="#3b82f6"/>
+  <line x1="635" y1="121" x2="683" y2="121" stroke="#111827" stroke-width="2"/>
+  <text x="101" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Mon</text>
+  <text x="194" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Tue</text>
+  <text x="287" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Wed</text>
+  <text x="380" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Thu</text>
+  <text x="473" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Fri</text>
+  <text x="566" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Sat</text>
+  <text x="659" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Sun</text>
+  <rect x="90" y="222" width="12" height="10" fill="#3b82f6"/>
+  <text x="106" y="231" fill="#52525b" font-size="10">Wind (or total when BESS net-charged)</text>
+  <rect x="330" y="222" width="12" height="10" fill="#059669"/>
+  <text x="346" y="231" fill="#52525b" font-size="10">BESS (net positive days only)</text>
+  <line x1="580" y1="227" x2="602" y2="227" stroke="#111827" stroke-width="2"/>
+  <text x="608" y="231" fill="#52525b" font-size="10">Declared</text>
+</svg>
+
+The reference line makes the charge/discharge split easy to read at a glance: only Monday and Sunday clearly out-discharge the weekly average, while most days lean more toward charging. On the contribution chart, Saturday (71.8%) and Wednesday (38.5%) stand out as the two days BESS carried a large share of exports — and those are exactly the two days it was a net-positive contributor rather than a net drain, visible in the export breakdown below. Every other day fell short of declared, sometimes by a wide margin (Friday exported 164.8 MWh against 263.6 MWh declared) — with Wind alone responsible for the shortfall on those days, since BESS wasn't adding on top.
 
 ## Month- and year-to-date
 
