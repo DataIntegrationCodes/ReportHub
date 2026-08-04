@@ -78,58 +78,53 @@ Production keeps improving, but net MWh didn't follow this week — both gain an
 
 ## BESS Daily View
 
-<svg class="report-chart" viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg">
-  <text x="10" y="16" fill="#52525b" font-size="12">Daily BESS charge &amp; discharge (MWh) — bars = this week, dashed lines = last week</text>
-  <line x1="50" y1="190" x2="730" y2="190" stroke="#d1d5db" stroke-width="1"/>
-  <text x="45" y="193" fill="#6b7280" font-size="9" text-anchor="end">0</text>
-  <text x="45" y="108" fill="#6b7280" font-size="9" text-anchor="end">150</text>
-  <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">300</text>
-  <rect x="79" y="35" width="18" height="155" fill="#3b82f6"/>
-  <rect x="101" y="105" width="18" height="85" fill="#b45309"/>
-  <rect x="176" y="109" width="18" height="81" fill="#3b82f6"/>
-  <rect x="198" y="121" width="18" height="69" fill="#b45309"/>
-  <rect x="273" y="159" width="18" height="31" fill="#3b82f6"/>
-  <rect x="295" y="110" width="18" height="80" fill="#b45309"/>
-  <rect x="370" y="156" width="18" height="34" fill="#3b82f6"/>
-  <rect x="392" y="168" width="18" height="22" fill="#b45309"/>
-  <rect x="467" y="114" width="18" height="76" fill="#3b82f6"/>
-  <rect x="489" y="184" width="18" height="6" fill="#b45309"/>
-  <rect x="564" y="187" width="18" height="3" fill="#3b82f6"/>
-  <rect x="586" y="111" width="18" height="79" fill="#b45309"/>
-  <rect x="661" y="144" width="18" height="46" fill="#3b82f6"/>
-  <rect x="683" y="157" width="18" height="33" fill="#b45309"/>
-  <polyline points="99,130 196,179 293,113 390,105 487,155 584,179 681,152" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.85"/>
-  <polyline points="99,130 196,179 293,113 390,105 487,155 584,179 681,152" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="6,4"/>
-  <polyline points="99,92 196,182 293,140 390,144 487,110 584,184 681,163" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.85"/>
-  <polyline points="99,92 196,182 293,140 390,144 487,110 584,184 681,163" fill="none" stroke="#92400e" stroke-width="2" stroke-dasharray="6,4"/>
-  <circle cx="99" cy="130" r="3" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/><circle cx="196" cy="179" r="3" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/><circle cx="293" cy="113" r="3" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/><circle cx="390" cy="105" r="3" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/><circle cx="487" cy="155" r="3" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/><circle cx="584" cy="179" r="3" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/><circle cx="681" cy="152" r="3" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/>
-  <circle cx="99" cy="92" r="3" fill="#ffffff" stroke="#92400e" stroke-width="1.5"/><circle cx="196" cy="182" r="3" fill="#ffffff" stroke="#92400e" stroke-width="1.5"/><circle cx="293" cy="140" r="3" fill="#ffffff" stroke="#92400e" stroke-width="1.5"/><circle cx="390" cy="144" r="3" fill="#ffffff" stroke="#92400e" stroke-width="1.5"/><circle cx="487" cy="110" r="3" fill="#ffffff" stroke="#92400e" stroke-width="1.5"/><circle cx="584" cy="184" r="3" fill="#ffffff" stroke="#92400e" stroke-width="1.5"/><circle cx="681" cy="163" r="3" fill="#ffffff" stroke="#92400e" stroke-width="1.5"/>
-  <text x="99" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Mon</text>
-  <text x="196" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Tue</text>
-  <text x="293" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Wed</text>
-  <text x="390" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Thu</text>
-  <text x="487" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Fri</text>
-  <text x="584" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Sat</text>
-  <text x="681" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Sun</text>
-  <rect x="90" y="220" width="12" height="10" fill="#3b82f6"/>
-  <text x="106" y="229" fill="#52525b" font-size="10">Charge (this week)</text>
-  <rect x="280" y="220" width="12" height="10" fill="#b45309"/>
-  <text x="296" y="229" fill="#52525b" font-size="10">Discharge (this week)</text>
-  <line x1="90" y1="245" x2="112" y2="245" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="6,4"/>
-  <text x="118" y="248" fill="#52525b" font-size="10">Charge (last week)</text>
-  <line x1="300" y1="245" x2="322" y2="245" stroke="#92400e" stroke-width="2" stroke-dasharray="6,4"/>
-  <text x="328" y="248" fill="#52525b" font-size="10">Discharge (last week)</text>
+<svg class="report-chart" viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="16" fill="#52525b" font-size="12">Daily hours charging vs. discharging (bars, left axis) and average SOC (line, right axis)</text>
+  <line x1="55" y1="190" x2="705" y2="190" stroke="#d1d5db" stroke-width="1"/>
+  <text x="50" y="193" fill="#6b7280" font-size="9" text-anchor="end">0h</text>
+  <text x="50" y="108" fill="#6b7280" font-size="9" text-anchor="end">12h</text>
+  <text x="50" y="24" fill="#6b7280" font-size="9" text-anchor="end">24h</text>
+  <text x="710" y="193" fill="#059669" font-size="9" text-anchor="start">0%</text>
+  <text x="710" y="108" fill="#059669" font-size="9" text-anchor="start">50%</text>
+  <text x="710" y="24" fill="#059669" font-size="9" text-anchor="start">100%</text>
+  <rect x="81" y="70" width="40" height="120" fill="#3b82f6"/>
+  <rect x="81" y="20" width="40" height="50" fill="#b45309"/>
+  <rect x="174" y="77" width="40" height="113" fill="#3b82f6"/>
+  <rect x="174" y="20" width="40" height="57" fill="#b45309"/>
+  <rect x="267" y="84" width="40" height="106" fill="#3b82f6"/>
+  <rect x="267" y="20" width="40" height="64" fill="#b45309"/>
+  <rect x="360" y="84" width="40" height="106" fill="#3b82f6"/>
+  <rect x="360" y="20" width="40" height="64" fill="#b45309"/>
+  <rect x="453" y="34" width="40" height="156" fill="#3b82f6"/>
+  <rect x="453" y="20" width="40" height="14" fill="#b45309"/>
+  <rect x="546" y="84" width="40" height="106" fill="#3b82f6"/>
+  <rect x="546" y="20" width="40" height="64" fill="#b45309"/>
+  <rect x="639" y="62" width="40" height="128" fill="#3b82f6"/>
+  <rect x="639" y="20" width="40" height="42" fill="#b45309"/>
+  <polyline points="101,123 194,122 287,126 380,170 473,151 566,135 659,173" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.85"/>
+  <polyline points="101,123 194,122 287,126 380,170 473,151 566,135 659,173" fill="none" stroke="#059669" stroke-width="2.5"/>
+  <circle cx="101" cy="123" r="3.5" fill="#059669"/><circle cx="194" cy="122" r="3.5" fill="#059669"/><circle cx="287" cy="126" r="3.5" fill="#059669"/><circle cx="380" cy="170" r="3.5" fill="#059669"/><circle cx="473" cy="151" r="3.5" fill="#059669"/><circle cx="566" cy="135" r="3.5" fill="#059669"/><circle cx="659" cy="173" r="3.5" fill="#059669"/>
+  <text x="101" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Mon</text>
+  <text x="194" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Tue</text>
+  <text x="287" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Wed</text>
+  <text x="380" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Thu</text>
+  <text x="473" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Fri</text>
+  <text x="566" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Sat</text>
+  <text x="659" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Sun</text>
+  <rect x="90" y="222" width="12" height="10" fill="#3b82f6"/>
+  <text x="106" y="231" fill="#52525b" font-size="10">Charging hours</text>
+  <rect x="260" y="222" width="12" height="10" fill="#b45309"/>
+  <text x="276" y="231" fill="#52525b" font-size="10">Discharging hours</text>
+  <line x1="430" y1="227" x2="452" y2="227" stroke="#059669" stroke-width="2.5"/>
+  <text x="458" y="231" fill="#52525b" font-size="10">Avg SOC %</text>
 </svg>
 
 <svg class="report-chart" viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg">
-  <text x="10" y="16" fill="#52525b" font-size="12">Daily BESS contribution to exports (%) — solid = this week, dashed = last week</text>
+  <text x="10" y="16" fill="#52525b" font-size="12">Daily BESS contribution to exports this week (%)</text>
   <line x1="50" y1="190" x2="730" y2="190" stroke="#d1d5db" stroke-width="1"/>
   <text x="45" y="193" fill="#6b7280" font-size="9" text-anchor="end">0%</text>
   <text x="45" y="108" fill="#6b7280" font-size="9" text-anchor="end">40%</text>
   <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">80%</text>
-  <polyline points="99,105 196,119 293,148 390,155 487,74 584,61 681,166" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.85"/>
-  <polyline points="99,105 196,119 293,148 390,155 487,74 584,61 681,166" fill="none" stroke="#6b7280" stroke-width="2" stroke-dasharray="6,4"/>
-  <circle cx="99" cy="105" r="3" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/><circle cx="196" cy="119" r="3" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/><circle cx="293" cy="148" r="3" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/><circle cx="390" cy="155" r="3" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/><circle cx="487" cy="74" r="3" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/><circle cx="584" cy="61" r="3" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/><circle cx="681" cy="166" r="3" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
   <polyline points="99,154 196,142 293,108 390,137 487,176 584,37 681,157" fill="none" stroke="#3b82f6" stroke-width="2"/>
   <circle cx="99" cy="154" r="3" fill="#3b82f6"/><circle cx="196" cy="142" r="3" fill="#3b82f6"/><circle cx="293" cy="108" r="3" fill="#3b82f6"/><circle cx="390" cy="137" r="3" fill="#3b82f6"/><circle cx="487" cy="176" r="3" fill="#3b82f6"/><circle cx="584" cy="37" r="3" fill="#3b82f6"/><circle cx="681" cy="157" r="3" fill="#3b82f6"/>
   <text x="99" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Mon</text>
@@ -139,13 +134,9 @@ Production keeps improving, but net MWh didn't follow this week — both gain an
   <text x="487" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Fri</text>
   <text x="584" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Sat</text>
   <text x="681" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Sun</text>
-  <line x1="480" y1="228" x2="500" y2="228" stroke="#3b82f6" stroke-width="2"/>
-  <text x="505" y="231" fill="#52525b" font-size="10">This week</text>
-  <line x1="580" y1="228" x2="600" y2="228" stroke="#6b7280" stroke-width="2" stroke-dasharray="6,4"/>
-  <text x="605" y="231" fill="#52525b" font-size="10">Last week</text>
 </svg>
 
-Both weeks show the same pattern: charge and discharge trade off day to day rather than moving together, and BESS's contribution share swings widely — from 6.8% (Fri, this week) up to 71.8% (Sat, this week) depending on how much wind was available that day to bank in the first place. Saturday stands out this week: charge nearly stopped (5.5 MWh) while discharge stayed high (138.8 MWh), consistent with BESS running down a charge built up earlier in the week rather than cycling same-day.
+Duration and SOC tell different stories. Friday spent 22 of 24 hours charging and just 2 discharging, yet SOC still only reached 23.1% — consistent with light, low-power charging rather than a strong bank-up. More strikingly, Sunday spent more hours charging than discharging (18h vs 6h) but ended the day at the week's lowest average SOC (10.0%), meaning the charging that did happen wasn't enough to offset a small number of high-power discharge hours. Hours spent in each state and how full the battery actually is are two different questions — this is why both are shown together. Separately, BESS's contribution to exports swung from 6.8% (Fri) to 71.8% (Sat) depending on how much wind was available to lean on it that day.
 
 ## Month- and year-to-date
 
