@@ -145,22 +145,22 @@ Production keeps improving, but net MWh didn't follow this week — both gain an
   <text x="50" y="193" fill="#6b7280" font-size="9" text-anchor="end">0</text>
   <text x="50" y="108" fill="#6b7280" font-size="9" text-anchor="end">500</text>
   <text x="50" y="24" fill="#6b7280" font-size="9" text-anchor="end">1000</text>
-  <rect x="81" y="40" width="40" height="150" fill="#3b82f6"/>
-  <line x1="77" y1="32" x2="125" y2="32" stroke="#111827" stroke-width="2"/>
-  <rect x="174" y="98" width="40" height="92" fill="#3b82f6"/>
-  <line x1="170" y1="95" x2="218" y2="95" stroke="#111827" stroke-width="2"/>
-  <rect x="267" y="141" width="40" height="49" fill="#3b82f6"/>
-  <rect x="267" y="126" width="40" height="15" fill="#059669"/>
-  <line x1="263" y1="122" x2="311" y2="122" stroke="#111827" stroke-width="2"/>
-  <rect x="360" y="164" width="40" height="26" fill="#3b82f6"/>
-  <line x1="356" y1="164" x2="404" y2="164" stroke="#111827" stroke-width="2"/>
-  <rect x="453" y="162" width="40" height="28" fill="#3b82f6"/>
-  <line x1="449" y1="145" x2="497" y2="145" stroke="#111827" stroke-width="2"/>
-  <rect x="546" y="179" width="40" height="11" fill="#3b82f6"/>
-  <rect x="546" y="156" width="40" height="23" fill="#059669"/>
-  <line x1="542" y1="146" x2="590" y2="146" stroke="#111827" stroke-width="2"/>
-  <rect x="639" y="128" width="40" height="62" fill="#3b82f6"/>
-  <line x1="635" y1="121" x2="683" y2="121" stroke="#111827" stroke-width="2"/>
+  <rect x="81" y="40" width="40" height="150" fill="#3b82f6"><title>Mon: Exported 879.4 MWh (Wind, BESS net-charged)</title></rect>
+  <line x1="77" y1="32" x2="125" y2="32" stroke="#111827" stroke-width="2"><title>Mon: Declared 929.8 MWh</title></line>
+  <rect x="174" y="98" width="40" height="92" fill="#3b82f6"><title>Tue: Exported 539.0 MWh (Wind, BESS net-charged)</title></rect>
+  <line x1="170" y1="95" x2="218" y2="95" stroke="#111827" stroke-width="2"><title>Tue: Declared 558.8 MWh</title></line>
+  <rect x="267" y="141" width="40" height="49" fill="#3b82f6"><title>Wed: Wind 286.8 MWh</title></rect>
+  <rect x="267" y="126" width="40" height="15" fill="#059669"><title>Wed: BESS +87.4 MWh (net positive)</title></rect>
+  <line x1="263" y1="122" x2="311" y2="122" stroke="#111827" stroke-width="2"><title>Wed: Declared 402.0 MWh</title></line>
+  <rect x="360" y="164" width="40" height="26" fill="#3b82f6"><title>Thu: Exported 153.6 MWh (Wind, BESS net-charged)</title></rect>
+  <line x1="356" y1="164" x2="404" y2="164" stroke="#111827" stroke-width="2"><title>Thu: Declared 152.8 MWh</title></line>
+  <rect x="453" y="162" width="40" height="28" fill="#3b82f6"><title>Fri: Exported 164.8 MWh (Wind, BESS net-charged)</title></rect>
+  <line x1="449" y1="145" x2="497" y2="145" stroke="#111827" stroke-width="2"><title>Fri: Declared 263.6 MWh</title></line>
+  <rect x="546" y="179" width="40" height="11" fill="#3b82f6"><title>Sat: Wind 62.8 MWh</title></rect>
+  <rect x="546" y="156" width="40" height="23" fill="#059669"><title>Sat: BESS +133.3 MWh (net positive)</title></rect>
+  <line x1="542" y1="146" x2="590" y2="146" stroke="#111827" stroke-width="2"><title>Sat: Declared 258.7 MWh</title></line>
+  <rect x="639" y="128" width="40" height="62" fill="#3b82f6"><title>Sun: Exported 366.9 MWh (Wind, BESS net-charged)</title></rect>
+  <line x1="635" y1="121" x2="683" y2="121" stroke="#111827" stroke-width="2"><title>Sun: Declared 408.8 MWh</title></line>
   <text x="101" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Mon</text>
   <text x="194" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Tue</text>
   <text x="287" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Wed</text>
