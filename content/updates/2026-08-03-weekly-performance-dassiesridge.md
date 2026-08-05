@@ -309,8 +309,7 @@ The reference line makes the charge/discharge split easy to read at a glance: on
   <text x="378" y="317" fill="#52525b" font-size="10">&lt;60%</text>
 </svg>
 
-Two patterns stand out. First, most of the fleet moves together day to day — Mon/Sat/Sun sit near 100%, Tue drops to ~65%, Wed to ~73%, Thu recovers to ~91%, and Fri is the week's worst day for nearly every unit (~35-43%) — which reads as a shared, fleet-wide constraint on those specific days rather than scattered individual faults. Second, three units break from that common pattern: PCS03 and PCS09 dip below the fleet on select days, and **PCS11** is consistently the worst performer of all 14 units on every single day of the week, including days (Tue, Wed, Fri) where it's meaningfully behind even the fleet's already-low readings. That's the unit worth a maintenance look first.
-
+Three units break from that common pattern: PCS03 and PCS09 dip below the fleet on select days, and **PCS11** is consistently the worst performer of all 14 units on every single day of the week, including days (Tue, Wed, Fri) where it's meaningfully behind even the fleet's already-low readings. That's the unit worth a maintenance look first.
 ## Month- and year-to-date
 
 | Period | Exported production | Declared utilisation | Wind contribution | BESS contribution |
