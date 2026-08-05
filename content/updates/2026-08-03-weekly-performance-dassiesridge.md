@@ -178,6 +178,139 @@ Production keeps improving, but net MWh didn't follow this week — both gain an
 
 The reference line makes the charge/discharge split easy to read at a glance: only Monday and Sunday clearly out-discharge the weekly average, while most days lean more toward charging. On the contribution chart, Saturday (71.8%) and Wednesday (38.5%) stand out as the two days BESS carried a large share of exports — and those are exactly the two days it was a net-positive contributor rather than a net drain, visible in the export breakdown below. Every other day fell short of declared, sometimes by a wide margin (Friday exported 164.8 MWh against 263.6 MWh declared) — with Wind alone responsible for the shortfall on those days, since BESS wasn't adding on top.
 
+### PCS availability heatmap
+
+<svg class="report-chart" viewBox="0 0 740 340" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="16" fill="#52525b" font-size="12">Per-unit PCS availability by day — hover any cell for the exact %</text>
+  <text x="103" y="32" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Mon</text>
+  <text x="193" y="32" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Tue</text>
+  <text x="283" y="32" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Wed</text>
+  <text x="373" y="32" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Thu</text>
+  <text x="463" y="32" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Fri</text>
+  <text x="553" y="32" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Sat</text>
+  <text x="643" y="32" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Sun</text>
+  <text x="55" y="53" fill="#374151" font-size="10" text-anchor="end">PCS01</text>
+  <rect x="60" y="40" width="86" height="16" rx="2" fill="#059669"><title>PCS01 Mon: 100.0% available</title></rect>
+  <rect x="150" y="40" width="86" height="16" rx="2" fill="#d97706"><title>PCS01 Tue: 65.4% available</title></rect>
+  <rect x="240" y="40" width="86" height="16" rx="2" fill="#d97706"><title>PCS01 Wed: 72.8% available</title></rect>
+  <rect x="330" y="40" width="86" height="16" rx="2" fill="#059669"><title>PCS01 Thu: 91.2% available</title></rect>
+  <rect x="420" y="40" width="86" height="16" rx="2" fill="#dc2626"><title>PCS01 Fri: 43.1% available</title></rect>
+  <rect x="510" y="40" width="86" height="16" rx="2" fill="#059669"><title>PCS01 Sat: 100.0% available</title></rect>
+  <rect x="600" y="40" width="86" height="16" rx="2" fill="#059669"><title>PCS01 Sun: 100.0% available</title></rect>
+  <text x="55" y="71" fill="#374151" font-size="10" text-anchor="end">PCS02</text>
+  <rect x="60" y="58" width="86" height="16" rx="2" fill="#059669"><title>PCS02 Mon: 100.0% available</title></rect>
+  <rect x="150" y="58" width="86" height="16" rx="2" fill="#d97706"><title>PCS02 Tue: 65.4% available</title></rect>
+  <rect x="240" y="58" width="86" height="16" rx="2" fill="#d97706"><title>PCS02 Wed: 72.8% available</title></rect>
+  <rect x="330" y="58" width="86" height="16" rx="2" fill="#059669"><title>PCS02 Thu: 91.2% available</title></rect>
+  <rect x="420" y="58" width="86" height="16" rx="2" fill="#dc2626"><title>PCS02 Fri: 36.5% available</title></rect>
+  <rect x="510" y="58" width="86" height="16" rx="2" fill="#059669"><title>PCS02 Sat: 100.0% available</title></rect>
+  <rect x="600" y="58" width="86" height="16" rx="2" fill="#059669"><title>PCS02 Sun: 100.0% available</title></rect>
+  <text x="55" y="89" fill="#374151" font-size="10" text-anchor="end">PCS03</text>
+  <rect x="60" y="76" width="86" height="16" rx="2" fill="#dc2626"><title>PCS03 Mon: 50.0% available</title></rect>
+  <rect x="150" y="76" width="86" height="16" rx="2" fill="#dc2626"><title>PCS03 Tue: 50.4% available</title></rect>
+  <rect x="240" y="76" width="86" height="16" rx="2" fill="#d97706"><title>PCS03 Wed: 72.8% available</title></rect>
+  <rect x="330" y="76" width="86" height="16" rx="2" fill="#059669"><title>PCS03 Thu: 91.2% available</title></rect>
+  <rect x="420" y="76" width="86" height="16" rx="2" fill="#dc2626"><title>PCS03 Fri: 40.9% available</title></rect>
+  <rect x="510" y="76" width="86" height="16" rx="2" fill="#059669"><title>PCS03 Sat: 100.0% available</title></rect>
+  <rect x="600" y="76" width="86" height="16" rx="2" fill="#059669"><title>PCS03 Sun: 100.0% available</title></rect>
+  <text x="55" y="107" fill="#374151" font-size="10" text-anchor="end">PCS04</text>
+  <rect x="60" y="94" width="86" height="16" rx="2" fill="#059669"><title>PCS04 Mon: 100.0% available</title></rect>
+  <rect x="150" y="94" width="86" height="16" rx="2" fill="#d97706"><title>PCS04 Tue: 65.4% available</title></rect>
+  <rect x="240" y="94" width="86" height="16" rx="2" fill="#d97706"><title>PCS04 Wed: 72.8% available</title></rect>
+  <rect x="330" y="94" width="86" height="16" rx="2" fill="#059669"><title>PCS04 Thu: 91.2% available</title></rect>
+  <rect x="420" y="94" width="86" height="16" rx="2" fill="#dc2626"><title>PCS04 Fri: 37.2% available</title></rect>
+  <rect x="510" y="94" width="86" height="16" rx="2" fill="#059669"><title>PCS04 Sat: 100.0% available</title></rect>
+  <rect x="600" y="94" width="86" height="16" rx="2" fill="#059669"><title>PCS04 Sun: 100.0% available</title></rect>
+  <text x="55" y="125" fill="#374151" font-size="10" text-anchor="end">PCS05</text>
+  <rect x="60" y="112" width="86" height="16" rx="2" fill="#059669"><title>PCS05 Mon: 100.0% available</title></rect>
+  <rect x="150" y="112" width="86" height="16" rx="2" fill="#d97706"><title>PCS05 Tue: 65.4% available</title></rect>
+  <rect x="240" y="112" width="86" height="16" rx="2" fill="#d97706"><title>PCS05 Wed: 72.7% available</title></rect>
+  <rect x="330" y="112" width="86" height="16" rx="2" fill="#059669"><title>PCS05 Thu: 91.2% available</title></rect>
+  <rect x="420" y="112" width="86" height="16" rx="2" fill="#dc2626"><title>PCS05 Fri: 39.1% available</title></rect>
+  <rect x="510" y="112" width="86" height="16" rx="2" fill="#059669"><title>PCS05 Sat: 100.0% available</title></rect>
+  <rect x="600" y="112" width="86" height="16" rx="2" fill="#059669"><title>PCS05 Sun: 100.0% available</title></rect>
+  <text x="55" y="143" fill="#374151" font-size="10" text-anchor="end">PCS06</text>
+  <rect x="60" y="130" width="86" height="16" rx="2" fill="#059669"><title>PCS06 Mon: 100.0% available</title></rect>
+  <rect x="150" y="130" width="86" height="16" rx="2" fill="#d97706"><title>PCS06 Tue: 65.4% available</title></rect>
+  <rect x="240" y="130" width="86" height="16" rx="2" fill="#d97706"><title>PCS06 Wed: 72.8% available</title></rect>
+  <rect x="330" y="130" width="86" height="16" rx="2" fill="#059669"><title>PCS06 Thu: 91.2% available</title></rect>
+  <rect x="420" y="130" width="86" height="16" rx="2" fill="#dc2626"><title>PCS06 Fri: 39.2% available</title></rect>
+  <rect x="510" y="130" width="86" height="16" rx="2" fill="#059669"><title>PCS06 Sat: 100.0% available</title></rect>
+  <rect x="600" y="130" width="86" height="16" rx="2" fill="#059669"><title>PCS06 Sun: 99.9% available</title></rect>
+  <text x="55" y="161" fill="#374151" font-size="10" text-anchor="end">PCS07</text>
+  <rect x="60" y="148" width="86" height="16" rx="2" fill="#059669"><title>PCS07 Mon: 100.0% available</title></rect>
+  <rect x="150" y="148" width="86" height="16" rx="2" fill="#d97706"><title>PCS07 Tue: 65.4% available</title></rect>
+  <rect x="240" y="148" width="86" height="16" rx="2" fill="#d97706"><title>PCS07 Wed: 72.8% available</title></rect>
+  <rect x="330" y="148" width="86" height="16" rx="2" fill="#059669"><title>PCS07 Thu: 91.2% available</title></rect>
+  <rect x="420" y="148" width="86" height="16" rx="2" fill="#dc2626"><title>PCS07 Fri: 37.2% available</title></rect>
+  <rect x="510" y="148" width="86" height="16" rx="2" fill="#059669"><title>PCS07 Sat: 100.0% available</title></rect>
+  <rect x="600" y="148" width="86" height="16" rx="2" fill="#059669"><title>PCS07 Sun: 100.0% available</title></rect>
+  <text x="55" y="179" fill="#374151" font-size="10" text-anchor="end">PCS08</text>
+  <rect x="60" y="166" width="86" height="16" rx="2" fill="#059669"><title>PCS08 Mon: 100.0% available</title></rect>
+  <rect x="150" y="166" width="86" height="16" rx="2" fill="#d97706"><title>PCS08 Tue: 65.4% available</title></rect>
+  <rect x="240" y="166" width="86" height="16" rx="2" fill="#d97706"><title>PCS08 Wed: 72.8% available</title></rect>
+  <rect x="330" y="166" width="86" height="16" rx="2" fill="#059669"><title>PCS08 Thu: 91.2% available</title></rect>
+  <rect x="420" y="166" width="86" height="16" rx="2" fill="#dc2626"><title>PCS08 Fri: 43.2% available</title></rect>
+  <rect x="510" y="166" width="86" height="16" rx="2" fill="#059669"><title>PCS08 Sat: 100.0% available</title></rect>
+  <rect x="600" y="166" width="86" height="16" rx="2" fill="#059669"><title>PCS08 Sun: 100.0% available</title></rect>
+  <text x="55" y="197" fill="#374151" font-size="10" text-anchor="end">PCS09</text>
+  <rect x="60" y="184" width="86" height="16" rx="2" fill="#059669"><title>PCS09 Mon: 99.7% available</title></rect>
+  <rect x="150" y="184" width="86" height="16" rx="2" fill="#d97706"><title>PCS09 Tue: 65.4% available</title></rect>
+  <rect x="240" y="184" width="86" height="16" rx="2" fill="#d97706"><title>PCS09 Wed: 69.9% available</title></rect>
+  <rect x="330" y="184" width="86" height="16" rx="2" fill="#d97706"><title>PCS09 Thu: 83.5% available</title></rect>
+  <rect x="420" y="184" width="86" height="16" rx="2" fill="#dc2626"><title>PCS09 Fri: 41.4% available</title></rect>
+  <rect x="510" y="184" width="86" height="16" rx="2" fill="#059669"><title>PCS09 Sat: 90.3% available</title></rect>
+  <rect x="600" y="184" width="86" height="16" rx="2" fill="#059669"><title>PCS09 Sun: 97.1% available</title></rect>
+  <text x="55" y="215" fill="#374151" font-size="10" text-anchor="end">PCS10</text>
+  <rect x="60" y="202" width="86" height="16" rx="2" fill="#059669"><title>PCS10 Mon: 100.0% available</title></rect>
+  <rect x="150" y="202" width="86" height="16" rx="2" fill="#d97706"><title>PCS10 Tue: 65.4% available</title></rect>
+  <rect x="240" y="202" width="86" height="16" rx="2" fill="#d97706"><title>PCS10 Wed: 72.8% available</title></rect>
+  <rect x="330" y="202" width="86" height="16" rx="2" fill="#059669"><title>PCS10 Thu: 91.2% available</title></rect>
+  <rect x="420" y="202" width="86" height="16" rx="2" fill="#dc2626"><title>PCS10 Fri: 37.2% available</title></rect>
+  <rect x="510" y="202" width="86" height="16" rx="2" fill="#059669"><title>PCS10 Sat: 100.0% available</title></rect>
+  <rect x="600" y="202" width="86" height="16" rx="2" fill="#059669"><title>PCS10 Sun: 100.0% available</title></rect>
+  <text x="55" y="233" fill="#374151" font-size="10" text-anchor="end">PCS11</text>
+  <rect x="60" y="220" width="86" height="16" rx="2" fill="#059669"><title>PCS11 Mon: 91.6% available</title></rect>
+  <rect x="150" y="220" width="86" height="16" rx="2" fill="#dc2626"><title>PCS11 Tue: 49.6% available</title></rect>
+  <rect x="240" y="220" width="86" height="16" rx="2" fill="#dc2626"><title>PCS11 Wed: 54.8% available</title></rect>
+  <rect x="330" y="220" width="86" height="16" rx="2" fill="#d97706"><title>PCS11 Thu: 77.8% available</title></rect>
+  <rect x="420" y="220" width="86" height="16" rx="2" fill="#dc2626"><title>PCS11 Fri: 29.8% available</title></rect>
+  <rect x="510" y="220" width="86" height="16" rx="2" fill="#d97706"><title>PCS11 Sat: 84.5% available</title></rect>
+  <rect x="600" y="220" width="86" height="16" rx="2" fill="#d97706"><title>PCS11 Sun: 85.1% available</title></rect>
+  <text x="55" y="251" fill="#374151" font-size="10" text-anchor="end">PCS12</text>
+  <rect x="60" y="238" width="86" height="16" rx="2" fill="#059669"><title>PCS12 Mon: 100.0% available</title></rect>
+  <rect x="150" y="238" width="86" height="16" rx="2" fill="#d97706"><title>PCS12 Tue: 65.4% available</title></rect>
+  <rect x="240" y="238" width="86" height="16" rx="2" fill="#d97706"><title>PCS12 Wed: 72.8% available</title></rect>
+  <rect x="330" y="238" width="86" height="16" rx="2" fill="#059669"><title>PCS12 Thu: 91.2% available</title></rect>
+  <rect x="420" y="238" width="86" height="16" rx="2" fill="#dc2626"><title>PCS12 Fri: 39.2% available</title></rect>
+  <rect x="510" y="238" width="86" height="16" rx="2" fill="#059669"><title>PCS12 Sat: 100.0% available</title></rect>
+  <rect x="600" y="238" width="86" height="16" rx="2" fill="#059669"><title>PCS12 Sun: 100.0% available</title></rect>
+  <text x="55" y="269" fill="#374151" font-size="10" text-anchor="end">PCS13</text>
+  <rect x="60" y="256" width="86" height="16" rx="2" fill="#059669"><title>PCS13 Mon: 100.0% available</title></rect>
+  <rect x="150" y="256" width="86" height="16" rx="2" fill="#d97706"><title>PCS13 Tue: 65.4% available</title></rect>
+  <rect x="240" y="256" width="86" height="16" rx="2" fill="#d97706"><title>PCS13 Wed: 72.8% available</title></rect>
+  <rect x="330" y="256" width="86" height="16" rx="2" fill="#059669"><title>PCS13 Thu: 91.2% available</title></rect>
+  <rect x="420" y="256" width="86" height="16" rx="2" fill="#dc2626"><title>PCS13 Fri: 32.4% available</title></rect>
+  <rect x="510" y="256" width="86" height="16" rx="2" fill="#059669"><title>PCS13 Sat: 100.0% available</title></rect>
+  <rect x="600" y="256" width="86" height="16" rx="2" fill="#059669"><title>PCS13 Sun: 100.0% available</title></rect>
+  <text x="55" y="287" fill="#374151" font-size="10" text-anchor="end">PCS14</text>
+  <rect x="60" y="274" width="86" height="16" rx="2" fill="#059669"><title>PCS14 Mon: 100.0% available</title></rect>
+  <rect x="150" y="274" width="86" height="16" rx="2" fill="#d97706"><title>PCS14 Tue: 65.4% available</title></rect>
+  <rect x="240" y="274" width="86" height="16" rx="2" fill="#d97706"><title>PCS14 Wed: 72.8% available</title></rect>
+  <rect x="330" y="274" width="86" height="16" rx="2" fill="#059669"><title>PCS14 Thu: 91.2% available</title></rect>
+  <rect x="420" y="274" width="86" height="16" rx="2" fill="#dc2626"><title>PCS14 Fri: 41.1% available</title></rect>
+  <rect x="510" y="274" width="86" height="16" rx="2" fill="#059669"><title>PCS14 Sat: 100.0% available</title></rect>
+  <rect x="600" y="274" width="86" height="16" rx="2" fill="#059669"><title>PCS14 Sun: 99.9% available</title></rect>
+  <rect x="60" y="308" width="14" height="12" rx="2" fill="#059669"/>
+  <text x="78" y="317" fill="#52525b" font-size="10">&#8805;90% available</text>
+  <rect x="220" y="308" width="14" height="12" rx="2" fill="#d97706"/>
+  <text x="238" y="317" fill="#52525b" font-size="10">60-89%</text>
+  <rect x="360" y="308" width="14" height="12" rx="2" fill="#dc2626"/>
+  <text x="378" y="317" fill="#52525b" font-size="10">&lt;60%</text>
+</svg>
+
+Two patterns stand out. First, most of the fleet moves together day to day — Mon/Sat/Sun sit near 100%, Tue drops to ~65%, Wed to ~73%, Thu recovers to ~91%, and Fri is the week's worst day for nearly every unit (~35-43%) — which reads as a shared, fleet-wide constraint on those specific days rather than scattered individual faults. Second, three units break from that common pattern: PCS03 and PCS09 dip below the fleet on select days, and **PCS11** is consistently the worst performer of all 14 units on every single day of the week, including days (Tue, Wed, Fri) where it's meaningfully behind even the fleet's already-low readings. That's the unit worth a maintenance look first.
+
 ## Month- and year-to-date
 
 | Period | Exported production | Declared utilisation | Wind contribution | BESS contribution |
