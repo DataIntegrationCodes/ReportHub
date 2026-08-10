@@ -15,7 +15,7 @@ Dassiesridge Hybrid (Wind + BESS) exported 3.42 GWh this week, up 28.3% on last 
 </div>
 
 <div class="callout callout-issue">
-<strong>Major issue:</strong> no valid capacity declaration was submitted for any hour across four consecutive days (Thu 6 Aug - Sun 9 Aug) — DeclaredCapacity sits at zero/blank the entire stretch despite normal export levels. This inflates Declared Utilisation to an unusable 185.5% and defaults ~73 hours into a "short notice" classification; the real short-notice rate, measured only on the 46 hours that had an actual declaration, was 32.6% — down from 48.7% last week, not a third consecutive record. This needs an operational explanation, whether it's a continuation of last week's Eskom-outage declaration issue or something new.
+<strong>Major issue:</strong> no valid capacity declaration was submitted for any hour across four consecutive days (Thu 6 Aug - Sun 9 Aug) — DeclaredCapacity sits at zero/blank the entire stretch despite normal export levels. This inflates Declared Utilisation to an unusable 185.5% and defaults ~73 hours into a "short notice" classification; the real short-notice rate, measured only on the 45 hours that had an actual declaration, was 33.3% — down from 48.7% last week, not a third consecutive record. This needs an operational explanation, whether it's a continuation of last week's Eskom-outage declaration issue or something new.
 </div>
 
 <div class="callout callout-win">
@@ -402,7 +402,7 @@ This week's 119 relevant hours (excluding 21:30-05:00) split as:
 | 1.75x | 3 | 2.5% |
 | 2.00x | 20 | 16.8% |
 
-The 1.00x share looks unusually high, but 69 of those 92 hours fall inside the 6-9 Aug declaration gap and default to no penalty simply because nothing was declared — not because delivery was strong. Restricting to the 46 hours with an actual declaration this week, the split is far closer to prior weeks' pattern. The short-notice correlation that held for five straight weeks (every short-notice hour landing in the 2.00x tier) breaks on the raw numbers this week for the same reason: of 88 hours flagged "short notice," 73 are undeclared hours defaulting into that flag. On the 46 genuinely-declared hours, 15 were short notice (32.6%) — down from 48.7% last week, ending what looked like a two-week trend toward record highs.
+The 1.00x share looks unusually high, but 69 of those 92 hours fall inside the 6-9 Aug declaration gap and default to no penalty simply because nothing was declared — not because delivery was strong. Of the 20 hours at the 2.00x tier, only 15 are genuinely declared and short-notice; the other 5 are undeclared hours that landed in 2.00x anyway rather than defaulting to 1.00x like the rest. Restricting to the 45 hours with an actual declaration this week, the short-notice correlation that held for five straight weeks is fully intact: all 15 short-notice hours on declared capacity landed in the 2.00x tier, and no declared 2.00x hour was anything but short notice. On those 45 genuinely-declared hours, 15 were short notice (33.3%) — down from 48.7% last week, ending what looked like a two-week trend toward record highs.
 
 ### Short-notice declaration rate — trend
 
@@ -433,8 +433,8 @@ The 1.00x share looks unusually high, but 69 of those 92 hours fall inside the 6
   <rect x="585" y="55" width="45" height="135" rx="4" fill="#dc2626"/>
   <text x="607" y="49" fill="#111827" font-size="11" text-anchor="middle">48.7% &#9888;</text>
   <text x="607" y="205" fill="#6b7280" font-size="10" text-anchor="middle">27 Jul</text>
-  <rect x="660" y="100" width="45" height="90" rx="4" fill="#1d4ed8"/>
-  <text x="682" y="94" fill="#111827" font-size="11" text-anchor="middle">32.6%*</text>
+  <rect x="660" y="98" width="45" height="92" rx="4" fill="#1d4ed8"/>
+  <text x="682" y="92" fill="#111827" font-size="11" text-anchor="middle">33.3%*</text>
   <text x="682" y="205" fill="#52525b" font-size="10" text-anchor="middle">03 Aug (this wk)</text>
 </svg>
 
@@ -442,4 +442,4 @@ The 1.00x share looks unusually high, but 69 of those 92 hours fall inside the 6
 
 ## Reviewer Notes
 
-_Pending review — please confirm the cause of the 6-9 Aug declaration gap._
+Last declaration was submitted 2026-08-04 23:55, covering Wed 5 Aug in advance — nothing was submitted after that, which is why Thu 6 Aug onward has no declared capacity at all.
