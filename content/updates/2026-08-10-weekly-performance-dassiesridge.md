@@ -4,7 +4,6 @@ date: '2026-08-10'
 layout: tabs
 notesStatus: draft
 ---
-
 Dassiesridge Hybrid (Wind + BESS) exported 3.42 GWh this week, up 28.3% on last week and the fourth straight week of recovery — the first week in over a month where net MWh (penalty-adjusted) came in positive. But a four-day gap in submitted declarations (6-9 Aug) means several of this week's headline ratios need a caveat rather than a straight read.
 
 <div class="summary-grid">
@@ -15,7 +14,7 @@ Dassiesridge Hybrid (Wind + BESS) exported 3.42 GWh this week, up 28.3% on last 
 </div>
 
 <div class="callout callout-issue">
-<strong>Major issue:</strong> no valid capacity declaration was submitted for any hour across four consecutive days (Thu 6 Aug - Sun 9 Aug) — DeclaredCapacity sits at zero/blank the entire stretch despite normal export levels. This inflates Declared Utilisation to an unusable 185.5% and, on the raw &lt;2h-before-execution measure, would misleadingly suggest a new short-notice record; the real short-notice rate — hours actually landing in the 2.00x penalty tier — was 16.8%, down from 48.7% last week, not a third consecutive record. This needs an operational explanation, whether it's a continuation of last week's Eskom-outage declaration issue or something new.
+<strong>Major issue:</strong> no valid capacity declaration was submitted for any hour across four consecutive days (Thu 6 Aug - Sun 9 Aug) — DeclaredCapacity sits at zero/blank the entire stretch despite normal export levels. This inflates Declared Utilisation to an unusable 185.5% and, on the raw &lt;2h-before-execution measure, would misleadingly suggest a new short-notice record; the real short-notice rate — hours actually landing in the 2.00x penalty tier — was 16.8%, down from 48.7% last week, not a third consecutive record.
 </div>
 
 <div class="callout callout-win">
