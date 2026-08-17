@@ -4,21 +4,21 @@ date: '2026-08-10'
 layout: tabs
 notesStatus: draft
 ---
-Dassiesridge Hybrid (Wind + BESS) exported 3.42 GWh this week, up 28.3% on last week and the fourth straight week of recovery — the first week in over a month where net MWh (penalty-adjusted) came in positive. But a four-day gap in submitted declarations (6-9 Aug) means several of this week's headline ratios need a caveat rather than a straight read.
+Dassiesridge Hybrid (Wind + BESS) exported 3.42 GWh this week, up 28.3% on last week and the fourth straight week of recovery — the first week in over a month where net MWh (penalty-adjusted) came in positive, though only narrowly. *Updated 17 Aug 2026: a Databricks workflow failure had left 6-9 Aug largely without a submitted declaration; that data has since been backfilled from source, and every figure below now reflects the corrected numbers.*
 
 <div class="summary-grid">
   <div class="summary-item"><span class="summary-label">Week 28 Exported</span><span class="summary-value">3.42 GWh</span></div>
   <div class="summary-item"><span class="summary-label">MTD Exported</span><span class="summary-value">3.98 GWh</span></div>
   <div class="summary-item"><span class="summary-label">YTD Exported</span><span class="summary-value">87.7 GWh</span></div>
-  <div class="summary-item"><span class="summary-label">Weighting factor</span><span class="summary-value">77% @1.0x&nbsp;/&nbsp;17% @2.0x*</span></div>
+  <div class="summary-item"><span class="summary-label">Weighting factor</span><span class="summary-value">34% @1.0x&nbsp;/&nbsp;47% @2.0x</span></div>
 </div>
 
 <div class="callout callout-issue">
-<strong>Alert:</strong> no valid capacity declaration was submitted for any hour across four consecutive days (Thu 6 Aug - Sun 9 Aug) — DeclaredCapacity sits at zero/blank the entire stretch despite normal export levels. This inflates Declared Utilisation to an unusable 185.5% and, on the raw &lt;2h-before-execution measure, would misleadingly suggest a new short-notice record; the real short-notice rate — hours actually landing in the 2.00x penalty tier — was 16.8%, down from 48.7% last week, not a third consecutive record.
+<strong>Correction (17 Aug):</strong> a Databricks workflow failure had left 6-9 Aug largely without a submitted declaration; that data has now been backfilled from source. Corrected figures: net MWh was only narrowly positive this week (+206.7 MWh, not the originally reported +681.2), declared utilisation is a believable 85.7% (not 185.5%), and the short-notice rate was 47.1% of relevant hours — high, but just short of the 48.7% record set on 27 Jul rather than a new low as first reported.
 </div>
 
 <div class="callout callout-win">
-<strong>Recovery continues:</strong> exported production is up 28.3% week-on-week, the fourth consecutive weekly increase, and net MWh turned positive (+681.2 MWh) for the first time in the streak. Average recovery time from a loss period dropped to 6.4h, from 18.8h last week. PCS fleet availability was strong all week too — no unit dropped below 60% on any day, a clear improvement on last week's multiple red readings.
+<strong>Recovery continues:</strong> exported production is up 28.3% week-on-week, the fourth consecutive weekly increase, and net MWh stayed positive (+206.7 MWh) for the first time in the streak, though narrowly. Average recovery time from a loss period fell to 8.0h, from 18.8h last week. PCS fleet availability was strong all week too — no unit dropped below 60% on any day, a clear improvement on last week's multiple red readings.
 </div>
 
 ## Exported Production — last ~2 months
@@ -62,18 +62,18 @@ Four straight weeks of growth since the 13 Jul low (0.53 GWh), and this is the s
 | Metric | This week (3-9 Aug) | Last week (27 Jul-2 Aug) | Change |
 |---|---|---|---|
 | Exported production | <span class="pos">3.42 GWh</span> | 2.67 GWh | <span class="pos">+0.76 GWh (+28.3%)</span> |
-| Net MWh (penalty-adjusted) | <span class="pos">+681.2</span> | <span class="neg">-972.1</span> | <span class="pos">+1,653.3 (swung positive)</span> |
-| Net gain / net loss (MWh) | +1,161.9 / -480.6 | +1,441.3 / -2,413.3 | Both shrank; loss shrank far more |
-| Positive net periods | 68.1% | 38.3% | <span class="pos">+29.8pp</span> |
-| Declared utilisation | 185.5%* | 89.6% | Not comparable — see note |
-| Export vs. declared ratio | 98.5%* | 82.1% | <span class="pos">+16.4pp</span> (partial week) |
+| Net MWh (penalty-adjusted) | <span class="pos">+206.7</span> | <span class="neg">-972.1</span> | <span class="pos">+1,178.8 (swung positive)</span> |
+| Net gain / net loss (MWh) | +2,021.1 / -1,814.5 | +1,441.3 / -2,413.3 | Both grew; gain grew slightly more |
+| Positive net periods | 52.7% | 38.3% | <span class="pos">+14.4pp</span> |
+| Declared utilisation | 85.7% | 89.6% | -3.9pp |
+| Export vs. declared ratio | 87.2% | 82.1% | <span class="pos">+5.1pp</span> |
 | Wind availability (declared) | 100% | 100% | flat |
 | BESS availability (declared) | 100% | 100% | flat |
 | BESS contribution to exports | 25.0% | 24.8% | +0.2pp (flat) |
 | BESS charge / discharge (MWh) | 1,077.6 / 855.7 | 753.6 / 661.2 | More cycling |
-| Avg. hours to recover from a loss period | <span class="pos">6.4h</span> | 18.8h | <span class="pos">-12.4h</span> |
+| Avg. hours to recover from a loss period | <span class="pos">8.0h</span> | 18.8h | <span class="pos">-10.8h</span> |
 
-\* Declared utilisation and export-vs-declared this week are distorted by the 6-9 Aug declaration gap: no capacity was declared at all for those four days, so declared utilisation is measured against a much smaller base than usual, and the export-vs-declared ratio is effectively only measuring Mon-Wed. Every other metric in this table is unaffected. Net MWh turning positive for the first time in weeks, and the sharp drop in average recovery time, are the two genuine standout improvements this week.
+*Corrected 17 Aug: this table originally reported Net MWh +681.2, declared utilisation 185.5%, export-vs-declared 98.5%, and 6.4h avg. recovery, all computed while 6-9 Aug had no submitted declaration. With that data now backfilled, the figures above are the accurate ones — net MWh is still positive for the first time in weeks and recovery time still improved sharply, just less dramatically than first reported.*
 
 ## BESS Daily View
 
@@ -139,7 +139,7 @@ Four straight weeks of growth since the 13 Jul low (0.53 GWh), and this is the s
 </svg>
 
 <svg class="report-chart" viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg">
-  <text x="10" y="16" fill="#52525b" font-size="12">Daily exported production vs. declared (MWh) — no declaration was on file for Thu-Sun this week</text>
+  <text x="10" y="16" fill="#52525b" font-size="12">Daily exported production vs. declared (MWh) — declared line corrected 17 Aug after backfill</text>
   <line x1="55" y1="190" x2="705" y2="190" stroke="#d1d5db" stroke-width="1"/>
   <text x="50" y="193" fill="#6b7280" font-size="9" text-anchor="end">0</text>
   <text x="50" y="108" fill="#6b7280" font-size="9" text-anchor="end">500</text>
@@ -149,17 +149,17 @@ Four straight weeks of growth since the 13 Jul low (0.53 GWh), and this is the s
   <rect x="174" y="127" width="40" height="63" fill="#3b82f6"><title>Tue: Exported 377.2 MWh (Wind, BESS net-charged)</title></rect>
   <line x1="170" y1="85" x2="218" y2="85" stroke="#111827" stroke-width="2"><title>Tue: Declared 634.6 MWh</title></line>
   <rect x="267" y="77" width="40" height="113" fill="#3b82f6"><title>Wed: Exported 681.1 MWh (Wind, BESS net-charged)</title></rect>
-  <line x1="263" y1="87" x2="311" y2="87" stroke="#111827" stroke-width="2"><title>Wed: Declared 620.0 MWh</title></line>
+  <line x1="263" y1="59" x2="311" y2="59" stroke="#111827" stroke-width="2"><title>Wed: Declared 789.6 MWh</title></line>
   <rect x="360" y="115" width="40" height="75" fill="#3b82f6"><title>Thu: Wind 451.6 MWh</title></rect>
   <rect x="360" y="101" width="40" height="14" fill="#059669"><title>Thu: BESS +81.5 MWh (net positive)</title></rect>
-  <text x="380" y="94" fill="#dc2626" font-size="9" text-anchor="middle"><title>Thu: No declaration submitted (DeclaredCapacity = 0)</title>no decl.</text>
+  <line x1="356" y1="95" x2="404" y2="95" stroke="#111827" stroke-width="2"><title>Thu: Declared 571.0 MWh</title></line>
   <rect x="453" y="158" width="40" height="32" fill="#3b82f6"><title>Fri: Wind 192.4 MWh</title></rect>
   <rect x="453" y="154" width="40" height="4" fill="#059669"><title>Fri: BESS +24.8 MWh (net positive)</title></rect>
-  <text x="473" y="147" fill="#dc2626" font-size="9" text-anchor="middle"><title>Fri: No declaration submitted (DeclaredCapacity = 0)</title>no decl.</text>
+  <line x1="449" y1="154" x2="497" y2="154" stroke="#111827" stroke-width="2"><title>Fri: Declared 214.5 MWh</title></line>
   <rect x="546" y="119" width="40" height="71" fill="#3b82f6"><title>Sat: Exported 429.2 MWh (Wind, BESS net-charged)</title></rect>
-  <text x="566" y="112" fill="#dc2626" font-size="9" text-anchor="middle"><title>Sat: No declaration submitted (DeclaredCapacity = 0)</title>no decl.</text>
+  <line x1="542" y1="110" x2="590" y2="110" stroke="#111827" stroke-width="2"><title>Sat: Declared 480.4 MWh</title></line>
   <rect x="639" y="89" width="40" height="101" fill="#3b82f6"><title>Sun: Exported 609.6 MWh (Wind, BESS net-charged)</title></rect>
-  <text x="659" y="82" fill="#dc2626" font-size="9" text-anchor="middle"><title>Sun: No declaration submitted (DeclaredCapacity = 0)</title>no decl.</text>
+  <line x1="635" y1="72" x2="683" y2="72" stroke="#111827" stroke-width="2"><title>Sun: Declared 712.8 MWh</title></line>
   <text x="101" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Mon</text>
   <text x="194" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Tue</text>
   <text x="287" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">Wed</text>
@@ -175,7 +175,7 @@ Four straight weeks of growth since the 13 Jul low (0.53 GWh), and this is the s
   <text x="608" y="231" fill="#52525b" font-size="10">Declared</text>
 </svg>
 
-Discharge hours were far more evenly spread this week than last — Friday even split exactly 12/12 between charging and discharging. On the contribution chart, Friday (68.8%) stands out well above every other day, and Wednesday (10.3%) was the lightest lean on BESS all week. Thursday and Friday were the two net-positive BESS days, but with the Thu-Sun declared line missing there's no baseline to compare those four days' exports against — only Mon-Wed can be judged against declaration this week.
+Discharge hours were far more evenly spread this week than last — Friday even split exactly 12/12 between charging and discharging. On the contribution chart, Friday (68.8%) stands out well above every other day, and Wednesday (10.3%) was the lightest lean on BESS all week. Thursday and Friday were the two net-positive BESS days. With the declared line now corrected for all seven days, Wednesday stands out as the week's biggest declared commitment (789.6 MWh) and its biggest shortfall against export — every day this week under-delivered against declared.
 
 ### PCS availability heatmap
 
@@ -314,10 +314,10 @@ A much cleaner week than last for the fleet: no unit dropped into the red tier o
 
 | Period | Exported production | Declared utilisation | Wind contribution | BESS contribution |
 |---|---|---|---|---|
-| MTD (1-9 Aug) | 3.98 GWh | 158.5%* | 104.3% | 26.4% |
-| YTD (Jan-9 Aug) | 87.7 GWh | 88.2% | 104.4% | 19.8% |
+| MTD (1-9 Aug) | 3.98 GWh | 85.5% | 104.3% | 26.4% |
+| YTD (Jan-9 Aug) | 87.7 GWh | 86.3% | 104.4% | 19.8% |
 
-\* MTD declared utilisation carries the same 6-9 Aug declaration gap as the weekly figure above — not a real efficiency read this month.
+*Both declared-utilisation figures corrected 17 Aug after the 6-9 Aug backfill (originally reported as 158.5% MTD / 88.2% YTD).*
 
 ## Monthly trend
 
@@ -357,38 +357,38 @@ A much cleaner week than last for the fleet: no unit dropped into the red tier o
   <text x="10" y="14" fill="#52525b" font-size="12">Monthly average ALP weighting factor</text>
   <line x1="50" y1="110" x2="730" y2="110" stroke="#d1d5db" stroke-width="1"/>
   <text x="45" y="113" fill="#6b7280" font-size="9" text-anchor="end">1.0x</text>
-  <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">1.5x</text>
-  <polyline points="88,61 164,63 239,85 315,65 390,31 466,43 542,67 617,42 693,64" fill="none" stroke="#b45309" stroke-width="2"/>
-  <circle cx="88" cy="61" r="4" fill="#b45309"/>
-  <text x="88" y="52" fill="#b45309" font-size="10" text-anchor="middle">1.27x</text>
+  <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">1.7x</text>
+  <polyline points="88,77 164,78 239,93 315,79 390,56 466,65 542,81 617,63 693,44" fill="none" stroke="#b45309" stroke-width="2"/>
+  <circle cx="88" cy="77" r="4" fill="#b45309"/>
+  <text x="88" y="68" fill="#b45309" font-size="10" text-anchor="middle">1.27x</text>
   <text x="88" y="125" fill="#6b7280" font-size="10" text-anchor="middle">Dec</text>
-  <circle cx="164" cy="63" r="4" fill="#b45309"/>
-  <text x="164" y="54" fill="#b45309" font-size="10" text-anchor="middle">1.26x</text>
+  <circle cx="164" cy="78" r="4" fill="#b45309"/>
+  <text x="164" y="69" fill="#b45309" font-size="10" text-anchor="middle">1.26x</text>
   <text x="164" y="125" fill="#6b7280" font-size="10" text-anchor="middle">Jan</text>
-  <circle cx="239" cy="85" r="4" fill="#b45309"/>
-  <text x="239" y="76" fill="#b45309" font-size="10" text-anchor="middle">1.14x</text>
+  <circle cx="239" cy="93" r="4" fill="#b45309"/>
+  <text x="239" y="84" fill="#b45309" font-size="10" text-anchor="middle">1.14x</text>
   <text x="239" y="125" fill="#6b7280" font-size="10" text-anchor="middle">Feb</text>
-  <circle cx="315" cy="65" r="4" fill="#b45309"/>
-  <text x="315" y="56" fill="#b45309" font-size="10" text-anchor="middle">1.25x</text>
+  <circle cx="315" cy="79" r="4" fill="#b45309"/>
+  <text x="315" y="70" fill="#b45309" font-size="10" text-anchor="middle">1.25x</text>
   <text x="315" y="125" fill="#6b7280" font-size="10" text-anchor="middle">Mar</text>
-  <circle cx="390" cy="31" r="4" fill="#b45309"/>
-  <text x="390" y="22" fill="#b45309" font-size="10" text-anchor="middle">1.44x</text>
+  <circle cx="390" cy="56" r="4" fill="#b45309"/>
+  <text x="390" y="47" fill="#b45309" font-size="10" text-anchor="middle">1.44x</text>
   <text x="390" y="125" fill="#6b7280" font-size="10" text-anchor="middle">Apr</text>
-  <circle cx="466" cy="43" r="4" fill="#b45309"/>
-  <text x="466" y="34" fill="#b45309" font-size="10" text-anchor="middle">1.37x</text>
+  <circle cx="466" cy="65" r="4" fill="#b45309"/>
+  <text x="466" y="56" fill="#b45309" font-size="10" text-anchor="middle">1.37x</text>
   <text x="466" y="125" fill="#6b7280" font-size="10" text-anchor="middle">May</text>
-  <circle cx="542" cy="67" r="4" fill="#b45309"/>
-  <text x="542" y="58" fill="#b45309" font-size="10" text-anchor="middle">1.24x</text>
+  <circle cx="542" cy="81" r="4" fill="#b45309"/>
+  <text x="542" y="72" fill="#b45309" font-size="10" text-anchor="middle">1.24x</text>
   <text x="542" y="125" fill="#6b7280" font-size="10" text-anchor="middle">Jun</text>
-  <circle cx="617" cy="42" r="4" fill="#b45309"/>
-  <text x="617" y="33" fill="#b45309" font-size="10" text-anchor="middle">1.38x*</text>
+  <circle cx="617" cy="63" r="4" fill="#b45309"/>
+  <text x="617" y="54" fill="#b45309" font-size="10" text-anchor="middle">1.38x*</text>
   <text x="617" y="125" fill="#6b7280" font-size="10" text-anchor="middle">Jul</text>
-  <circle cx="693" cy="64" r="4" fill="#b45309"/>
-  <text x="693" y="55" fill="#b45309" font-size="10" text-anchor="middle">1.26x*</text>
+  <circle cx="693" cy="44" r="4" fill="#b45309"/>
+  <text x="693" y="35" fill="#b45309" font-size="10" text-anchor="middle">1.53x*</text>
   <text x="693" y="125" fill="#52525b" font-size="10" text-anchor="middle">Aug (MTD)</text>
 </svg>
 
-\* July and August use the 21:30-05:00 exclusion methodology; December-June use the prior all-24h method and aren't directly comparable. August's figure is now based on 9 days, but includes the 6-9 Aug stretch with no submitted declarations — hours with no declaration default to the 1.00x/no-penalty tier, which pulls this average down artificially. Treat it as provisional until the declaration gap is explained.
+\* July and August use the 21:30-05:00 exclusion methodology; December-June use the prior all-24h method and aren't directly comparable. August's figure (corrected 17 Aug after the 6-9 Aug backfill; originally reported as 1.26x with the y-axis capped at 1.5x) is the highest of any month in this series. The y-axis top has been extended to 1.7x to fit it.
 
 ## Weighting (ALP penalty factor) this week
 
@@ -396,12 +396,12 @@ This week's 119 relevant hours (excluding 21:30-05:00) split as:
 
 | Penalty factor | Hours | Share |
 |---|---|---|
-| 1.00x | 92 | 77.3% |
-| 1.25x | 4 | 3.4% |
-| 1.75x | 3 | 2.5% |
-| 2.00x | 20 | 16.8% |
+| 1.00x | 41 | 34.5% |
+| 1.25x | 13 | 10.9% |
+| 1.75x | 9 | 7.6% |
+| 2.00x | 56 | 47.1% |
 
-The 1.00x share looks unusually high, but 69 of those 92 hours fall inside the 6-9 Aug declaration gap and default to no penalty simply because nothing was declared — not because delivery was strong. This week's short-notice rate is the 2.00x share itself: 16.8% (20 of 119 hours), down from 48.7% last week and ending what looked like a two-week trend toward record highs. The five-week correlation between short notice and the 2.00x tier is still intact where it can be checked directly: of the 20 hours, 15 are genuinely declared hours that were both short-notice and 2.00x, exactly as expected. The other 5 are undeclared hours that landed in 2.00x anyway rather than defaulting to 1.00x like the remaining 69 undeclared hours — a smaller, separate anomaly worth a look, but not one that materially moves this week's headline rate.
+*Corrected 17 Aug: with 6-9 Aug backfilled, this table replaces the original (92/4/3/20, with the 1.00x share inflated by undeclared hours defaulting to no penalty).* This week's short-notice rate is the 2.00x share: 47.1% (56 of 119 hours) — high, and just short of the 48.7% record set 27 Jul rather than the 16.8% originally reported. The five-week correlation between short notice and the 2.00x tier holds exactly on the corrected data: all 56 hours at the 2.00x tier are also short-notice hours, and vice versa — a clean 1:1 match, with no leftover undeclared-hours anomaly this time.
 
 ### Short-notice declaration rate — trend
 
@@ -432,13 +432,13 @@ The 1.00x share looks unusually high, but 69 of those 92 hours fall inside the 6
   <rect x="585" y="55" width="45" height="135" rx="4" fill="#dc2626"/>
   <text x="607" y="49" fill="#111827" font-size="11" text-anchor="middle">48.7% &#9888;</text>
   <text x="607" y="205" fill="#6b7280" font-size="10" text-anchor="middle">27 Jul</text>
-  <rect x="660" y="144" width="45" height="46" rx="4" fill="#1d4ed8"/>
-  <text x="682" y="138" fill="#111827" font-size="11" text-anchor="middle">16.8%</text>
+  <rect x="660" y="60" width="45" height="130" rx="4" fill="#1d4ed8"/>
+  <text x="682" y="54" fill="#111827" font-size="11" text-anchor="middle">47.1%</text>
   <text x="682" y="205" fill="#52525b" font-size="10" text-anchor="middle">03 Aug (this wk)</text>
 </svg>
 
-This week's figure is the 2.00x-tier share (matching the table above), not the raw &lt;2h-before-execution count — the raw count is skewed to 73.9% by ~73 hours with no submitted declaration (6-9 Aug) that default into a short-notice-looking flag. The 2.00x share is a much smaller target for that same artifact: only 5 of its 20 hours are undeclared.
+*Corrected 17 Aug: originally shown as 16.8% while 6-9 Aug had no submitted declaration; the true figure, now that data is backfilled, is 47.1% — the second-highest week in this series, just below 27 Jul's 48.7% record.*
 
 ## Reviewer Notes
 
-Last declaration was submitted 2026-08-04 23:55, covering Wed 5 Aug in advance — nothing was submitted after that, which is why Thu 6 Aug onward has no declared capacity at all.
+Last declaration submitted before the gap was 2026-08-04 23:55, covering Wed 5 Aug in advance. Root cause identified 17 Aug: the Databricks workflow that processes and loads declaration emails had failed — declarations may have kept arriving by email, but weren't being captured into the data platform. That data has since been backfilled from source, and this report has been corrected accordingly.
