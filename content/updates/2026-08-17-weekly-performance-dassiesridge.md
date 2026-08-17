@@ -4,7 +4,6 @@ date: '2026-08-17'
 layout: tabs
 notesStatus: draft
 ---
-
 Dassiesridge Hybrid (Wind + BESS) exported 4.21 GWh this week, up 23.0% on last week and the fifth straight week of recovery — the strongest week since the recovery began, closing in on the 29 Jun peak (4.74 GWh). But a record 55.5% of this week's relevant hours landed in the harshest 2.00x penalty tier, pulling net MWh back into negative territory despite the production gain.
 
 <div class="summary-grid">
@@ -15,7 +14,7 @@ Dassiesridge Hybrid (Wind + BESS) exported 4.21 GWh this week, up 23.0% on last 
 </div>
 
 <div class="callout callout-issue">
-<strong>Major issue:</strong> 55.5% of this week's 119 relevant hours landed in the 2.00x penalty tier — a new high for this report series, surpassing the previous record of 48.7% (27 Jul). That's the main reason net MWh swung back negative (-335.9 MWh) this week despite record exported production. Separately, the declaration pipeline issue flagged two weeks ago is mostly resolved — 88.2% of relevant hours had a valid declaration this week, up from 37.8% — though Tuesday and Friday still show partial gaps worth a look.
+<strong>Alert:</strong> 55.5% of this week's 119 relevant hours landed in the 2.00x penalty tier — a new high for this report series, surpassing the previous record of 48.7% (27 Jul). That's the main reason net MWh swung back negative (-335.9 MWh) this week despite record exported production. Separately, the declaration pipeline issue flagged two weeks ago is mostly resolved — 88.2% of relevant hours had a valid declaration this week, up from 37.8% — though Tuesday and Friday still show partial gaps worth a look.
 </div>
 
 <div class="callout callout-win">
