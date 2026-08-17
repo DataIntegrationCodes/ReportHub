@@ -62,18 +62,18 @@ Five straight weeks of growth since the 13 Jul low (0.53 GWh), and this is the b
 | Metric | This week (10-16 Aug) | Last week (3-9 Aug) | Change |
 |---|---|---|---|
 | Exported production | <span class="pos">4.21 GWh</span> | 3.42 GWh | <span class="pos">+0.79 GWh (+23.0%)</span> |
-| Net MWh (penalty-adjusted) | <span class="neg">-335.9</span> | <span class="pos">+681.2</span> | <span class="neg">-1,017.1 (swung negative)</span> |
-| Net gain / net loss (MWh) | +2,618.3 / -2,954.2 | +1,161.9 / -480.6 | Both grew sharply; loss grew far more |
-| Positive net periods | 45.1% | 68.1% | -23.0pp |
-| Declared utilisation | 91.6% | 185.5%* | Not comparable — see note |
-| Export vs. declared ratio | 87.3% | 98.5%* | Not comparable — see note |
+| Net MWh (penalty-adjusted) | <span class="neg">-335.9</span> | <span class="pos">+206.7</span> | <span class="neg">-542.6 (swung negative)</span> |
+| Net gain / net loss (MWh) | +2,618.3 / -2,954.2 | +2,021.1 / -1,814.5 | Both grew; loss grew more |
+| Positive net periods | 45.1% | 52.7% | -7.6pp |
+| Declared utilisation | 91.6% | 85.7% | +5.9pp |
+| Export vs. declared ratio | 87.3% | 87.2% | +0.1pp (flat) |
 | Wind availability (declared) | 100% | 100% | flat |
 | BESS availability (declared) | 100% | 100% | flat |
 | BESS contribution to exports | 17.3% | 25.0% | -7.7pp |
 | BESS charge / discharge (MWh) | 787.0 / 729.2 | 1,077.6 / 855.7 | Less cycling |
-| Avg. hours to recover from a loss period | 8.25h | 6.4h | +1.85h |
+| Avg. hours to recover from a loss period | 8.25h | 8.0h | +0.25h (flat) |
 
-\* Last week's declared utilisation and export-vs-declared were inflated by the 6-9 Aug declaration-pipeline gap. This week's pipeline is mostly recovered (105 of 119 relevant hours had a valid declaration, vs 45 last week), so this week's figures are trustworthy again — aside from smaller residual gaps on Tuesday (11/17 hours) and Friday (10/17 hours). Avg. recovery time is still much better than the ~18h seen in late July, even with the small uptick from last week.
+*Last week's column was corrected 17 Aug: the 6-9 Aug declaration-pipeline gap (see [3-9 Aug report](/updates/2026-08-10-weekly-performance-dassiesridge)) has since been backfilled from source, replacing the originally reported +681.2 Net MWh, 185.5% declared utilisation, 98.5% export-vs-declared, and 6.4h avg. recovery with the accurate figures above. This week's own pipeline is separately mostly recovered (105 of 119 relevant hours had a valid declaration, vs 45 the week before), aside from smaller residual gaps on Tuesday (11/17 hours) and Saturday (10/17 hours).*
 
 ## BESS Daily View
 
@@ -400,7 +400,9 @@ This week's 119 relevant hours (excluding 21:30-05:00) split as:
 | 1.75x | 14 | 11.8% |
 | 2.00x | 66 | 55.5% |
 
-A new high for this report series: 55.5% of relevant hours landed in the harshest tier, well above the previous record (48.7%, 27 Jul) and more than triple last week's 16.8%. Of the 66 hours at 2.00x, 61 are genuinely declared and short-notice — the five-week correlation between short notice and the 2.00x tier continues to hold cleanly on real declared hours. The other 5 are the same small undeclared-hours anomaly seen last week (declaration missing, but still landing in 2.00x rather than defaulting to 1.00x). This penalty-tier shift, not the production number, is the reason net MWh swung back negative this week.
+A new high for this report series: 55.5% of relevant hours landed in the harshest tier, above the previous record (48.7%, 27 Jul) and up from last week's 47.1%*. Of the 66 hours at 2.00x, 61 are genuinely declared and short-notice — the five-week correlation between short notice and the 2.00x tier continues to hold cleanly on real declared hours. The other 5 are a small undeclared-hours anomaly this week (declaration missing, but still landing in 2.00x rather than defaulting to 1.00x) — last week's own version of this anomaly has since been resolved by the 6-9 Aug backfill. This penalty-tier shift, not the production number, is the reason net MWh swung back negative this week.
+
+*Last week's figure was corrected 17 Aug from an originally reported 16.8% — see the [3-9 Aug report](/updates/2026-08-10-weekly-performance-dassiesridge) for detail.
 
 ### Short-notice declaration rate — trend
 
@@ -428,8 +430,8 @@ A new high for this report series: 55.5% of relevant hours landed in the harshes
   <rect x="510" y="55" width="45" height="135" rx="4" fill="#3b82f6"/>
   <text x="532" y="49" fill="#52525b" font-size="11" text-anchor="middle">48.7%</text>
   <text x="532" y="205" fill="#6b7280" font-size="10" text-anchor="middle">27 Jul</text>
-  <rect x="585" y="144" width="45" height="46" rx="4" fill="#3b82f6"/>
-  <text x="607" y="138" fill="#52525b" font-size="11" text-anchor="middle">16.8%</text>
+  <rect x="585" y="60" width="45" height="130" rx="4" fill="#3b82f6"/>
+  <text x="607" y="54" fill="#52525b" font-size="11" text-anchor="middle">47.1%</text>
   <text x="607" y="205" fill="#6b7280" font-size="10" text-anchor="middle">03 Aug</text>
   <rect x="660" y="36" width="45" height="154" rx="4" fill="#dc2626"/>
   <text x="682" y="30" fill="#111827" font-size="11" text-anchor="middle">55.5% &#9888;</text>
