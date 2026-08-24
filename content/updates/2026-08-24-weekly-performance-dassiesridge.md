@@ -86,6 +86,35 @@ The five-week climb from the 13 Jul low ends here — production fell back to ro
 
 This week's 6.3h average reads as the lowest of the period, but it's not a genuine discharge decline — it's mechanically depressed by the same Sat/Sun telemetry gap flagged above (zero discharge hours recorded on both days, dragging the 7-day average down). Excluding that gap, the daily average would have tracked closer to 03 Aug and 10 Aug's levels given how much less wind there was to work with this week.
 
+<svg class="report-chart" viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="16" fill="#52525b" font-size="12">Weekly avg discharge rate (MW per discharging hour)</text>
+  <line x1="50" y1="190" x2="730" y2="190" stroke="#d1d5db" stroke-width="1"/>
+  <text x="45" y="193" fill="#6b7280" font-size="9" text-anchor="end">0 MW</text>
+  <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">16 MW</text>
+  <polyline points="82,51 157,78 232,125 307,155 382,120 457,53 532,61 607,82 682,95" fill="none" stroke="#059669" stroke-width="2"/>
+  <circle cx="82" cy="51" r="3" fill="#059669"/><circle cx="157" cy="78" r="3" fill="#059669"/><circle cx="232" cy="125" r="3" fill="#059669"/><circle cx="307" cy="155" r="3" fill="#059669"/><circle cx="382" cy="120" r="3" fill="#059669"/><circle cx="457" cy="53" r="3" fill="#059669"/><circle cx="532" cy="61" r="3" fill="#059669"/><circle cx="607" cy="82" r="3" fill="#059669"/><circle cx="682" cy="95" r="3" fill="#059669"/>
+  <text x="82" y="43" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">13.4</text>
+  <text x="157" y="70" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">10.8</text>
+  <text x="232" y="117" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">6.3</text>
+  <text x="307" y="147" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">3.4</text>
+  <text x="382" y="112" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">6.8</text>
+  <text x="457" y="45" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">13.2</text>
+  <text x="532" y="53" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">12.4</text>
+  <text x="607" y="74" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">10.4</text>
+  <text x="682" y="87" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">9.1</text>
+  <text x="82" y="205" fill="#6b7280" font-size="10" text-anchor="middle">22 Jun</text>
+  <text x="157" y="205" fill="#6b7280" font-size="10" text-anchor="middle">29 Jun</text>
+  <text x="232" y="205" fill="#6b7280" font-size="10" text-anchor="middle">06 Jul</text>
+  <text x="307" y="205" fill="#6b7280" font-size="10" text-anchor="middle">13 Jul</text>
+  <text x="382" y="205" fill="#6b7280" font-size="10" text-anchor="middle">20 Jul</text>
+  <text x="457" y="205" fill="#6b7280" font-size="10" text-anchor="middle">27 Jul</text>
+  <text x="532" y="205" fill="#6b7280" font-size="10" text-anchor="middle">03 Aug</text>
+  <text x="607" y="205" fill="#6b7280" font-size="10" text-anchor="middle">10 Aug</text>
+  <text x="682" y="205" fill="#52525b" font-size="10" text-anchor="middle">17 Aug (this wk)</text>
+</svg>
+
+This is the piece that explains the 20 Jul vs 10 Aug puzzle above: 20 Jul had more discharge *hours* (11.7h/day) but a much lower discharge *rate* (6.8 MW/hour) than 10 Aug (10.0h/day at 10.4 MW/hour) — the battery was thinly trickling out a small charge over more hours rather than delivering fewer, bigger bursts. 13 Jul is the extreme case: only 3.4 MW/hour, the lowest rate of the period, in the same week production bottomed out at 0.53 GWh. This week's 9.1 MW/hour is actually mid-pack — the hours that did discharge (before the Sat/Sun gap) were working at a reasonable rate, it's the hour *count* that was artificially cut short.
+
 ## This week vs. last week
 
 | Metric | This week (17-23 Aug) | Last week (10-16 Aug) | Change |
