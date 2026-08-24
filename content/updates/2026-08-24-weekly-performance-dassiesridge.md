@@ -397,12 +397,12 @@ Production is fairly even across the fleet (WTG30 leads at 890.7 MWh, WTG61 trai
 
 ### MTD & YTD vs P50/P90 and wind speed
 
-| Period | Production (turbines) | P50 target | P90 target | Measured wind speed | Forecasted wind speed |
-|---|---|---|---|---|---|
-| MTD (1-23 Aug) | 10,667.1 MWh | 13,901.4 MWh (-23.3%) | 12,103.6 MWh (-11.9%) | 6.24 m/s | 7.49 m/s |
-| YTD (Jan-23 Aug) | 99,789.7 MWh | 133,596.4 MWh (-25.3%) | 116,320.6 MWh (-14.2%) | 6.39 m/s | 7.18 m/s |
+| Period | Production (turbines) | P50 target | P90 target | Technical availability | Contractual availability | Measured wind speed | Forecasted wind speed |
+|---|---|---|---|---|---|---|---|
+| MTD (1-23 Aug) | 10,667.1 MWh | 13,901.4 MWh (-23.3%) | 12,103.6 MWh (-11.9%) | 95.6% | 98.8% | 6.24 m/s | 7.49 m/s |
+| YTD (Jan-23 Aug) | 99,789.7 MWh | 133,596.4 MWh (-25.3%) | 116,320.6 MWh (-14.2%) | 89.5% | 93.5% | 6.39 m/s | 7.18 m/s |
 
-Production is the sum of the 14 turbines' technical output (the same basis as the per-turbine chart above). The variance shown in each target cell is production vs. that target. Targets are pro-rated to elapsed days in the period — the model's raw target tables store whole-month buckets, not a running daily accrual.
+Production is the sum of the 14 turbines' technical output (the same basis as the per-turbine chart above). The variance shown in each target cell is production vs. that target. Targets are pro-rated to elapsed days in the period — the model's raw target tables store whole-month buckets, not a running daily accrual. Technical and contractual availability are fleet-wide (all 14 turbines combined) using the same two measures as the per-turbine chart above — note YTD availability (89.5% / 93.5%) sits well below this month's (95.6% / 98.8%), meaning earlier months this year were the weaker ones on availability, not August.
 
 <svg class="report-chart" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
   <text x="10" y="16" fill="#52525b" font-size="12">Production as % of P50 / P90 target</text>
