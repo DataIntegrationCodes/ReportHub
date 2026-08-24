@@ -58,21 +58,21 @@ Dassiesridge Hybrid (Wind + BESS) exported 2.02 GWh this week, down 52.0% on las
 The five-week climb from the 13 Jul low ends here — production fell back to roughly 20 Jul levels. Unlike the earlier dips this year, this one has a clean explanation: see Wind Overview below.
 
 <svg class="report-chart" viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg">
-  <text x="10" y="16" fill="#52525b" font-size="12">Weekly total BESS discharge hours</text>
+  <text x="10" y="16" fill="#52525b" font-size="12">Weekly avg BESS discharge hours (per day)</text>
   <line x1="50" y1="190" x2="730" y2="190" stroke="#d1d5db" stroke-width="1"/>
   <text x="45" y="193" fill="#6b7280" font-size="9" text-anchor="end">0h</text>
-  <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">100h</text>
-  <polyline points="82,74 157,79 232,87 307,102 382,54 457,107 532,75 607,74 682,117" fill="none" stroke="#3b82f6" stroke-width="2"/>
-  <circle cx="82" cy="74" r="3" fill="#3b82f6"/><circle cx="157" cy="79" r="3" fill="#3b82f6"/><circle cx="232" cy="87" r="3" fill="#3b82f6"/><circle cx="307" cy="102" r="3" fill="#3b82f6"/><circle cx="382" cy="54" r="3" fill="#3b82f6"/><circle cx="457" cy="107" r="3" fill="#3b82f6"/><circle cx="532" cy="75" r="3" fill="#3b82f6"/><circle cx="607" cy="74" r="3" fill="#3b82f6"/><circle cx="682" cy="117" r="4" fill="#dc2626"/>
-  <text x="82" y="66" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">70h</text>
-  <text x="157" y="71" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">67h</text>
-  <text x="232" y="79" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">62h</text>
-  <text x="307" y="94" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">53h</text>
-  <text x="382" y="46" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">82h</text>
-  <text x="457" y="99" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">50h</text>
-  <text x="532" y="67" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">69h</text>
-  <text x="607" y="66" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">70h</text>
-  <text x="682" y="109" fill="#dc2626" font-size="10" font-weight="600" text-anchor="middle">44h &#9888;</text>
+  <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">12h</text>
+  <polyline points="82,52 157,57 232,67 307,85 382,28 457,92 532,53 607,52 682,103" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="82" cy="52" r="3" fill="#3b82f6"/><circle cx="157" cy="57" r="3" fill="#3b82f6"/><circle cx="232" cy="67" r="3" fill="#3b82f6"/><circle cx="307" cy="85" r="3" fill="#3b82f6"/><circle cx="382" cy="28" r="3" fill="#3b82f6"/><circle cx="457" cy="92" r="3" fill="#3b82f6"/><circle cx="532" cy="53" r="3" fill="#3b82f6"/><circle cx="607" cy="52" r="3" fill="#3b82f6"/><circle cx="682" cy="103" r="4" fill="#dc2626"/>
+  <text x="82" y="44" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">10.0h</text>
+  <text x="157" y="49" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">9.6h</text>
+  <text x="232" y="59" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">8.9h</text>
+  <text x="307" y="77" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">7.6h</text>
+  <text x="382" y="20" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">11.7h</text>
+  <text x="457" y="84" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">7.1h</text>
+  <text x="532" y="45" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">9.9h</text>
+  <text x="607" y="44" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">10.0h</text>
+  <text x="682" y="95" fill="#dc2626" font-size="10" font-weight="600" text-anchor="middle">6.3h &#9888;</text>
   <text x="82" y="205" fill="#6b7280" font-size="10" text-anchor="middle">22 Jun</text>
   <text x="157" y="205" fill="#6b7280" font-size="10" text-anchor="middle">29 Jun</text>
   <text x="232" y="205" fill="#6b7280" font-size="10" text-anchor="middle">06 Jul</text>
@@ -84,7 +84,7 @@ The five-week climb from the 13 Jul low ends here — production fell back to ro
   <text x="682" y="205" fill="#52525b" font-size="10" text-anchor="middle">17 Aug (this wk)</text>
 </svg>
 
-This week's 44h reads as the lowest of the period, but it's not a genuine discharge decline — it's mechanically depressed by the same Sat/Sun telemetry gap flagged above (zero discharge hours recorded on both days). Excluding that gap, discharge hours would have tracked closer to 03 Aug and 10 Aug's levels given how much less wind there was to work with this week.
+This week's 6.3h average reads as the lowest of the period, but it's not a genuine discharge decline — it's mechanically depressed by the same Sat/Sun telemetry gap flagged above (zero discharge hours recorded on both days, dragging the 7-day average down). Excluding that gap, the daily average would have tracked closer to 03 Aug and 10 Aug's levels given how much less wind there was to work with this week.
 
 ## This week vs. last week
 
