@@ -398,12 +398,12 @@ Production is fairly even across the fleet (WTG30 leads at 890.7 MWh, WTG61 trai
 
 ### MTD & YTD vs P50/P90 and wind speed
 
-| Period | Production | P50 target (pro-rated) | P90 target (pro-rated) | Measured wind speed | Forecasted wind speed |
+| Period | Production (turbines) | P50 target | P90 target | Measured wind speed | Forecasted wind speed |
 |---|---|---|---|---|---|
-| MTD (1-23 Aug) | 6,316.4 MWh | 13,901.4 MWh | 12,103.6 MWh | 6.24 m/s | 7.49 m/s |
-| YTD (Jan-23 Aug) | 93,545.4 MWh | 133,596.4 MWh | 116,320.6 MWh | 6.39 m/s | 7.18 m/s |
+| MTD (1-23 Aug) | 10,667.1 MWh | 13,901.4 MWh (-23.3%) | 12,103.6 MWh (-11.9%) | 6.24 m/s | 7.49 m/s |
+| YTD (Jan-23 Aug) | 99,789.7 MWh | 133,596.4 MWh (-25.3%) | 116,320.6 MWh (-14.2%) | 6.39 m/s | 7.18 m/s |
 
-P50/P90 targets are shown pro-rated to elapsed days in the period (the model's raw target tables store whole-month buckets, not a running daily accrual).
+Production is the sum of the 14 turbines' technical output (the same basis as the per-turbine chart above). The variance shown in each target cell is production vs. that target. Targets are pro-rated to elapsed days in the period — the model's raw target tables store whole-month buckets, not a running daily accrual.
 
 <svg class="report-chart" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
   <text x="10" y="16" fill="#52525b" font-size="12">Production as % of P50 / P90 target</text>
@@ -412,15 +412,15 @@ P50/P90 targets are shown pro-rated to elapsed days in the period (the model's r
   <text x="45" y="52" fill="#6b7280" font-size="9" text-anchor="end">100%</text>
   <line x1="50" y1="52" x2="370" y2="52" stroke="#111827" stroke-width="1.5" stroke-dasharray="4,3"/>
   <text x="375" y="55" fill="#111827" font-size="9" text-anchor="start">on target</text>
-  <rect x="70" y="127" width="40" height="63" fill="#3b82f6"><title>MTD vs P50: 45.4%</title></rect>
-  <text x="90" y="121" fill="#52525b" font-size="10" text-anchor="middle">45.4%</text>
-  <rect x="120" y="118" width="40" height="72" fill="#7c3aed"><title>MTD vs P90: 52.2%</title></rect>
-  <text x="140" y="112" fill="#52525b" font-size="10" text-anchor="middle">52.2%</text>
+  <rect x="70" y="84" width="40" height="106" fill="#3b82f6"><title>MTD vs P50: 76.7%</title></rect>
+  <text x="90" y="78" fill="#52525b" font-size="10" text-anchor="middle">76.7%</text>
+  <rect x="120" y="68" width="40" height="122" fill="#7c3aed"><title>MTD vs P90: 88.1%</title></rect>
+  <text x="140" y="62" fill="#52525b" font-size="10" text-anchor="middle">88.1%</text>
   <text x="115" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">MTD</text>
-  <rect x="230" y="93" width="40" height="97" fill="#3b82f6"><title>YTD vs P50: 70.0%</title></rect>
-  <text x="250" y="87" fill="#52525b" font-size="10" text-anchor="middle">70.0%</text>
-  <rect x="280" y="79" width="40" height="111" fill="#7c3aed"><title>YTD vs P90: 80.4%</title></rect>
-  <text x="300" y="73" fill="#52525b" font-size="10" text-anchor="middle">80.4%</text>
+  <rect x="230" y="87" width="40" height="103" fill="#3b82f6"><title>YTD vs P50: 74.7%</title></rect>
+  <text x="250" y="81" fill="#52525b" font-size="10" text-anchor="middle">74.7%</text>
+  <rect x="280" y="71" width="40" height="119" fill="#7c3aed"><title>YTD vs P90: 85.8%</title></rect>
+  <text x="300" y="65" fill="#52525b" font-size="10" text-anchor="middle">85.8%</text>
   <text x="275" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">YTD</text>
   <rect x="70" y="222" width="12" height="10" fill="#3b82f6"/>
   <text x="86" y="231" fill="#52525b" font-size="10">vs P50</text>
@@ -449,7 +449,7 @@ P50/P90 targets are shown pro-rated to elapsed days in the period (the model's r
   <text x="166" y="231" fill="#52525b" font-size="10">Forecasted</text>
 </svg>
 
-This is the clearest resource-vs-plan story in the model: wind speed has undershot forecast both MTD (-16.7%) and YTD (-11.0%), and production has fallen further behind plan than wind speed alone would suggest (45.4% of P50 MTD vs a wind shortfall of "only" 16.7%) — consistent with the wind-power cubic relationship, where a moderate wind speed miss produces a much larger energy shortfall. YTD is a somewhat healthier 70.0% of P50, showing the shortfall has been concentrated more heavily in August than earlier months.
+This is the clearest resource-vs-plan story in the model: wind speed has undershot forecast both MTD (-16.7%) and YTD (-11.0%), and turbine production has fallen further behind plan than the wind shortfall alone would suggest (76.7% of P50 MTD vs a wind shortfall of "only" 16.7%) — consistent with the wind-power cubic relationship, where a moderate wind speed miss produces a larger energy shortfall. YTD sits at a similar 74.7% of P50, so the gap isn't unique to August — it's been a feature of the year so far.
 
 ## Month- and year-to-date
 
