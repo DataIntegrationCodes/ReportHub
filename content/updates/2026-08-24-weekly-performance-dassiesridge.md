@@ -4,7 +4,6 @@ date: '2026-08-24'
 layout: tabs
 notesStatus: draft
 ---
-
 Dassiesridge Hybrid (Wind + BESS) exported 2.02 GWh this week, down 52.0% on last week — the five-week recovery streak breaks here. Two things stand out: a 48-hour stretch (Sat 22 - Sun 23 Aug) where every PCS unit and the BESS both went suspiciously flat, and a wind resource shortfall this month that the new Wind Overview data below can now explain directly.
 
 <div class="summary-grid">
@@ -15,7 +14,7 @@ Dassiesridge Hybrid (Wind + BESS) exported 2.02 GWh this week, down 52.0% on las
 </div>
 
 <div class="callout callout-issue">
-<strong>Major issue:</strong> for a full 48 hours (Sat 22 - Sun 23 Aug), every one of the 14 PCS units read exactly 0.0% availability, and the BESS logged 24 hours of charging with zero discharge hours on both days. Every reading in that window is a literal, present zero, not missing data — but 14 independent units and the BESS all going flat at once looks far more like a monitoring/telemetry gap than a genuine simultaneous fleet failure. Needs operational confirmation before it's read either way. Separately, the production recovery streak broke this week (-52.0%), and the new Wind Overview tab below shows why: measured wind speed has been running well below forecast all month.
+<strong>Alert:</strong> for a full 48 hours (Sat 22 - Sun 23 Aug), every one of the 14 PCS units read exactly 0.0% availability, and the BESS logged 24 hours of charging with zero discharge hours on both days. Every reading in that window is a literal, present zero, not missing data — but 14 independent units and the BESS all going flat at once looks far more like a monitoring/telemetry gap than a genuine simultaneous fleet failure. Needs operational confirmation before it's read either way. Separately, the production recovery streak broke this week (-52.0%), and the new Wind Overview tab below shows why: measured wind speed has been running well below forecast all month.
 </div>
 
 <div class="callout callout-win">
