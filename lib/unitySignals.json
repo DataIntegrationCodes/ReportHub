@@ -1,0 +1,647 @@
+{
+  "pcs": {
+    "PCS01": {
+      "segment_id": "73ab6c08-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "HeartbeatCount": {
+          "mloc_id": "aa79c3ba-8c84-11f0-9353-42010afa015a",
+          "source_id": "aa79c5cc-8c84-11f0-9353-42010afa015a"
+        },
+        "BatInvSOC": {
+          "mloc_id": "aa5c6ef0-8c84-11f0-9353-42010afa015a",
+          "source_id": "aa5c7364-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "aa9d36a6-8c84-11f0-9353-42010afa015a",
+          "source_id": "aa9d38cc-8c84-11f0-9353-42010afa015a"
+        },
+        "InvModBatteriesAvailability": {
+          "mloc_id": "aa5d52d4-8c84-11f0-9353-42010afa015a",
+          "source_id": "aa5d5536-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvOverallAlarmState": {
+          "mloc_id": "aa9d634c-8c84-11f0-9353-42010afa015a",
+          "source_id": "aa9d6572-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS02": {
+      "segment_id": "73ac6b9e-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "InvModBatteriesAvailability": {
+          "mloc_id": "b0ca6c10-8c84-11f0-9353-42010afa015a",
+          "source_id": "b0ca6e2c-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvOverallAlarmState": {
+          "mloc_id": "b10b58ba-8c84-11f0-9353-42010afa015a",
+          "source_id": "b10b5ab8-8c84-11f0-9353-42010afa015a"
+        },
+        "BatInvSOC": {
+          "mloc_id": "b0c98ac0-8c84-11f0-9353-42010afa015a",
+          "source_id": "b0c98f3e-8c84-11f0-9353-42010afa015a"
+        },
+        "HeartbeatCount": {
+          "mloc_id": "b0e75082-8c84-11f0-9353-42010afa015a",
+          "source_id": "b0e75294-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "b10b2912-8c84-11f0-9353-42010afa015a",
+          "source_id": "b10b2b88-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS03": {
+      "segment_id": "73ad6fda-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "HeartbeatCount": {
+          "mloc_id": "b751fd32-8c84-11f0-9353-42010afa015a",
+          "source_id": "b752005c-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "b7761708-8c84-11f0-9353-42010afa015a",
+          "source_id": "b7761924-8c84-11f0-9353-42010afa015a"
+        },
+        "InvModBatteriesAvailability": {
+          "mloc_id": "b733fc9c-8c84-11f0-9353-42010afa015a",
+          "source_id": "b733feae-8c84-11f0-9353-42010afa015a"
+        },
+        "BatInvSOC": {
+          "mloc_id": "b7331d54-8c84-11f0-9353-42010afa015a",
+          "source_id": "b73321be-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvOverallAlarmState": {
+          "mloc_id": "b77651b4-8c84-11f0-9353-42010afa015a",
+          "source_id": "b77653bc-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS04": {
+      "segment_id": "73ae78ee-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "BinvOverallAlarmState": {
+          "mloc_id": "bde122e0-8c84-11f0-9353-42010afa015a",
+          "source_id": "bde124e8-8c84-11f0-9353-42010afa015a"
+        },
+        "HeartbeatCount": {
+          "mloc_id": "bd921d4e-8c84-11f0-9353-42010afa015a",
+          "source_id": "bd921f60-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "bde0f5b8-8c84-11f0-9353-42010afa015a",
+          "source_id": "bde0f7ca-8c84-11f0-9353-42010afa015a"
+        },
+        "BatInvSOC": {
+          "mloc_id": "bd74fb6a-8c84-11f0-9353-42010afa015a",
+          "source_id": "bd74ff70-8c84-11f0-9353-42010afa015a"
+        },
+        "InvModBatteriesAvailability": {
+          "mloc_id": "bd75cc7a-8c84-11f0-9353-42010afa015a",
+          "source_id": "bd75ce8c-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS05": {
+      "segment_id": "73af8f4a-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "BinvOverallAlarmState": {
+          "mloc_id": "c4208628-8c84-11f0-9353-42010afa015a",
+          "source_id": "c4208812-8c84-11f0-9353-42010afa015a"
+        },
+        "InvModBatteriesAvailability": {
+          "mloc_id": "c3e05f26-8c84-11f0-9353-42010afa015a",
+          "source_id": "c3e06278-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "c4205a2c-8c84-11f0-9353-42010afa015a",
+          "source_id": "c4205cde-8c84-11f0-9353-42010afa015a"
+        },
+        "BatInvSOC": {
+          "mloc_id": "c3df80ec-8c84-11f0-9353-42010afa015a",
+          "source_id": "c3df84fc-8c84-11f0-9353-42010afa015a"
+        },
+        "HeartbeatCount": {
+          "mloc_id": "c3fcf834-8c84-11f0-9353-42010afa015a",
+          "source_id": "c3fcfa3c-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS06": {
+      "segment_id": "73b09926-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "InvModBatteriesAvailability": {
+          "mloc_id": "ca554c54-8c84-11f0-9353-42010afa015a",
+          "source_id": "ca554e5c-8c84-11f0-9353-42010afa015a"
+        },
+        "HeartbeatCount": {
+          "mloc_id": "ca720baa-8c84-11f0-9353-42010afa015a",
+          "source_id": "ca720e70-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvOverallAlarmState": {
+          "mloc_id": "ca960168-8c84-11f0-9353-42010afa015a",
+          "source_id": "ca96037a-8c84-11f0-9353-42010afa015a"
+        },
+        "BatInvSOC": {
+          "mloc_id": "ca54673a-8c84-11f0-9353-42010afa015a",
+          "source_id": "ca546b90-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "ca95d558-8c84-11f0-9353-42010afa015a",
+          "source_id": "ca95d76a-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS07": {
+      "segment_id": "73b19a88-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "InvModBatteriesAvailability": {
+          "mloc_id": "d09e9d0e-8c84-11f0-9353-42010afa015a",
+          "source_id": "d09e9f16-8c84-11f0-9353-42010afa015a"
+        },
+        "HeartbeatCount": {
+          "mloc_id": "d0baa08a-8c84-11f0-9353-42010afa015a",
+          "source_id": "d0baa422-8c84-11f0-9353-42010afa015a"
+        },
+        "BatInvSOC": {
+          "mloc_id": "d09dc9ce-8c84-11f0-9353-42010afa015a",
+          "source_id": "d09dce88-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvOverallAlarmState": {
+          "mloc_id": "d0de3ad6-8c84-11f0-9353-42010afa015a",
+          "source_id": "d0de3eb4-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "d0ddffda-8c84-11f0-9353-42010afa015a",
+          "source_id": "d0de01d8-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS08": {
+      "segment_id": "73b29dca-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "BatInvSOC": {
+          "mloc_id": "d7212200-8c84-11f0-9353-42010afa015a",
+          "source_id": "d7212638-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "d762340c-8c84-11f0-9353-42010afa015a",
+          "source_id": "d762361e-8c84-11f0-9353-42010afa015a"
+        },
+        "HeartbeatCount": {
+          "mloc_id": "d73ed99e-8c84-11f0-9353-42010afa015a",
+          "source_id": "d73edb9c-8c84-11f0-9353-42010afa015a"
+        },
+        "InvModBatteriesAvailability": {
+          "mloc_id": "d722088c-8c84-11f0-9353-42010afa015a",
+          "source_id": "d7220c74-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvOverallAlarmState": {
+          "mloc_id": "d76260bc-8c84-11f0-9353-42010afa015a",
+          "source_id": "d76262ba-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS09": {
+      "segment_id": "73b399dc-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "BinvSystemStatus": {
+          "mloc_id": "dda120d0-8c84-11f0-9353-42010afa015a",
+          "source_id": "dda1230a-8c84-11f0-9353-42010afa015a"
+        },
+        "InvModBatteriesAvailability": {
+          "mloc_id": "dd60a6ea-8c84-11f0-9353-42010afa015a",
+          "source_id": "dd60a960-8c84-11f0-9353-42010afa015a"
+        },
+        "HeartbeatCount": {
+          "mloc_id": "dd7d4516-8c84-11f0-9353-42010afa015a",
+          "source_id": "dd7d4728-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvOverallAlarmState": {
+          "mloc_id": "dda150f0-8c84-11f0-9353-42010afa015a",
+          "source_id": "dda152e4-8c84-11f0-9353-42010afa015a"
+        },
+        "BatInvSOC": {
+          "mloc_id": "dd5fc1da-8c84-11f0-9353-42010afa015a",
+          "source_id": "dd5fc5ea-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS10": {
+      "segment_id": "73b4b34e-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "BinvOverallAlarmState": {
+          "mloc_id": "e3ea7f5e-8c84-11f0-9353-42010afa015a",
+          "source_id": "e3ea8148-8c84-11f0-9353-42010afa015a"
+        },
+        "InvModBatteriesAvailability": {
+          "mloc_id": "e3aa6bda-8c84-11f0-9353-42010afa015a",
+          "source_id": "e3aa6e00-8c84-11f0-9353-42010afa015a"
+        },
+        "BatInvSOC": {
+          "mloc_id": "e3a98d8c-8c84-11f0-9353-42010afa015a",
+          "source_id": "e3a991ba-8c84-11f0-9353-42010afa015a"
+        },
+        "HeartbeatCount": {
+          "mloc_id": "e3c70ae2-8c84-11f0-9353-42010afa015a",
+          "source_id": "e3c70d3a-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "e3ea4d5e-8c84-11f0-9353-42010afa015a",
+          "source_id": "e3ea5272-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS11": {
+      "segment_id": "73b5b906-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "HeartbeatCount": {
+          "mloc_id": "ea0c4516-8c84-11f0-9353-42010afa015a",
+          "source_id": "ea0c473c-8c84-11f0-9353-42010afa015a"
+        },
+        "InvModBatteriesAvailability": {
+          "mloc_id": "e9efbf5e-8c84-11f0-9353-42010afa015a",
+          "source_id": "e9efc2b0-8c84-11f0-9353-42010afa015a"
+        },
+        "BatInvSOC": {
+          "mloc_id": "e9eee6a6-8c84-11f0-9353-42010afa015a",
+          "source_id": "e9eeeb74-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "ea676e3c-8c84-11f0-9353-42010afa015a",
+          "source_id": "ea677044-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvOverallAlarmState": {
+          "mloc_id": "ea679ccc-8c84-11f0-9353-42010afa015a",
+          "source_id": "ea679eb6-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS12": {
+      "segment_id": "73b6af3c-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "BinvOverallAlarmState": {
+          "mloc_id": "f0c70bac-8c84-11f0-9353-42010afa015a",
+          "source_id": "f0c70d96-8c84-11f0-9353-42010afa015a"
+        },
+        "InvModBatteriesAvailability": {
+          "mloc_id": "f04ac11e-8c84-11f0-9353-42010afa015a",
+          "source_id": "f04ac34e-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "f0c6de66-8c84-11f0-9353-42010afa015a",
+          "source_id": "f0c6e06e-8c84-11f0-9353-42010afa015a"
+        },
+        "BatInvSOC": {
+          "mloc_id": "f049ec8a-8c84-11f0-9353-42010afa015a",
+          "source_id": "f049f0ae-8c84-11f0-9353-42010afa015a"
+        },
+        "HeartbeatCount": {
+          "mloc_id": "f0a305a4-8c84-11f0-9353-42010afa015a",
+          "source_id": "f0a307d4-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS13": {
+      "segment_id": "73b7a914-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "HeartbeatCount": {
+          "mloc_id": "f702e194-8c84-11f0-9353-42010afa015a",
+          "source_id": "f702e39c-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "f726b2f4-8c84-11f0-9353-42010afa015a",
+          "source_id": "f726b524-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvOverallAlarmState": {
+          "mloc_id": "f726ed3c-8c84-11f0-9353-42010afa015a",
+          "source_id": "f726ef58-8c84-11f0-9353-42010afa015a"
+        },
+        "InvModBatteriesAvailability": {
+          "mloc_id": "f6e649f8-8c84-11f0-9353-42010afa015a",
+          "source_id": "f6e64c0a-8c84-11f0-9353-42010afa015a"
+        },
+        "BatInvSOC": {
+          "mloc_id": "f6e57546-8c84-11f0-9353-42010afa015a",
+          "source_id": "f6e57988-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    },
+    "PCS14": {
+      "segment_id": "73b8af12-8c84-11f0-9353-42010afa015a",
+      "mlocs": {
+        "BatInvSOC": {
+          "mloc_id": "fd40d1f6-8c84-11f0-9353-42010afa015a",
+          "source_id": "fd40d624-8c84-11f0-9353-42010afa015a"
+        },
+        "InvModBatteriesAvailability": {
+          "mloc_id": "fd41b882-8c84-11f0-9353-42010afa015a",
+          "source_id": "fd41bae4-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvSystemStatus": {
+          "mloc_id": "fd819ac4-8c84-11f0-9353-42010afa015a",
+          "source_id": "fd819cd6-8c84-11f0-9353-42010afa015a"
+        },
+        "BinvOverallAlarmState": {
+          "mloc_id": "fd81c6e8-8c84-11f0-9353-42010afa015a",
+          "source_id": "fd81c8d2-8c84-11f0-9353-42010afa015a"
+        },
+        "HeartbeatCount": {
+          "mloc_id": "fd5e71e8-8c84-11f0-9353-42010afa015a",
+          "source_id": "fd5e73f0-8c84-11f0-9353-42010afa015a"
+        }
+      }
+    }
+  },
+  "wtg": {
+    "WTG01": {
+      "segment_id": "bbb51a1c-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "WindSpeed": {
+          "mloc_id": "5b526eb2-b313-11f0-94b7-42010afa015a",
+          "source_id": "5b527308-b313-11f0-94b7-42010afa015a"
+        },
+        "Availability": {
+          "mloc_id": "5b528a0a-b313-11f0-94b7-42010afa015a",
+          "source_id": "5b528faa-b313-11f0-94b7-42010afa015a"
+        },
+        "ActivePowerExport": {
+          "mloc_id": "5b51598c-b313-11f0-94b7-42010afa015a",
+          "source_id": "5b515df6-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG16": {
+      "segment_id": "bbb6db5e-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "ActivePowerExport": {
+          "mloc_id": "5b865ec0-b313-11f0-94b7-42010afa015a",
+          "source_id": "5b866762-b313-11f0-94b7-42010afa015a"
+        },
+        "Availability": {
+          "mloc_id": "5b878778-b313-11f0-94b7-42010afa015a",
+          "source_id": "5b878b7e-b313-11f0-94b7-42010afa015a"
+        },
+        "WindSpeed": {
+          "mloc_id": "5b877472-b313-11f0-94b7-42010afa015a",
+          "source_id": "5b8778fa-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG20": {
+      "segment_id": "bbb89cb4-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "ActivePowerExport": {
+          "mloc_id": "5bbbc920-b313-11f0-94b7-42010afa015a",
+          "source_id": "5bbbcf9c-b313-11f0-94b7-42010afa015a"
+        },
+        "Availability": {
+          "mloc_id": "5bbce382-b313-11f0-94b7-42010afa015a",
+          "source_id": "5bbce7c4-b313-11f0-94b7-42010afa015a"
+        },
+        "WindSpeed": {
+          "mloc_id": "5bbccc4e-b313-11f0-94b7-42010afa015a",
+          "source_id": "5bbcd0a4-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG21": {
+      "segment_id": "bbba88e4-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "Availability": {
+          "mloc_id": "5bf205d0-b313-11f0-94b7-42010afa015a",
+          "source_id": "5bf209fe-b313-11f0-94b7-42010afa015a"
+        },
+        "WindSpeed": {
+          "mloc_id": "5bf1ef82-b313-11f0-94b7-42010afa015a",
+          "source_id": "5bf1f630-b313-11f0-94b7-42010afa015a"
+        },
+        "ActivePowerExport": {
+          "mloc_id": "5bf0bf18-b313-11f0-94b7-42010afa015a",
+          "source_id": "5bf0c3d2-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG25": {
+      "segment_id": "bbbc683a-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "ActivePowerExport": {
+          "mloc_id": "5c24716e-b313-11f0-94b7-42010afa015a",
+          "source_id": "5c2478d0-b313-11f0-94b7-42010afa015a"
+        },
+        "WindSpeed": {
+          "mloc_id": "5c257fc8-b313-11f0-94b7-42010afa015a",
+          "source_id": "5c2584fa-b313-11f0-94b7-42010afa015a"
+        },
+        "Availability": {
+          "mloc_id": "5c2595f8-b313-11f0-94b7-42010afa015a",
+          "source_id": "5c259a30-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG30": {
+      "segment_id": "bbbe2f76-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "WindSpeed": {
+          "mloc_id": "5c593886-b313-11f0-94b7-42010afa015a",
+          "source_id": "5c593d54-b313-11f0-94b7-42010afa015a"
+        },
+        "ActivePowerExport": {
+          "mloc_id": "5c5831e8-b313-11f0-94b7-42010afa015a",
+          "source_id": "5c5836de-b313-11f0-94b7-42010afa015a"
+        },
+        "Availability": {
+          "mloc_id": "5c594d44-b313-11f0-94b7-42010afa015a",
+          "source_id": "5c5951f4-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG52": {
+      "segment_id": "bbbfdb6e-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "WindSpeed": {
+          "mloc_id": "5cc99482-b313-11f0-94b7-42010afa015a",
+          "source_id": "5cc9995a-b313-11f0-94b7-42010afa015a"
+        },
+        "ActivePowerExport": {
+          "mloc_id": "5cc87c82-b313-11f0-94b7-42010afa015a",
+          "source_id": "5cc8829a-b313-11f0-94b7-42010afa015a"
+        },
+        "Availability": {
+          "mloc_id": "5cc9a832-b313-11f0-94b7-42010afa015a",
+          "source_id": "5cc9ac42-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG54": {
+      "segment_id": "bbc19ec2-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "WindSpeed": {
+          "mloc_id": "5cfd85f8-b313-11f0-94b7-42010afa015a",
+          "source_id": "5cfd8a62-b313-11f0-94b7-42010afa015a"
+        },
+        "Availability": {
+          "mloc_id": "5cfd9e26-b313-11f0-94b7-42010afa015a",
+          "source_id": "5cfda38a-b313-11f0-94b7-42010afa015a"
+        },
+        "ActivePowerExport": {
+          "mloc_id": "5cfc7a50-b313-11f0-94b7-42010afa015a",
+          "source_id": "5cfc7e7e-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG60": {
+      "segment_id": "bbc38d04-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "WindSpeed": {
+          "mloc_id": "5d3176ec-b313-11f0-94b7-42010afa015a",
+          "source_id": "5d317c5a-b313-11f0-94b7-42010afa015a"
+        },
+        "Availability": {
+          "mloc_id": "5d318b78-b313-11f0-94b7-42010afa015a",
+          "source_id": "5d318f88-b313-11f0-94b7-42010afa015a"
+        },
+        "ActivePowerExport": {
+          "mloc_id": "5d306be4-b313-11f0-94b7-42010afa015a",
+          "source_id": "5d30710c-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG61": {
+      "segment_id": "bbc57d8a-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "ActivePowerExport": {
+          "mloc_id": "5d65184e-b313-11f0-94b7-42010afa015a",
+          "source_id": "5d651cc2-b313-11f0-94b7-42010afa015a"
+        },
+        "Availability": {
+          "mloc_id": "5d663aa8-b313-11f0-94b7-42010afa015a",
+          "source_id": "5d663f3a-b313-11f0-94b7-42010afa015a"
+        },
+        "WindSpeed": {
+          "mloc_id": "5d662720-b313-11f0-94b7-42010afa015a",
+          "source_id": "5d662b9e-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG63": {
+      "segment_id": "bbc76488-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "WindSpeed": {
+          "mloc_id": "5d99a1c2-b313-11f0-94b7-42010afa015a",
+          "source_id": "5d99a74e-b313-11f0-94b7-42010afa015a"
+        },
+        "ActivePowerExport": {
+          "mloc_id": "5d989ce6-b313-11f0-94b7-42010afa015a",
+          "source_id": "5d98a29a-b313-11f0-94b7-42010afa015a"
+        },
+        "Availability": {
+          "mloc_id": "5d99b8d8-b313-11f0-94b7-42010afa015a",
+          "source_id": "5d99bd42-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG64": {
+      "segment_id": "bbc93c5e-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "Availability": {
+          "mloc_id": "5dce9846-b313-11f0-94b7-42010afa015a",
+          "source_id": "5dce9d14-b313-11f0-94b7-42010afa015a"
+        },
+        "ActivePowerExport": {
+          "mloc_id": "5dcd7218-b313-11f0-94b7-42010afa015a",
+          "source_id": "5dcd76c8-b313-11f0-94b7-42010afa015a"
+        },
+        "WindSpeed": {
+          "mloc_id": "5dce8536-b313-11f0-94b7-42010afa015a",
+          "source_id": "5dce89d2-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG65": {
+      "segment_id": "bbcb197a-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "WindSpeed": {
+          "mloc_id": "5e0583ce-b313-11f0-94b7-42010afa015a",
+          "source_id": "5e0588b0-b313-11f0-94b7-42010afa015a"
+        },
+        "ActivePowerExport": {
+          "mloc_id": "5e045d0a-b313-11f0-94b7-42010afa015a",
+          "source_id": "5e046214-b313-11f0-94b7-42010afa015a"
+        },
+        "Availability": {
+          "mloc_id": "5e059fbc-b313-11f0-94b7-42010afa015a",
+          "source_id": "5e05a48a-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    },
+    "WTG67": {
+      "segment_id": "bbcd22e2-b312-11f0-94b7-42010afa015a",
+      "mlocs": {
+        "ActivePowerExport": {
+          "mloc_id": "5e3918ec-b313-11f0-94b7-42010afa015a",
+          "source_id": "5e391dba-b313-11f0-94b7-42010afa015a"
+        },
+        "Availability": {
+          "mloc_id": "5e3a40fa-b313-11f0-94b7-42010afa015a",
+          "source_id": "5e3a4582-b313-11f0-94b7-42010afa015a"
+        },
+        "WindSpeed": {
+          "mloc_id": "5e3a278c-b313-11f0-94b7-42010afa015a",
+          "source_id": "5e3a2be2-b313-11f0-94b7-42010afa015a"
+        }
+      }
+    }
+  },
+  "wtg_svars": {
+    "WTG67": "7b843ea0-8c84-11f0-9353-42010afa015a",
+    "WTG65": "7b843b80-8c84-11f0-9353-42010afa015a",
+    "WTG64": "7b84378e-8c84-11f0-9353-42010afa015a",
+    "WTG63": "7b8432a2-8c84-11f0-9353-42010afa015a",
+    "WTG61": "7b842f28-8c84-11f0-9353-42010afa015a",
+    "WTG60": "7b842bea-8c84-11f0-9353-42010afa015a",
+    "WTG54": "7b84282a-8c84-11f0-9353-42010afa015a",
+    "WTG52": "7b8424e2-8c84-11f0-9353-42010afa015a",
+    "WTG30": "7b84219a-8c84-11f0-9353-42010afa015a",
+    "WTG25": "7b841e5c-8c84-11f0-9353-42010afa015a",
+    "WTG21": "7b841b1e-8c84-11f0-9353-42010afa015a",
+    "WTG20": "7b841772-8c84-11f0-9353-42010afa015a",
+    "WTG16": "7b841132-8c84-11f0-9353-42010afa015a",
+    "WTG01": "7b84099e-8c84-11f0-9353-42010afa015a"
+  },
+  "ems": {
+    "segment_id": "74088aaa-8c84-11f0-9353-42010afa015a",
+    "mlocs": {
+      "AvailabilityDeclaredWF": {
+        "mloc_id": "7a1347c8-8c84-11f0-9353-42010afa015a",
+        "source_id": "7a1349da-8c84-11f0-9353-42010afa015a"
+      },
+      "AvailabilityDeclaredWFEffective": {
+        "mloc_id": "7a134f34-8c84-11f0-9353-42010afa015a",
+        "source_id": "7a135128-8c84-11f0-9353-42010afa015a"
+      },
+      "UnplannedUnavaibilityWF": {
+        "mloc_id": "7a134b92-8c84-11f0-9353-42010afa015a",
+        "source_id": "7a134d68-8c84-11f0-9353-42010afa015a"
+      },
+      "WFAvailability": {
+        "mloc_id": "7a13fd6c-8c84-11f0-9353-42010afa015a",
+        "source_id": "7a1401ae-8c84-11f0-9353-42010afa015a"
+      },
+      "AvailabilityDeclaredBESS": {
+        "mloc_id": "7a135664-8c84-11f0-9353-42010afa015a",
+        "source_id": "7a135830-8c84-11f0-9353-42010afa015a"
+      },
+      "AvailabilityDeclaredBESSEffective": {
+        "mloc_id": "7a1359d4-8c84-11f0-9353-42010afa015a",
+        "source_id": "7a135ba0-8c84-11f0-9353-42010afa015a"
+      },
+      "UnplannedUnavaibilityBESS": {
+        "mloc_id": "7a135d62-8c84-11f0-9353-42010afa015a",
+        "source_id": "7a135f2e-8c84-11f0-9353-42010afa015a"
+      },
+      "BESSAvailability": {
+        "mloc_id": "7a1414a0-8c84-11f0-9353-42010afa015a",
+        "source_id": "7a1418a6-8c84-11f0-9353-42010afa015a"
+      }
+    }
+  }
+}
