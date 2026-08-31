@@ -4,7 +4,6 @@ date: '2026-08-31'
 layout: tabs
 notesStatus: draft
 ---
-
 Dassiesridge Hybrid (Wind + BESS) exported 3.26 GWh this week, up 61.2% on last week's telemetry-affected low. Production is recovering, but this week has its own oddity worth a look: declared Wind and BESS availability dropped to 76.6% on Wednesday and Thursday — yet those were two of the week's best production days.
 
 <div class="summary-grid">
@@ -15,7 +14,7 @@ Dassiesridge Hybrid (Wind + BESS) exported 3.26 GWh this week, up 61.2% on last 
 </div>
 
 <div class="callout callout-issue">
-<strong>Major issue:</strong> declared Wind and BESS availability fell to 41.7% (Wed) and 20.8% (Thu) — yet both days were among the week's strongest for actual output (489 MWh and 611 MWh exported, on 553 MWh and 589 MWh of wind). A plant reporting itself barely available while physically producing near-normal volumes is a genuine inconsistency worth flagging for review rather than a straightforward operational problem. Separately, PCS03 is this week's clear outlier — 29.7% on Monday and 50.0% on Tuesday, the two worst single-unit readings of the week — and the 2.00x penalty tier share stayed high at 50.4%, close to two weeks ago's record.
+<strong>Alert:</strong> declared Wind and BESS availability fell to 41.7% (Wed) and 20.8% (Thu) — yet both days were among the week's strongest for actual output (489 MWh and 611 MWh exported, on 553 MWh and 589 MWh of wind). A plant reporting itself barely available while physically producing near-normal volumes is a genuine inconsistency worth flagging for review rather than a straightforward operational problem. Separately, PCS03 is this week's clear outlier — 29.7% on Monday and 50.0% on Tuesday, the two worst single-unit readings of the week — and the 2.00x penalty tier share stayed high at 50.4%, close to two weeks ago's record.
 </div>
 
 <div class="callout callout-win">
