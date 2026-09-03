@@ -153,7 +153,7 @@
     header.top { flex-direction: column; }
   }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
 </head>
 <body>
 
@@ -382,51 +382,124 @@
   }
 
   // ================= Excel export (selected month only) =================
-  function downloadCurrentMonthExcel() {
+  // Severity fill colors mirror the on-page heatmap exactly (see --status-* tokens above).
+  const SEVERITY_FILL = {
+    0: { argb: "FFECEFF1" }, // no issue - surface-2
+    1: { argb: "FFFAB219" }, // isolated trip - warning
+    2: { argb: "FFEC835A" }, // partial outage - serious
+    3: { argb: "FFD03B3B" }, // fleet-wide event - critical
+  };
+  const SEVERITY_TEXT = {
+    0: { argb: "FF16221F" },
+    1: { argb: "FF16221F" },
+    2: { argb: "FFFFFFFF" },
+    3: { argb: "FFFFFFFF" },
+  };
+
+  async function downloadCurrentMonthExcel() {
     const M = MONTHS[currentMonthKey];
     const btn = document.getElementById("download-btn");
+    const labelEl = document.getElementById("download-btn-label");
 
-    if (typeof XLSX === "undefined") {
+    if (typeof ExcelJS === "undefined") {
       btn.disabled = true;
-      document.getElementById("download-btn-label").textContent = "Library failed to load";
+      labelEl.textContent = "Library failed to load";
       setTimeout(updateDownloadLabel, 2500);
       return;
     }
 
-    const wb = XLSX.utils.book_new();
+    btn.disabled = true;
+    const originalLabel = labelEl.textContent;
+    labelEl.textContent = "Preparing…";
 
-    // --- Events sheet ---
-    const eventRows = [["Unit", "Category", "Start (UTC)", "End (UTC)", "Duration", "Chronic (many short episodes)", "Note"]];
-    M.events.forEach(e => {
-      const sMs = parseDT(e.start).getTime();
+    try {
+      const wb = new ExcelJS.Workbook();
+      wb.creator = "Dassiesridge BESS Outage Trends";
+      wb.created = new Date();
+
+      // --- Events sheet ---
+      const eventsSheet = wb.addWorksheet("Events");
+      eventsSheet.columns = [
+        { header: "Unit", key: "unit", width: 26 },
+        { header: "Category", key: "category", width: 34 },
+        { header: "Start (UTC)", key: "start", width: 18 },
+        { header: "End (UTC)", key: "end", width: 18 },
+        { header: "Duration", key: "duration", width: 12 },
+        { header: "Chronic (many short episodes)", key: "chronic", width: 14 },
+        { header: "Note", key: "note", width: 70 },
+      ];
+      eventsSheet.getRow(1).font = { bold: true };
       const monthEndDay = Date.UTC(M.year, M.month - 1, M.days, 23, 59);
-      const eMs = e.ongoing ? monthEndDay : parseDT(e.end).getTime();
-      eventRows.push([
-        e.unit,
-        CATEGORY[e.category].label,
-        fmtDT(parseDT(e.start)),
-        e.ongoing ? "ongoing as of last check" : fmtDT(parseDT(e.end)),
-        fmtDuration(sMs, eMs) + (e.ongoing ? "+ (open)" : ""),
-        e.chronic ? "Yes" : "No",
-        e.note,
-      ]);
-    });
-    const eventsSheet = XLSX.utils.aoa_to_sheet(eventRows);
-    eventsSheet["!cols"] = [{ wch: 26 }, { wch: 32 }, { wch: 18 }, { wch: 18 }, { wch: 12 }, { wch: 12 }, { wch: 70 }];
-    XLSX.utils.book_append_sheet(wb, eventsSheet, "Events");
+      M.events.forEach(e => {
+        const sMs = parseDT(e.start).getTime();
+        const eMs = e.ongoing ? monthEndDay : parseDT(e.end).getTime();
+        eventsSheet.addRow({
+          unit: e.unit,
+          category: CATEGORY[e.category].label,
+          start: fmtDT(parseDT(e.start)),
+          end: e.ongoing ? "ongoing as of last check" : fmtDT(parseDT(e.end)),
+          duration: fmtDuration(sMs, eMs) + (e.ongoing ? "+ (open)" : ""),
+          chronic: e.chronic ? "Yes" : "No",
+          note: e.note,
+        });
+      });
+      eventsSheet.views = [{ state: "frozen", ySplit: 1 }];
 
-    // --- Grid sheet (unit x day, raw severity levels 0-3) ---
-    const gridRows = [["Unit", ...Array.from({ length: M.days }, (_, i) => i + 1)]];
-    ALL_PCS.forEach(unit => {
-      gridRows.push([unit, ...M.grid[unit].slice(1)]);
-    });
-    gridRows.push([]);
-    gridRows.push(["Severity key: 0 = no issue, 1 = isolated trip, 2 = partial outage, 3 = fleet-wide event"]);
-    const gridSheet = XLSX.utils.aoa_to_sheet(gridRows);
-    gridSheet["!cols"] = [{ wch: 8 }, ...Array.from({ length: M.days }, () => ({ wch: 4 }))];
-    XLSX.utils.book_append_sheet(wb, gridSheet, "Unit x Day Grid");
+      // --- Unit Day sheet (unit x day grid, colored by severity) ---
+      const gridSheet = wb.addWorksheet("Unit Day");
+      gridSheet.getColumn(1).width = 8;
+      for (let d = 1; d <= M.days; d++) gridSheet.getColumn(d + 1).width = 4;
 
-    XLSX.writeFile(wb, `Dassiesridge_BESS_Outage_${M.tabLabel}${M.year}.xlsx`);
+      const headerRow = gridSheet.addRow(["Unit", ...Array.from({ length: M.days }, (_, i) => i + 1)]);
+      headerRow.font = { bold: true };
+
+      ALL_PCS.forEach(unit => {
+        const row = gridSheet.addRow([unit, ...M.grid[unit].slice(1)]);
+        row.getCell(1).font = { bold: true };
+        for (let d = 1; d <= M.days; d++) {
+          const level = M.grid[unit][d];
+          const cell = row.getCell(d + 1);
+          cell.fill = { type: "pattern", pattern: "solid", fgColor: SEVERITY_FILL[level] };
+          cell.font = { color: SEVERITY_TEXT[level] };
+          cell.alignment = { horizontal: "center" };
+        }
+      });
+      gridSheet.views = [{ state: "frozen", xSplit: 1, ySplit: 1 }];
+
+      gridSheet.addRow([]);
+      const keyRowLabel = ["Severity key:"];
+      const keyRow = gridSheet.addRow(keyRowLabel);
+      keyRow.getCell(1).font = { bold: true };
+      const keyItems = [
+        { level: 0, text: "0 = no issue" },
+        { level: 1, text: "1 = isolated trip" },
+        { level: 2, text: "2 = partial outage" },
+        { level: 3, text: "3 = fleet-wide event" },
+      ];
+      keyItems.forEach((item, i) => {
+        const r = gridSheet.addRow([item.text]);
+        r.getCell(1).fill = { type: "pattern", pattern: "solid", fgColor: SEVERITY_FILL[item.level] };
+        r.getCell(1).font = { color: SEVERITY_TEXT[item.level] };
+      });
+
+      const buffer = await wb.xlsx.writeBuffer();
+      const blob = new Blob([buffer], { type: "application/octet-stream" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `Dassiesridge_BESS_Outage_${M.tabLabel}${M.year}.xlsx`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      labelEl.textContent = "Export failed";
+      setTimeout(updateDownloadLabel, 2500);
+      throw err;
+    } finally {
+      btn.disabled = false;
+      if (labelEl.textContent === "Preparing…") labelEl.textContent = originalLabel;
+    }
   }
 
   // ================= KPI row =================
