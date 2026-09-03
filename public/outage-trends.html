@@ -80,6 +80,18 @@
   .month-switcher button:hover { color: var(--text); }
   .month-switcher button.active { background: var(--surface); color: var(--accent-strong); box-shadow: var(--shadow); }
 
+  .header-controls { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+  .download-btn {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    font-family: var(--font-body); font-size: 0.85rem; font-weight: 500;
+    background: var(--accent-soft); border: 1px solid var(--accent); color: var(--accent-strong);
+    border-radius: 6px; padding: 0.5rem 0.85rem; cursor: pointer; transition: background 0.12s ease;
+  }
+  .download-btn:hover { background: var(--accent); color: var(--surface); }
+  .download-btn:hover svg { stroke: var(--surface); }
+  .download-btn svg { width: 15px; height: 15px; stroke: var(--accent-strong); transition: stroke 0.12s ease; }
+  .download-btn:disabled { opacity: 0.6; cursor: default; }
+
   .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 2rem; }
   .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1rem; box-shadow: var(--shadow); position: relative; overflow: hidden; }
   .kpi::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--kpi-stripe, var(--border)); }
@@ -141,6 +153,7 @@
     header.top { flex-direction: column; }
   }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
 
@@ -155,7 +168,13 @@
       </div>
       <div class="site-meta">Dassiesridge Hybrid (Wind + BESS) &middot; Umoyilanga VPP &middot; 14 PCS units</div>
     </div>
-    <div class="month-switcher" id="month-switcher"></div>
+    <div class="header-controls">
+      <div class="month-switcher" id="month-switcher"></div>
+      <button id="download-btn" class="download-btn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span id="download-btn-label">Download Excel</span>
+      </button>
+    </div>
   </header>
 
   <div class="month-note" id="month-note"></div>
@@ -351,8 +370,63 @@
         el.querySelectorAll("button").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
         renderAll();
+        updateDownloadLabel();
       });
     });
+    updateDownloadLabel();
+  }
+
+  function updateDownloadLabel() {
+    const label = document.getElementById("download-btn-label");
+    if (label) label.textContent = `Download ${MONTHS[currentMonthKey].tabLabel} Excel`;
+  }
+
+  // ================= Excel export (selected month only) =================
+  function downloadCurrentMonthExcel() {
+    const M = MONTHS[currentMonthKey];
+    const btn = document.getElementById("download-btn");
+
+    if (typeof XLSX === "undefined") {
+      btn.disabled = true;
+      document.getElementById("download-btn-label").textContent = "Library failed to load";
+      setTimeout(updateDownloadLabel, 2500);
+      return;
+    }
+
+    const wb = XLSX.utils.book_new();
+
+    // --- Events sheet ---
+    const eventRows = [["Unit", "Category", "Start (UTC)", "End (UTC)", "Duration", "Chronic (many short episodes)", "Note"]];
+    M.events.forEach(e => {
+      const sMs = parseDT(e.start).getTime();
+      const monthEndDay = Date.UTC(M.year, M.month - 1, M.days, 23, 59);
+      const eMs = e.ongoing ? monthEndDay : parseDT(e.end).getTime();
+      eventRows.push([
+        e.unit,
+        CATEGORY[e.category].label,
+        fmtDT(parseDT(e.start)),
+        e.ongoing ? "ongoing as of last check" : fmtDT(parseDT(e.end)),
+        fmtDuration(sMs, eMs) + (e.ongoing ? "+ (open)" : ""),
+        e.chronic ? "Yes" : "No",
+        e.note,
+      ]);
+    });
+    const eventsSheet = XLSX.utils.aoa_to_sheet(eventRows);
+    eventsSheet["!cols"] = [{ wch: 26 }, { wch: 32 }, { wch: 18 }, { wch: 18 }, { wch: 12 }, { wch: 12 }, { wch: 70 }];
+    XLSX.utils.book_append_sheet(wb, eventsSheet, "Events");
+
+    // --- Grid sheet (unit x day, raw severity levels 0-3) ---
+    const gridRows = [["Unit", ...Array.from({ length: M.days }, (_, i) => i + 1)]];
+    ALL_PCS.forEach(unit => {
+      gridRows.push([unit, ...M.grid[unit].slice(1)]);
+    });
+    gridRows.push([]);
+    gridRows.push(["Severity key: 0 = no issue, 1 = isolated trip, 2 = partial outage, 3 = fleet-wide event"]);
+    const gridSheet = XLSX.utils.aoa_to_sheet(gridRows);
+    gridSheet["!cols"] = [{ wch: 8 }, ...Array.from({ length: M.days }, () => ({ wch: 4 }))];
+    XLSX.utils.book_append_sheet(wb, gridSheet, "Unit x Day Grid");
+
+    XLSX.writeFile(wb, `Dassiesridge_BESS_Outage_${M.tabLabel}${M.year}.xlsx`);
   }
 
   // ================= KPI row =================
@@ -511,6 +585,8 @@
     renderTimeline();
     renderHeatmap();
   }
+
+  document.getElementById("download-btn").addEventListener("click", downloadCurrentMonthExcel);
 
   renderSwitcher();
   renderAll();
