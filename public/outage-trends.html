@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dassiesridge Outage Trends</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  body { margin: 0; }
+  .viz-root {
+    color-scheme: light;
+    --bg: #f4f6f7;
+    --surface: #ffffff;
+    --surface-2: #eceff1;
+    --border: #d7dde0;
+    --text: #16221f;
+    --text-muted: #5c6e6a;
+    --text-faint: #8a9a96;
+    --accent: #0d7d78;
+    --accent-strong: #095e5a;
+    --accent-soft: #e3f1ef;
+    --shadow: 0 1px 2px rgba(20, 30, 28, 0.06), 0 4px 12px rgba(20, 30, 28, 0.05);
+
+    --series-1: #2a78d6;
+    --series-2: #eb6834;
+    --series-3: #1baf7a;
+    --series-4: #eda100;
+
+    --status-good: #0ca30c;
+    --status-warning: #fab219;
+    --status-serious: #ec835a;
+    --status-critical: #d03b3b;
+
+    --font-display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+    --font-body: "IBM Plex Sans", system-ui, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .viz-root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0e1513; --surface: #161e1c; --surface-2: #1d2725; --border: #2a3634;
+      --text: #e7edeb; --text-muted: #93a5a1; --text-faint: #63706d;
+      --accent: #3fb3ac; --accent-strong: #66c9c2; --accent-soft: #16302e;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.35);
+      --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
+      --status-good: #0ca30c; --status-warning: #fab219; --status-serious: #ec835a; --status-critical: #d03b3b;
+    }
+  }
+  .viz-root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0e1513; --surface: #161e1c; --surface-2: #1d2725; --border: #2a3634;
+    --text: #e7edeb; --text-muted: #93a5a1; --text-faint: #63706d;
+    --accent: #3fb3ac; --accent-strong: #66c9c2; --accent-soft: #16302e;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.35);
+    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
+    --status-good: #0ca30c; --status-warning: #fab219; --status-serious: #ec835a; --status-critical: #d03b3b;
+  }
+
+  * { box-sizing: border-box; }
+  .viz-root { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 1.75rem 1.5rem 4rem; }
+
+  header.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); margin-bottom: 1.25rem; flex-wrap: wrap; }
+  .plant-id { display: flex; align-items: baseline; gap: 0.6rem; }
+  .plant-id .mark { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; letter-spacing: 0.02em; color: var(--accent-strong); border: 1.5px solid var(--accent); border-radius: 4px; padding: 0.12rem 0.4rem; }
+  h1 { font-family: var(--font-display); font-weight: 700; font-size: 1.55rem; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+  .site-meta { color: var(--text-muted); font-size: 0.82rem; margin-top: 0.3rem; }
+
+  /* month switcher */
+  .month-switcher { display: flex; gap: 0.3rem; background: var(--surface-2); border-radius: 8px; padding: 0.25rem; }
+  .month-switcher button {
+    font-family: var(--font-display); font-weight: 600; font-size: 0.88rem;
+    background: none; border: none; color: var(--text-muted); padding: 0.5rem 1rem;
+    border-radius: 6px; cursor: pointer; transition: background 0.12s ease, color 0.12s ease;
+  }
+  .month-switcher button:hover { color: var(--text); }
+  .month-switcher button.active { background: var(--surface); color: var(--accent-strong); box-shadow: var(--shadow); }
+
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 2rem; }
+  .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1rem; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+  .kpi::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--kpi-stripe, var(--border)); }
+  .kpi.crit { --kpi-stripe: var(--status-critical); }
+  .kpi.warn { --kpi-stripe: var(--status-warning); }
+  .kpi .k-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-faint); margin-bottom: 0.35rem; }
+  .kpi .k-value { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .k-sub { font-size: 0.76rem; color: var(--text-muted); margin-top: 0.3rem; }
+
+  section.chart-section { margin-bottom: 2.25rem; }
+  .section-head { margin-bottom: 0.9rem; }
+  .section-head h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; margin: 0 0 0.2rem; }
+  .section-head p { font-size: 0.82rem; color: var(--text-muted); margin: 0; max-width: 70ch; }
+
+  .chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.2rem 1.3rem; box-shadow: var(--shadow); }
+  .chart-scroll { overflow-x: auto; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.9rem; padding-top: 0.8rem; border-top: 1px solid var(--border); }
+  .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--text-muted); }
+  .legend-swatch { width: 12px; height: 12px; border-radius: 3px; flex: none; }
+
+  svg text { font-family: var(--font-body); fill: var(--text-muted); }
+  .tl-row-label { font-size: 11px; fill: var(--text); font-weight: 500; }
+  .tl-day-label { font-size: 10px; fill: var(--text-faint); font-family: var(--font-mono); }
+  .tl-bar { cursor: pointer; }
+  .tl-bar:hover, .tl-bar.hovered { filter: brightness(1.12); }
+  .tl-gridline { stroke: var(--border); stroke-width: 1; }
+
+  .hm-cell { cursor: pointer; stroke: var(--surface); stroke-width: 2px; }
+  .hm-cell:hover, .hm-cell.hovered { filter: brightness(1.15); stroke: var(--accent); }
+  .hm-unit-label { font-size: 10.5px; fill: var(--text); font-family: var(--font-mono); font-weight: 500; }
+  .hm-day-label { font-size: 9px; fill: var(--text-faint); font-family: var(--font-mono); }
+
+  .viz-tooltip {
+    position: fixed; pointer-events: none; background: var(--text); color: var(--bg);
+    font-size: 0.76rem; padding: 0.5rem 0.65rem; border-radius: 6px; box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    z-index: 50; max-width: 280px; opacity: 0; transform: translateY(4px); transition: opacity 0.1s ease, transform 0.1s ease;
+  }
+  .viz-tooltip.visible { opacity: 1; transform: translateY(0); }
+  .viz-tooltip .tt-value { font-family: var(--font-mono); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.15rem; }
+  .viz-tooltip .tt-label { opacity: 0.85; }
+
+  .month-note {
+    margin-bottom: 1.5rem; padding: 0.85rem 1.1rem; background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid var(--status-critical); border-radius: 6px; font-size: 0.82rem; color: var(--text-muted);
+  }
+  .month-note strong { color: var(--text); }
+
+  .template-note {
+    margin-top: 2.5rem; padding: 1rem 1.2rem; background: var(--accent-soft); border: 1px solid var(--accent);
+    border-radius: 8px; font-size: 0.82rem; color: var(--text);
+  }
+  .template-note strong { color: var(--accent-strong); }
+
+  footer.foot { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--text-faint); font-size: 0.76rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+
+  @media (max-width: 760px) {
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+    header.top { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="viz-root">
+<div class="wrap">
+
+  <header class="top">
+    <div>
+      <div class="plant-id">
+        <span class="mark">DSR</span>
+        <h1>BESS Outage Trends</h1>
+      </div>
+      <div class="site-meta">Dassiesridge Hybrid (Wind + BESS) &middot; Umoyilanga VPP &middot; 14 PCS units</div>
+    </div>
+    <div class="month-switcher" id="month-switcher"></div>
+  </header>
+
+  <div class="month-note" id="month-note"></div>
+
+  <section class="kpis" id="kpi-row"></section>
+
+  <section class="chart-section">
+    <div class="section-head">
+      <h2>Outage Timeline</h2>
+      <p>Every confirmed outage this month, positioned by date and sized by duration. Colour marks the category &mdash; hover any bar for exact times.</p>
+    </div>
+    <div class="chart-card">
+      <div class="chart-scroll">
+        <svg id="timeline-svg"></svg>
+      </div>
+      <div class="legend" id="timeline-legend"></div>
+    </div>
+  </section>
+
+  <section class="chart-section">
+    <div class="section-head">
+      <h2>Unit &times; Day Grid</h2>
+      <p>Every PCS unit's status each day of the month. Built to answer the question a timeline alone can't: does the same unit keep coming back? Hover any cell for detail.</p>
+    </div>
+    <div class="chart-card">
+      <div class="chart-scroll">
+        <svg id="heatmap-svg"></svg>
+      </div>
+      <div class="legend" id="heatmap-legend"></div>
+    </div>
+  </section>
+
+  <div class="template-note">
+    <strong>Using this as the monthly template:</strong> add a new entry to <code>MONTHS</code> at the top of this page's script with next month's confirmed incidents, keep the same four outage categories and four status levels, and it appears as a new tab automatically. The categories are fixed on purpose &mdash; comparing severity month to month only works if the color coding never drifts.
+  </div>
+
+  <footer class="foot">
+    <span>Source: PCS Fleet Recurring Fault Investigation, BESS Outage Summary (Aug 2026), and June&ndash;July retrospective scan</span>
+    <span>Generated for internal review</span>
+  </footer>
+
+</div>
+</div>
+
+<div class="viz-tooltip" id="tooltip"></div>
+
+<script>
+  // ================= DATA =================
+  const CATEGORY = {
+    "fleet-hw":    { label: "Fleet-wide — recurring Hardware fault", color: "var(--series-1)" },
+    "fleet-other": { label: "Fleet-wide — other/unclassified signature", color: "var(--series-2)" },
+    "partial":     { label: "Single-unit partial outage",             color: "var(--series-3)" },
+    "isolated":    { label: "Isolated single-unit trip",              color: "var(--series-4)" },
+  };
+  const STATUS_LABEL = { 1: "Isolated trip", 2: "Partial outage", 3: "Fleet-wide event" };
+
+  function unitsList(prefix, nums) { return nums.map(n => prefix + String(n).padStart(2, "0")); }
+  const ALL_PCS = unitsList("PCS", Array.from({length: 14}, (_, i) => i + 1));
+
+  function buildGridFromDays(days, fleetDays, extra) {
+    // extra: array of {unit or 'ALL', day or [days], level}
+    const grid = {};
+    ALL_PCS.forEach(u => { grid[u] = Array(days + 1).fill(0); });
+    const setMax = (unit, day, level) => { if (grid[unit] && day >= 1 && day <= days) grid[unit][day] = Math.max(grid[unit][day], level); };
+    fleetDays.forEach(d => ALL_PCS.forEach(u => setMax(u, d, 3)));
+    extra.forEach(rule => {
+      const units = rule.unit === "ALL" ? ALL_PCS : (Array.isArray(rule.unit) ? rule.unit : [rule.unit]);
+      const dayList = Array.isArray(rule.day) ? rule.day : [rule.day];
+      units.forEach(u => dayList.forEach(d => setMax(u, d, rule.level)));
+    });
+    return grid;
+  }
+
+  const MONTHS = {
+    june: {
+      key: "june", tabLabel: "June", label: "June 2026", year: 2026, month: 6, days: 30,
+      note: "Headline event: PCS01–14 were stuck in Fault continuously from 1 June 11:52 to 9 June ~14:40 UTC — an 8-day, fleet-wide outage, the longest found anywhere in this investigation. No bit was set in either fault register at the trigger moment (only an all-zero clear was logged), so its root cause is unclassified — distinct from the recurring “Hardware fault” signature seen later. Recovery was ragged: several units suffered further short trips on 10–11 June before fully stabilizing.",
+      events: [
+        { unit: "Fleet (14 units)", category: "fleet-other", start: "2026-06-01T11:52", end: "2026-06-09T14:40", note: "8-day outage — no fault bit set at trigger, root cause unclassified. By far the longest outage found in this investigation." },
+        { unit: "Fleet (14 units)", category: "fleet-hw",    start: "2026-06-25T08:24", end: "2026-06-25T14:37", note: "Hardware fault (FaultBin1 BIT24) — first confirmed occurrence of the pattern later seen recurring through August" },
+        { unit: "8 units (PCS06,08,09,10,11,12,13,14)", category: "isolated", start: "2026-06-10T07:59", end: "2026-06-10T15:25", note: "Ragged recovery tail of the 1–9 June outage — 6 separate short re-fault clusters across the day, not one continuous event", chronic: true },
+        { unit: "7 units (PCS01,02,03,04,05,07,08)",    category: "isolated", start: "2026-06-11T07:51", end: "2026-06-11T10:55", note: "Continuation of the same ragged recovery tail — 7 separate short re-fault clusters across the morning", chronic: true },
+        { unit: "PCS14",            category: "isolated",    start: "2026-06-12T08:25", end: "2026-06-12T12:38", note: "3 isolated trips in one day" },
+        { unit: "PCS08",            category: "isolated",    start: "2026-06-26T08:15", end: "2026-06-26T11:09", note: "7 isolated trips in one day" },
+      ],
+      grid: buildGridFromDays(30, [1,2,3,4,5,6,7,8,9,25], [
+        { unit: ["PCS06","PCS08","PCS09","PCS10","PCS11","PCS12","PCS13","PCS14"], day: 10, level: 1 },
+        { unit: ["PCS01","PCS02","PCS03","PCS04","PCS05","PCS07","PCS08"], day: 11, level: 1 },
+        { unit: "PCS14", day: 12, level: 1 },
+        { unit: "PCS08", day: 26, level: 1 },
+      ]),
+    },
+    july: {
+      key: "july", tabLabel: "July", label: "July 2026", year: 2026, month: 7, days: 31,
+      note: "Six occurrences of the recurring “Hardware fault” signature this month (10, 25, 28, 29, 30, 31 Jul). Separately, two units — PCS09 (Container 9.1) and PCS11 (Container 11.3) — show chronic, near-daily battery-container degradation nearly all month: their inverter modules stayed at 100% throughout, so this is not the PCS14-style module failure, but the same rack-level mechanism as PCS07's August outage, recurring far more often. 7 July's PCS-fleet stop is not included — confirmed as planned/declared maintenance, not a fault.",
+      events: [
+        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-10T06:27", end: "2026-07-10T09:24", note: "Hardware fault (FaultBin1 BIT24)" },
+        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-25T17:37", end: "2026-07-26T06:09", note: "Hardware fault (FaultBin1 BIT24)" },
+        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-28T07:03", end: "2026-07-28T15:22", note: "Hardware fault (FaultBin1 BIT24)" },
+        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-29T08:51", end: "2026-07-29T15:24", note: "Hardware fault (FaultBin1 BIT24)" },
+        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-30T21:43", end: "2026-07-31T08:06", note: "Hardware fault (FaultBin1 BIT24)" },
+        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-31T10:00", end: "2026-07-31T15:24", note: "Hardware fault (FaultBin1 BIT24)" },
+        { unit: "PCS03",            category: "isolated", start: "2026-07-24T07:04", end: "2026-07-24T09:33", note: "3 episodes — FaultBin2 BIT11 “DC switch fault”, same signature recurring in August" },
+        { unit: "PCS09 (Container 9.1)",  category: "partial", start: "2026-07-04T19:30", end: "2026-07-31T23:50", note: "21 separate episodes across the month, mostly dipping to 75% — one battery rack chronically flaky while the inverter stayed healthy", chronic: true },
+        { unit: "PCS11 (Container 11.3)", category: "partial", start: "2026-07-01T02:20", end: "2026-07-31T23:50", note: "23 separate episodes across the month, near-daily — the most persistent single-unit issue found in this investigation", chronic: true },
+      ],
+      grid: buildGridFromDays(31, [10,25,26,28,29,30,31], [
+        { unit: "PCS03", day: 24, level: 1 },
+        { unit: "PCS09", day: [1,4,5,7,9,10,13,14,15,19,20,22,24,25,26,29,30,31], level: 2 },
+        { unit: "PCS11", day: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,19,20,21,22,23,24,25,26,27,28,29,30,31], level: 2 },
+      ]),
+    },
+    august: {
+      key: "august", tabLabel: "August", label: "August 2026", year: 2026, month: 8, days: 31,
+      note: "First edition of this template. Three more “Hardware fault” occurrences (4, 11, 20 Aug) plus the differently-signatured 21–22 Aug event, two confirmed single-unit partial outages (PCS14, PCS07 — see below), and seven isolated single-unit trips, one of which (PCS03, 27 Aug) repeats the same DC-switch-fault signature as 24 July.",
+      events: [
+        { unit: "Fleet (14 units)", category: "fleet-hw",    start: "2026-08-04T04:24", end: "2026-08-04T11:06", note: "Hardware fault (FaultBin1 BIT24)" },
+        { unit: "Fleet (14 units)", category: "fleet-hw",    start: "2026-08-11T12:44", end: "2026-08-11T16:05", note: "Hardware fault (FaultBin1 BIT24)" },
+        { unit: "Fleet (14 units)", category: "fleet-hw",    start: "2026-08-20T08:00", end: "2026-08-20T13:17", note: "Hardware fault (FaultBin1 BIT24)" },
+        { unit: "Fleet (14 units)", category: "fleet-other", start: "2026-08-21T22:09", end: "2026-08-24T07:03", note: "LCD-DSP comm fault (FaultBin2 BIT5) — 4.5–17x longer than any Hardware fault occurrence" },
+        { unit: "PCS07",            category: "partial",     start: "2026-08-29T17:40", end: "2026-08-31T10:30", note: "2 of 4 battery racks at 0% — no alarm raised" },
+        { unit: "PCS14",            category: "partial",     start: "2026-08-30T09:20", end: "2026-08-31T23:59", note: "Site-confirmed fan fault, 1 of 2 inverter modules — open as of last check", ongoing: true },
+        { unit: "PCS11",            category: "isolated",    start: "2026-08-13T08:17", end: "2026-08-13T08:22", note: "Clean stop/quick blip, no fault bit captured" },
+        { unit: "PCS09",            category: "isolated",    start: "2026-08-13T08:35", end: "2026-08-13T08:58", note: "3 stop/restart cycles, no fault bit captured" },
+        { unit: "PCS03",            category: "isolated",    start: "2026-08-26T10:00", end: "2026-08-26T10:38", note: "2 cycles, no fault bit captured in window checked" },
+        { unit: "PCS02",            category: "isolated",    start: "2026-08-26T15:03", end: "2026-08-26T15:25", note: "2-stage recovery, reserved bit only" },
+        { unit: "PCS03",            category: "isolated",    start: "2026-08-27T09:25", end: "2026-08-27T10:33", note: "FaultBin2 BIT11 — “DC switch fault” — same signature as 24 Jul" },
+        { unit: "PCS06 + PCS07",    category: "isolated",    start: "2026-08-29T17:34", end: "2026-08-29T17:36", note: "Mixed bits — preceded PCS07's battery-rack outage by 6 min" },
+      ],
+      grid: buildGridFromDays(31, [4,11,20,21,22,23,24], [
+        { unit: "PCS07", day: [29,30,31], level: 2 },
+        { unit: "PCS14", day: [30,31], level: 2 },
+        { unit: "PCS11", day: 13, level: 1 },
+        { unit: "PCS09", day: 13, level: 1 },
+        { unit: "PCS03", day: [26,27], level: 1 },
+        { unit: "PCS02", day: 26, level: 1 },
+        { unit: "PCS06", day: 29, level: 1 },
+      ]),
+    },
+  };
+
+  let currentMonthKey = "august";
+
+  // ================= helpers =================
+  function parseDT(s) {
+    const [d, t] = s.split("T");
+    const [y, mo, da] = d.split("-").map(Number);
+    const [h, mi] = t.split(":").map(Number);
+    return new Date(Date.UTC(y, mo - 1, da, h, mi));
+  }
+  function fmtDT(dt) {
+    const pad = n => String(n).padStart(2, "0");
+    return `${dt.getUTCFullYear()}-${pad(dt.getUTCMonth()+1)}-${pad(dt.getUTCDate())} ${pad(dt.getUTCHours())}:${pad(dt.getUTCMinutes())} UTC`;
+  }
+  function fmtDuration(startMs, endMs) {
+    const mins = Math.round((endMs - startMs) / 60000);
+    if (mins < 60) return `${mins}m`;
+    const totalHours = mins / 60;
+    if (totalHours >= 24) {
+      const d = Math.floor(totalHours / 24), h = Math.round(totalHours % 24);
+      return h ? `${d}d ${h}h` : `${d}d`;
+    }
+    const h = Math.floor(mins / 60), m = mins % 60;
+    return m ? `${h}h ${m}m` : `${h}h`;
+  }
+
+  const tooltip = document.getElementById("tooltip");
+  function showTooltip(evt, valueHtml, labelText) {
+    tooltip.innerHTML = `<div class="tt-value"></div><div class="tt-label"></div>`;
+    tooltip.querySelector(".tt-value").textContent = valueHtml;
+    tooltip.querySelector(".tt-label").textContent = labelText;
+    tooltip.classList.add("visible");
+    moveTooltip(evt);
+  }
+  function moveTooltip(evt) {
+    const x = evt.clientX, y = evt.clientY, pad = 14;
+    let left = x + pad, top = y + pad;
+    if (left + 280 > window.innerWidth) left = x - 280 - pad;
+    if (top + 90 > window.innerHeight) top = y - 90 - pad;
+    tooltip.style.left = left + "px"; tooltip.style.top = top + "px";
+  }
+  function hideTooltip() { tooltip.classList.remove("visible"); }
+
+  // ================= month switcher =================
+  function renderSwitcher() {
+    const el = document.getElementById("month-switcher");
+    el.innerHTML = Object.values(MONTHS).map(m => `
+      <button data-key="${m.key}" class="${m.key === currentMonthKey ? 'active' : ''}">${m.tabLabel} 2026</button>
+    `).join("");
+    el.querySelectorAll("button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        currentMonthKey = btn.dataset.key;
+        el.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderAll();
+      });
+    });
+  }
+
+  // ================= KPI row =================
+  function renderKpis() {
+    const M = MONTHS[currentMonthKey];
+    const monthStart = Date.UTC(M.year, M.month - 1, 1);
+    const monthEnd = Date.UTC(M.year, M.month - 1, M.days, 23, 59);
+    let fleetHours = 0, fleetCount = 0, longestMins = 0, longestLabel = "";
+    const recurringUnits = new Map();
+    M.events.forEach(e => {
+      const s = Math.max(parseDT(e.start).getTime(), monthStart);
+      const rawEnd = e.ongoing ? monthEnd : parseDT(e.end).getTime();
+      const en = Math.min(rawEnd, monthEnd);
+      const mins = (en - s) / 60000;
+      if (e.category === "fleet-hw" || e.category === "fleet-other") { fleetHours += mins / 60; fleetCount++; }
+      // chronic events (many short episodes shown as one spanning bar) are not continuous downtime - exclude from "longest single outage"
+      if (!e.chronic && mins > longestMins) { longestMins = mins; longestLabel = e.unit; }
+      if (e.category === "isolated" || e.category === "partial") {
+        const key = e.unit.split(" ")[0].split("(")[0].trim();
+        recurringUnits.set(key, (recurringUnits.get(key) || 0) + 1);
+      }
+    });
+    const recurring = Array.from(recurringUnits.entries()).filter(([,n]) => n > 1);
+    document.getElementById("month-note").innerHTML = `<strong>${M.label}:</strong> ${M.note}`;
+
+    const kpis = [
+      { label: "Total outage events", value: M.events.length, sub: "across all categories", cls: "" },
+      { label: "Fleet-wide events", value: fleetCount, sub: `~${fleetHours.toFixed(0)}h combined full-fleet impact`, cls: fleetCount ? "crit" : "" },
+      { label: "Longest single outage", value: fmtDuration(0, longestMins * 60000), sub: longestLabel, cls: "crit" },
+      { label: "Units with recurring issues", value: recurring.length, sub: recurring.length ? recurring.map(([u]) => u).join(", ") : "none this month", cls: recurring.length ? "warn" : "" },
+    ];
+    document.getElementById("kpi-row").innerHTML = kpis.map(k => `
+      <div class="kpi ${k.cls}">
+        <div class="k-label">${k.label}</div>
+        <div class="k-value">${k.value}</div>
+        <div class="k-sub">${k.sub}</div>
+      </div>
+    `).join("");
+  }
+
+  // ================= Timeline =================
+  function renderTimeline() {
+    const M = MONTHS[currentMonthKey];
+    const svg = document.getElementById("timeline-svg");
+    const W = 1400, rowH = 34, marginLeft = 210, marginRight = 30, marginTop = 20, marginBottom = 34;
+    const plotH = M.events.length * rowH;
+    const H = marginTop + plotH + marginBottom;
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.setAttribute("width", W); svg.setAttribute("height", H);
+    const plotW = W - marginLeft - marginRight;
+
+    const monthStart = Date.UTC(M.year, M.month - 1, 1);
+    const monthEnd = Date.UTC(M.year, M.month - 1, M.days + 1);
+    const xScale = ms => marginLeft + ((ms - monthStart) / (monthEnd - monthStart)) * plotW;
+
+    let svgContent = "";
+    const step = M.days > 30 ? 5 : 5;
+    for (let d = 1; d <= M.days; d += step) {
+      const x = xScale(Date.UTC(M.year, M.month - 1, d));
+      svgContent += `<line class="tl-gridline" x1="${x}" y1="${marginTop}" x2="${x}" y2="${marginTop + plotH}" />`;
+      svgContent += `<text class="tl-day-label" x="${x}" y="${marginTop + plotH + 18}" text-anchor="middle">${M.tabLabel.slice(0,3)} ${d}</text>`;
+    }
+    svgContent += `<line class="tl-gridline" x1="${marginLeft}" y1="${marginTop + plotH}" x2="${marginLeft + plotW}" y2="${marginTop + plotH}" />`;
+
+    M.events.forEach((e, i) => {
+      const y = marginTop + i * rowH;
+      const barH = Math.min(20, rowH - 10);
+      const barY = y + (rowH - barH) / 2;
+      const sMs = parseDT(e.start).getTime();
+      const eMs = e.ongoing ? monthEnd : parseDT(e.end).getTime();
+      let x1 = xScale(sMs), x2 = xScale(eMs);
+      if (x2 - x1 < 3) x2 = x1 + 3;
+      const color = CATEGORY[e.category].color;
+      svgContent += `<text class="tl-row-label" x="${marginLeft - 10}" y="${y + rowH / 2 + 4}" text-anchor="end">${e.unit}</text>`;
+      if (e.chronic) {
+        svgContent += `<rect class="tl-bar" data-idx="${i}" x="${x1}" y="${barY}" width="${x2 - x1}" height="${barH}" rx="4" fill="${color}" opacity="0.28" />`;
+        svgContent += `<rect class="tl-bar" data-idx="${i}" x="${x1}" y="${barY + barH/2 - 2}" width="${x2 - x1}" height="4" fill="${color}" />`;
+      } else {
+        svgContent += `<rect class="tl-bar" data-idx="${i}" x="${x1}" y="${barY}" width="${x2 - x1}" height="${barH}" rx="4" fill="${color}" />`;
+      }
+    });
+
+    svg.innerHTML = svgContent;
+
+    svg.querySelectorAll(".tl-bar").forEach(bar => {
+      const e = M.events[+bar.dataset.idx];
+      bar.addEventListener("pointermove", (evt) => {
+        bar.classList.add("hovered");
+        const sMs = parseDT(e.start).getTime();
+        const eMs = e.ongoing ? Date.UTC(M.year, M.month - 1, M.days, 23, 59) : parseDT(e.end).getTime();
+        const dur = fmtDuration(sMs, eMs) + (e.ongoing ? "+ (still open)" : "");
+        showTooltip(evt, `${e.unit} — ${dur}`, `${fmtDT(parseDT(e.start))} → ${e.ongoing ? "ongoing" : fmtDT(parseDT(e.end))}. ${e.note}`);
+      });
+      bar.addEventListener("pointerleave", () => { bar.classList.remove("hovered"); hideTooltip(); });
+    });
+
+    document.getElementById("timeline-legend").innerHTML = Object.entries(CATEGORY).map(([k, v]) => `
+      <div class="legend-item"><span class="legend-swatch" style="background:${v.color}"></span>${v.label}</div>
+    `).join("");
+  }
+
+  // ================= Heatmap =================
+  function renderHeatmap() {
+    const M = MONTHS[currentMonthKey];
+    const svg = document.getElementById("heatmap-svg");
+    const marginLeft = 60, marginTop = 24, marginRight = 10, marginBottom = 10;
+    const cellW = 32, cellH = 24, gap = 2;
+    const plotW = M.days * cellW;
+    const plotH = ALL_PCS.length * cellH;
+    const W = marginLeft + plotW + marginRight;
+    const H = marginTop + plotH + marginBottom;
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.setAttribute("width", W); svg.setAttribute("height", H);
+
+    const statusColor = { 0: "var(--surface-2)", 1: "var(--status-warning)", 2: "var(--status-serious)", 3: "var(--status-critical)" };
+
+    let svgContent = "";
+    for (let d = 1; d <= M.days; d++) {
+      if (d === 1 || d % 5 === 0) {
+        const x = marginLeft + (d - 1) * cellW + cellW / 2;
+        svgContent += `<text class="hm-day-label" x="${x}" y="${marginTop - 8}" text-anchor="middle">${d}</text>`;
+      }
+    }
+    ALL_PCS.forEach((unit, ri) => {
+      const y = marginTop + ri * cellH;
+      svgContent += `<text class="hm-unit-label" x="${marginLeft - 10}" y="${y + cellH / 2 + 4}" text-anchor="end">${unit}</text>`;
+      for (let d = 1; d <= M.days; d++) {
+        const level = M.grid[unit][d];
+        const x = marginLeft + (d - 1) * cellW;
+        svgContent += `<rect class="hm-cell" data-unit="${unit}" data-day="${d}" data-level="${level}" x="${x + gap/2}" y="${y + gap/2}" width="${cellW - gap}" height="${cellH - gap}" rx="3" fill="${statusColor[level]}" />`;
+      }
+    });
+    svg.innerHTML = svgContent;
+
+    svg.querySelectorAll(".hm-cell").forEach(cell => {
+      const unit = cell.dataset.unit, day = +cell.dataset.day, level = +cell.dataset.level;
+      cell.addEventListener("pointermove", (evt) => {
+        cell.classList.add("hovered");
+        const dateStr = `${M.tabLabel} ${day}, ${M.year}`;
+        if (level === 0) showTooltip(evt, `${unit} — ${dateStr}`, "No issue recorded this day.");
+        else showTooltip(evt, `${unit} — ${dateStr}`, `${STATUS_LABEL[level]}. See the Outage Timeline above for exact times.`);
+      });
+      cell.addEventListener("pointerleave", () => { cell.classList.remove("hovered"); hideTooltip(); });
+    });
+
+    document.getElementById("heatmap-legend").innerHTML = `
+      <div class="legend-item"><span class="legend-swatch" style="background:var(--surface-2);border:1px solid var(--border)"></span>No issue</div>
+      <div class="legend-item"><span class="legend-swatch" style="background:var(--status-warning)"></span>Isolated trip</div>
+      <div class="legend-item"><span class="legend-swatch" style="background:var(--status-serious)"></span>Partial outage</div>
+      <div class="legend-item"><span class="legend-swatch" style="background:var(--status-critical)"></span>Fleet-wide event</div>
+    `;
+  }
+
+  function renderAll() {
+    renderKpis();
+    renderTimeline();
+    renderHeatmap();
+  }
+
+  renderSwitcher();
+  renderAll();
+</script>
+</body>
+</html>
