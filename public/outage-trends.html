@@ -28,6 +28,7 @@
     --series-2: #eb6834;
     --series-3: #1baf7a;
     --series-4: #eda100;
+    --series-5: #e87ba4;
 
     --status-good: #0ca30c;
     --status-warning: #fab219;
@@ -46,7 +47,7 @@
       --text: #e7edeb; --text-muted: #93a5a1; --text-faint: #63706d;
       --accent: #3fb3ac; --accent-strong: #66c9c2; --accent-soft: #16302e;
       --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.35);
-      --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
+      --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500; --series-5: #d55181;
       --status-good: #0ca30c; --status-warning: #fab219; --status-serious: #ec835a; --status-critical: #d03b3b;
     }
   }
@@ -56,7 +57,7 @@
     --text: #e7edeb; --text-muted: #93a5a1; --text-faint: #63706d;
     --accent: #3fb3ac; --accent-strong: #66c9c2; --accent-soft: #16302e;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.35);
-    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
+    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500; --series-5: #d55181;
     --status-good: #0ca30c; --status-warning: #fab219; --status-serious: #ec835a; --status-critical: #d03b3b;
   }
 
@@ -228,6 +229,7 @@
     "fleet-other": { label: "Fleet-wide — other/unclassified signature", color: "var(--series-2)" },
     "partial":     { label: "Single-unit partial outage",             color: "var(--series-3)" },
     "isolated":    { label: "Isolated single-unit trip",              color: "var(--series-4)" },
+    "relay-only":  { label: "Substation relay glitch — no fleet impact", color: "var(--series-5)" },
   };
   const STATUS_LABEL = { 1: "Isolated trip", 2: "Partial outage", 3: "Fleet-wide event" };
 
@@ -251,10 +253,11 @@
   const MONTHS = {
     june: {
       key: "june", tabLabel: "June", label: "June 2026", year: 2026, month: 6, days: 30,
-      note: "Headline event: PCS01–14 were stuck in Fault continuously from 1 June 11:52 to 9 June ~14:40 UTC — an 8-day, fleet-wide outage, the longest found anywhere in this investigation. No bit was set in either fault register at the trigger moment (only an all-zero clear was logged), so its root cause is unclassified — distinct from the recurring “Hardware fault” signature seen later. Recovery was ragged: several units suffered further short trips on 10–11 June before fully stabilizing.",
+      note: "Root cause confirmed 2026-09-05: the 33kV BESS Collector 1, Collector 2, and Incomer protection relays all report a simultaneous \"Malfunction\" at the exact same second as every recurring Hardware-fault trip below — a substation-level electrical glitch outside the battery system, not a battery fault. Separately, the 8-day outage starting 1 June (PCS01–14 stuck in Fault from 11:52 to 9 June ~14:40 UTC, the longest outage in this investigation) shows no matching relay event at all — its root cause remains genuinely unclassified. Recovery from that 8-day event was ragged: several units suffered further short trips on 10–11 June before fully stabilizing.",
       events: [
-        { unit: "Fleet (14 units)", category: "fleet-other", start: "2026-06-01T11:52", end: "2026-06-09T14:40", note: "8-day outage — no fault bit set at trigger, root cause unclassified. By far the longest outage found in this investigation." },
-        { unit: "Fleet (14 units)", category: "fleet-hw",    start: "2026-06-25T08:24", end: "2026-06-25T14:37", note: "Hardware fault (FaultBin1 BIT24) — first confirmed occurrence of the pattern later seen recurring through August" },
+        { unit: "Fleet (14 units)", category: "fleet-other", start: "2026-06-01T11:52", end: "2026-06-09T14:40", note: "8-day outage — no fault bit set at trigger, and no matching substation relay event either. Root cause unclassified. By far the longest outage found in this investigation." },
+        { unit: "33kV Collector 1+2 / Incomer relays", category: "relay-only", start: "2026-06-08T05:19", end: "2026-06-08T06:39", note: "All 3 relays malfunctioned together for ~1h20m, same signature as every recurring fleet-wide trip — but this time PCS01 shows zero status change, confirming the relay glitch does not always cascade into a PCS trip." },
+        { unit: "Fleet (14 units)", category: "fleet-hw",    start: "2026-06-25T08:24", end: "2026-06-25T14:37", note: "Hardware fault (FaultBin1 BIT24) — first confirmed occurrence of the pattern later seen recurring through August. Confirmed trigger: 33kV Collector 1/2 + Incomer relays malfunctioned at 08:24:05, the same second." },
         { unit: "8 units (PCS06,08,09,10,11,12,13,14)", category: "isolated", start: "2026-06-10T07:59", end: "2026-06-10T15:25", note: "Ragged recovery tail of the 1–9 June outage — 6 separate short re-fault clusters across the day, not one continuous event", chronic: true },
         { unit: "7 units (PCS01,02,03,04,05,07,08)",    category: "isolated", start: "2026-06-11T07:51", end: "2026-06-11T10:55", note: "Continuation of the same ragged recovery tail — 7 separate short re-fault clusters across the morning", chronic: true },
         { unit: "PCS14",            category: "isolated",    start: "2026-06-12T08:25", end: "2026-06-12T12:38", note: "3 isolated trips in one day" },
@@ -269,14 +272,14 @@
     },
     july: {
       key: "july", tabLabel: "July", label: "July 2026", year: 2026, month: 7, days: 31,
-      note: "Six occurrences of the recurring “Hardware fault” signature this month (10, 25, 28, 29, 30, 31 Jul). Separately, two units — PCS09 (Container 9.1) and PCS11 (Container 11.3) — show chronic, near-daily battery-container degradation nearly all month: their inverter modules stayed at 100% throughout, so this is not the PCS14-style module failure, but the same rack-level mechanism as PCS07's August outage, recurring far more often. 7 July's PCS-fleet stop is not included — confirmed as planned/declared maintenance, not a fault.",
+      note: "Root cause confirmed 2026-09-05: all six recurring \"Hardware fault\" occurrences this month were preceded, to the second, by a simultaneous \"Malfunction\" on the 33kV BESS Collector 1, Collector 2, and Incomer substation protection relays — a shared electrical glitch outside the battery system, not a battery fault. Separately, two units — PCS09 (Container 9.1) and PCS11 (Container 11.3) — show chronic, near-daily battery-container degradation nearly all month: their inverter modules stayed at 100% throughout, so this is not the PCS14-style module failure, but the same rack-level mechanism as PCS07's August outage, recurring far more often. 7 July's PCS-fleet stop is not included — confirmed as planned/declared maintenance, not a fault.",
       events: [
-        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-10T06:27", end: "2026-07-10T09:24", note: "Hardware fault (FaultBin1 BIT24)" },
-        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-25T17:37", end: "2026-07-26T06:09", note: "Hardware fault (FaultBin1 BIT24)" },
-        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-28T07:03", end: "2026-07-28T15:22", note: "Hardware fault (FaultBin1 BIT24)" },
-        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-29T08:51", end: "2026-07-29T15:24", note: "Hardware fault (FaultBin1 BIT24)" },
-        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-30T21:43", end: "2026-07-31T08:06", note: "Hardware fault (FaultBin1 BIT24)" },
-        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-31T10:00", end: "2026-07-31T15:24", note: "Hardware fault (FaultBin1 BIT24)" },
+        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-10T06:27", end: "2026-07-10T09:24", note: "Hardware fault (FaultBin1 BIT24). Confirmed trigger: substation relays malfunctioned at 06:27:49, the same second." },
+        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-25T17:37", end: "2026-07-26T06:09", note: "Hardware fault (FaultBin1 BIT24). Confirmed trigger: substation relays malfunctioned at 17:37:23, the same second." },
+        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-28T07:03", end: "2026-07-28T15:22", note: "Hardware fault (FaultBin1 BIT24). Confirmed trigger: substation relays malfunctioned at 07:03:39, the same second." },
+        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-29T08:51", end: "2026-07-29T15:24", note: "Hardware fault (FaultBin1 BIT24). Confirmed trigger: substation relays malfunctioned at 08:51:13, the same second." },
+        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-30T21:43", end: "2026-07-31T08:06", note: "Hardware fault (FaultBin1 BIT24). Confirmed trigger: substation relays malfunctioned at 21:43:26, the same second." },
+        { unit: "Fleet (14 units)", category: "fleet-hw", start: "2026-07-31T10:00", end: "2026-07-31T15:24", note: "Hardware fault (FaultBin1 BIT24). Confirmed trigger: substation relays malfunctioned at 10:00:21, the same second." },
         { unit: "PCS03",            category: "isolated", start: "2026-07-24T07:04", end: "2026-07-24T09:33", note: "3 episodes — FaultBin2 BIT11 “DC switch fault”, same signature recurring in August" },
         { unit: "PCS09 (Container 9.1)",  category: "partial", start: "2026-07-04T19:30", end: "2026-07-31T23:50", note: "21 separate episodes across the month, mostly dipping to 75% — one battery rack chronically flaky while the inverter stayed healthy", chronic: true },
         { unit: "PCS11 (Container 11.3)", category: "partial", start: "2026-07-01T02:20", end: "2026-07-31T23:50", note: "23 separate episodes across the month, near-daily — the most persistent single-unit issue found in this investigation", chronic: true },
@@ -289,12 +292,12 @@
     },
     august: {
       key: "august", tabLabel: "August", label: "August 2026", year: 2026, month: 8, days: 31,
-      note: "First edition of this template. Three more “Hardware fault” occurrences (4, 11, 20 Aug) plus the differently-signatured 21–22 Aug event, two confirmed single-unit partial outages (PCS14, PCS07 — see below), and seven isolated single-unit trips, one of which (PCS03, 27 Aug) repeats the same DC-switch-fault signature as 24 July.",
+      note: "Root cause confirmed 2026-09-05: the three recurring \"Hardware fault\" occurrences this month (4, 11, 20 Aug) were each preceded, to the second, by a simultaneous \"Malfunction\" on the 33kV BESS Collector 1, Collector 2, and Incomer substation protection relays — a shared electrical glitch outside the battery system. The differently-signatured 21–22 Aug event also lines up with a relay malfunction, but that one lasted only ~2 seconds — notably brief compared to the 57-hour PCS outage that followed, so the relay may be a trigger rather than the full explanation there. Also this month: two confirmed single-unit partial outages (PCS14, PCS07 — see below), and seven isolated single-unit trips, one of which (PCS03, 27 Aug) repeats the same DC-switch-fault signature as 24 July.",
       events: [
-        { unit: "Fleet (14 units)", category: "fleet-hw",    start: "2026-08-04T04:24", end: "2026-08-04T11:06", note: "Hardware fault (FaultBin1 BIT24)" },
-        { unit: "Fleet (14 units)", category: "fleet-hw",    start: "2026-08-11T12:44", end: "2026-08-11T16:05", note: "Hardware fault (FaultBin1 BIT24)" },
-        { unit: "Fleet (14 units)", category: "fleet-hw",    start: "2026-08-20T08:00", end: "2026-08-20T13:17", note: "Hardware fault (FaultBin1 BIT24)" },
-        { unit: "Fleet (14 units)", category: "fleet-other", start: "2026-08-21T22:09", end: "2026-08-24T07:03", note: "LCD-DSP comm fault (FaultBin2 BIT5) — 4.5–17x longer than any Hardware fault occurrence" },
+        { unit: "Fleet (14 units)", category: "fleet-hw",    start: "2026-08-04T04:24", end: "2026-08-04T11:06", note: "Hardware fault (FaultBin1 BIT24). Confirmed trigger: substation relays malfunctioned at 04:24:16, the same second." },
+        { unit: "Fleet (14 units)", category: "fleet-hw",    start: "2026-08-11T12:44", end: "2026-08-11T16:05", note: "Hardware fault (FaultBin1 BIT24). Confirmed trigger: substation relays malfunctioned at 12:44:05, the same second." },
+        { unit: "Fleet (14 units)", category: "fleet-hw",    start: "2026-08-20T08:00", end: "2026-08-20T13:17", note: "Hardware fault (FaultBin1 BIT24). Confirmed trigger: substation relays malfunctioned at 08:00:08, the same second." },
+        { unit: "Fleet (14 units)", category: "fleet-other", start: "2026-08-21T22:09", end: "2026-08-24T07:03", note: "LCD-DSP comm fault (FaultBin2 BIT5) — 4.5–17x longer than any Hardware fault occurrence. Substation relays also malfunctioned at 22:09:07, but for only ~2s — much briefer than the recurring pattern's relay events." },
         { unit: "PCS07",            category: "partial",     start: "2026-08-29T17:40", end: "2026-08-31T10:30", note: "2 of 4 battery racks at 0% — no alarm raised" },
         { unit: "PCS14",            category: "partial",     start: "2026-08-30T09:20", end: "2026-08-31T23:59", note: "Site-confirmed fan fault, 1 of 2 inverter modules — open as of last check", ongoing: true },
         { unit: "PCS11",            category: "isolated",    start: "2026-08-13T08:17", end: "2026-08-13T08:22", note: "Clean stop/quick blip, no fault bit captured" },
