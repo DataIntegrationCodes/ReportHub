@@ -56,7 +56,7 @@ Dassiesridge Hybrid (Wind + BESS) exported 4.22 GWh this week, up 29.5% on last 
   <text x="682" y="205" fill="#52525b" font-size="10" text-anchor="middle">31 Aug (this wk)</text>
 </svg>
 
-A near-exact repeat of 10 Aug's peak, and the third strong week out of the last four — the two disrupted weeks (17 Aug's PCS/BESS event, 24 Aug's availability inconsistency) increasingly look like isolated data/reporting issues rather than a genuine downward trend.
+A near-exact repeat of 10 Aug's peak, and the third strong week out of the last four.
 
 <svg class="report-chart" viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg">
   <text x="10" y="16" fill="#52525b" font-size="12">Weekly avg BESS discharge hours (per day)</text>
@@ -113,7 +113,6 @@ A near-exact repeat of 10 Aug's peak, and the third strong week out of the last 
 </svg>
 
 Discharge hours (10.4h/day) were among the highest of the period this week, but at a below-median rate (7.7 MW/hour) — a similar shape to 20 Jul, where the battery cycled for longer at a gentler rate rather than fewer, more powerful bursts.
-
 ## This week vs. last week
 
 | Metric | This week (31 Aug-6 Sep) | Last week (24-30 Aug) | Change |
