@@ -501,4 +501,6 @@ This trend line has been recalculated in full using `Penalty Factor_rev`, so it 
 
 ## Reviewer Notes
 
-_Pending review — please confirm whether PCS14's failure is a module-level fault (consistent with the known pinned-50% pattern) or something else._
+HR: PCS14 fan fault reported since Monday (31 August) affecting one inverter module 1(0% Availability). Second inverter followed with same issue since Thursday and still ongoing. Both Inverter is currently at 0% Availability and PCS overall SOC at 0%. Sungrow to resolve the issue on 2026/09/08. 
+
+PCS02 triggered a fan fault (2026/09/08) issue as well and currently affecting Inverter module 1 and Availability now at 50 %
