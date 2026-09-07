@@ -62,17 +62,17 @@ A solid rebound from last week's low, though still short of the 10 Aug peak. Two
   <line x1="50" y1="190" x2="730" y2="190" stroke="#d1d5db" stroke-width="1"/>
   <text x="45" y="193" fill="#6b7280" font-size="9" text-anchor="end">0h</text>
   <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">12h</text>
-  <polyline points="82,28 157,102 232,155 307,120 382,92 457,53 532,52 607,103 682,60" fill="none" stroke="#3b82f6" stroke-width="2"/>
-  <circle cx="82" cy="28" r="3" fill="#3b82f6"/><circle cx="157" cy="102" r="3" fill="#3b82f6"/><circle cx="232" cy="155" r="3" fill="#3b82f6"/><circle cx="307" cy="120" r="3" fill="#3b82f6"/><circle cx="382" cy="92" r="3" fill="#3b82f6"/><circle cx="457" cy="53" r="3" fill="#3b82f6"/><circle cx="532" cy="52" r="3" fill="#3b82f6"/><circle cx="607" cy="103" r="3" fill="#3b82f6"/><circle cx="682" cy="60" r="4" fill="#1d4ed8"/>
-  <text x="82" y="20" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">11.7h</text>
-  <text x="157" y="94" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">7.1h</text>
-  <text x="232" y="147" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">3.4h</text>
-  <text x="307" y="112" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">6.3h</text>
-  <text x="382" y="84" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">7.6h</text>
+  <polyline points="82,57 157,67 232,85 307,28 382,92 457,53 532,52 607,103 682,75" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="82" cy="57" r="3" fill="#3b82f6"/><circle cx="157" cy="67" r="3" fill="#3b82f6"/><circle cx="232" cy="85" r="3" fill="#3b82f6"/><circle cx="307" cy="28" r="3" fill="#3b82f6"/><circle cx="382" cy="92" r="3" fill="#3b82f6"/><circle cx="457" cy="53" r="3" fill="#3b82f6"/><circle cx="532" cy="52" r="3" fill="#3b82f6"/><circle cx="607" cy="103" r="3" fill="#3b82f6"/><circle cx="682" cy="75" r="4" fill="#1d4ed8"/>
+  <text x="82" y="49" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">9.6h</text>
+  <text x="157" y="59" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">8.9h</text>
+  <text x="232" y="77" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">7.6h</text>
+  <text x="307" y="20" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">11.7h</text>
+  <text x="382" y="84" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">7.1h</text>
   <text x="457" y="45" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">9.9h</text>
   <text x="532" y="44" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">10.0h</text>
   <text x="607" y="95" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">6.3h</text>
-  <text x="682" y="52" fill="#111827" font-size="10" font-weight="600" text-anchor="middle">8.3h</text>
+  <text x="682" y="67" fill="#111827" font-size="10" font-weight="600" text-anchor="middle">8.3h</text>
   <text x="82" y="205" fill="#6b7280" font-size="10" text-anchor="middle">29 Jun</text>
   <text x="157" y="205" fill="#6b7280" font-size="10" text-anchor="middle">06 Jul</text>
   <text x="232" y="205" fill="#6b7280" font-size="10" text-anchor="middle">13 Jul</text>
@@ -89,12 +89,12 @@ A solid rebound from last week's low, though still short of the 10 Aug peak. Two
   <line x1="50" y1="190" x2="730" y2="190" stroke="#d1d5db" stroke-width="1"/>
   <text x="45" y="193" fill="#6b7280" font-size="9" text-anchor="end">0 MW</text>
   <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">16 MW</text>
-  <polyline points="82,120 157,125 232,155 307,150 382,53 457,61 532,82 607,95 682,79" fill="none" stroke="#059669" stroke-width="2"/>
-  <circle cx="82" cy="120" r="3" fill="#059669"/><circle cx="157" cy="125" r="3" fill="#059669"/><circle cx="232" cy="155" r="3" fill="#059669"/><circle cx="307" cy="150" r="3" fill="#059669"/><circle cx="382" cy="53" r="3" fill="#059669"/><circle cx="457" cy="61" r="3" fill="#059669"/><circle cx="532" cy="82" r="3" fill="#059669"/><circle cx="607" cy="95" r="3" fill="#059669"/><circle cx="682" cy="79" r="3" fill="#059669"/>
-  <text x="82" y="112" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">6.7</text>
+  <polyline points="82,78 157,125 232,155 307,119 382,53 457,61 532,82 607,95 682,79" fill="none" stroke="#059669" stroke-width="2"/>
+  <circle cx="82" cy="78" r="3" fill="#059669"/><circle cx="157" cy="125" r="3" fill="#059669"/><circle cx="232" cy="155" r="3" fill="#059669"/><circle cx="307" cy="119" r="3" fill="#059669"/><circle cx="382" cy="53" r="3" fill="#059669"/><circle cx="457" cy="61" r="3" fill="#059669"/><circle cx="532" cy="82" r="3" fill="#059669"/><circle cx="607" cy="95" r="3" fill="#059669"/><circle cx="682" cy="79" r="3" fill="#059669"/>
+  <text x="82" y="70" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">10.8</text>
   <text x="157" y="117" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">6.3</text>
   <text x="232" y="147" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">3.4</text>
-  <text x="307" y="142" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">3.7</text>
+  <text x="307" y="111" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">6.8</text>
   <text x="382" y="45" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">13.2</text>
   <text x="457" y="53" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">12.4</text>
   <text x="532" y="74" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">10.4</text>

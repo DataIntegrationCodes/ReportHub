@@ -63,17 +63,17 @@ A near-exact repeat of 10 Aug's peak, and the third strong week out of the last 
   <line x1="50" y1="190" x2="730" y2="190" stroke="#d1d5db" stroke-width="1"/>
   <text x="45" y="193" fill="#6b7280" font-size="9" text-anchor="end">0h</text>
   <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">12h</text>
-  <polyline points="82,102 157,155 232,120 307,92 382,53 457,52 532,103 607,60 682,116" fill="none" stroke="#3b82f6" stroke-width="2"/>
-  <circle cx="82" cy="102" r="3" fill="#3b82f6"/><circle cx="157" cy="155" r="3" fill="#3b82f6"/><circle cx="232" cy="120" r="3" fill="#3b82f6"/><circle cx="307" cy="92" r="3" fill="#3b82f6"/><circle cx="382" cy="53" r="3" fill="#3b82f6"/><circle cx="457" cy="52" r="3" fill="#3b82f6"/><circle cx="532" cy="103" r="3" fill="#3b82f6"/><circle cx="607" cy="60" r="3" fill="#3b82f6"/><circle cx="682" cy="116" r="4" fill="#1d4ed8"/>
-  <text x="82" y="94" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">7.1h</text>
-  <text x="157" y="147" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">3.4h</text>
-  <text x="232" y="112" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">6.3h</text>
-  <text x="307" y="84" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">7.6h</text>
+  <polyline points="82,67 157,85 232,28 307,92 382,53 457,52 532,103 607,75 682,46" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="82" cy="67" r="3" fill="#3b82f6"/><circle cx="157" cy="85" r="3" fill="#3b82f6"/><circle cx="232" cy="28" r="3" fill="#3b82f6"/><circle cx="307" cy="92" r="3" fill="#3b82f6"/><circle cx="382" cy="53" r="3" fill="#3b82f6"/><circle cx="457" cy="52" r="3" fill="#3b82f6"/><circle cx="532" cy="103" r="3" fill="#3b82f6"/><circle cx="607" cy="75" r="3" fill="#3b82f6"/><circle cx="682" cy="46" r="4" fill="#1d4ed8"/>
+  <text x="82" y="59" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">8.9h</text>
+  <text x="157" y="77" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">7.6h</text>
+  <text x="232" y="20" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">11.7h</text>
+  <text x="307" y="84" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">7.1h</text>
   <text x="382" y="45" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">9.9h</text>
   <text x="457" y="44" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">10.0h</text>
   <text x="532" y="95" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">6.3h</text>
-  <text x="607" y="52" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">8.3h</text>
-  <text x="682" y="108" fill="#111827" font-size="10" font-weight="600" text-anchor="middle">10.4h</text>
+  <text x="607" y="67" fill="#1d4ed8" font-size="10" font-weight="600" text-anchor="middle">8.3h</text>
+  <text x="682" y="38" fill="#111827" font-size="10" font-weight="600" text-anchor="middle">10.4h</text>
   <text x="82" y="205" fill="#6b7280" font-size="10" text-anchor="middle">06 Jul</text>
   <text x="157" y="205" fill="#6b7280" font-size="10" text-anchor="middle">13 Jul</text>
   <text x="232" y="205" fill="#6b7280" font-size="10" text-anchor="middle">20 Jul</text>
@@ -90,17 +90,17 @@ A near-exact repeat of 10 Aug's peak, and the third strong week out of the last 
   <line x1="50" y1="190" x2="730" y2="190" stroke="#d1d5db" stroke-width="1"/>
   <text x="45" y="193" fill="#6b7280" font-size="9" text-anchor="end">0 MW</text>
   <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">16 MW</text>
-  <polyline points="82,125 157,155 232,120 307,53 382,61 457,82 532,95 607,79 682,86" fill="none" stroke="#059669" stroke-width="2"/>
-  <circle cx="82" cy="125" r="3" fill="#059669"/><circle cx="157" cy="155" r="3" fill="#059669"/><circle cx="232" cy="120" r="3" fill="#059669"/><circle cx="307" cy="53" r="3" fill="#059669"/><circle cx="382" cy="61" r="3" fill="#059669"/><circle cx="457" cy="82" r="3" fill="#059669"/><circle cx="532" cy="95" r="3" fill="#059669"/><circle cx="607" cy="79" r="3" fill="#059669"/><circle cx="682" cy="86" r="3" fill="#059669"/>
+  <polyline points="82,125 157,155 232,119 307,53 382,61 457,82 532,96 607,83 682,110" fill="none" stroke="#059669" stroke-width="2"/>
+  <circle cx="82" cy="125" r="3" fill="#059669"/><circle cx="157" cy="155" r="3" fill="#059669"/><circle cx="232" cy="119" r="3" fill="#059669"/><circle cx="307" cy="53" r="3" fill="#059669"/><circle cx="382" cy="61" r="3" fill="#059669"/><circle cx="457" cy="82" r="3" fill="#059669"/><circle cx="532" cy="96" r="3" fill="#059669"/><circle cx="607" cy="83" r="3" fill="#059669"/><circle cx="682" cy="110" r="3" fill="#059669"/>
   <text x="82" y="117" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">6.3</text>
   <text x="157" y="147" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">3.4</text>
-  <text x="232" y="112" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">6.8</text>
+  <text x="232" y="111" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">6.8</text>
   <text x="307" y="45" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">13.2</text>
   <text x="382" y="53" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">12.4</text>
   <text x="457" y="74" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">10.4</text>
-  <text x="532" y="87" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">9.1</text>
-  <text x="607" y="71" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">10.3</text>
-  <text x="682" y="78" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">9.6</text>
+  <text x="532" y="88" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">9.1</text>
+  <text x="607" y="75" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">10.3</text>
+  <text x="682" y="102" fill="#047857" font-size="10" font-weight="600" text-anchor="middle">7.7</text>
   <text x="82" y="205" fill="#6b7280" font-size="10" text-anchor="middle">06 Jul</text>
   <text x="157" y="205" fill="#6b7280" font-size="10" text-anchor="middle">13 Jul</text>
   <text x="232" y="205" fill="#6b7280" font-size="10" text-anchor="middle">20 Jul</text>
@@ -112,7 +112,7 @@ A near-exact repeat of 10 Aug's peak, and the third strong week out of the last 
   <text x="682" y="205" fill="#52525b" font-size="10" text-anchor="middle">31 Aug (this wk)</text>
 </svg>
 
-Both discharge metrics land mid-pack this week (10.4h/day at 9.6 MW/hour) — a normal, unremarkable BESS profile consistent with a genuinely healthy week.
+Discharge hours (10.4h/day) were among the highest of the period this week, but at a below-median rate (7.7 MW/hour) — a similar shape to 20 Jul, where the battery cycled for longer at a gentler rate rather than fewer, more powerful bursts.
 
 ## This week vs. last week
 
