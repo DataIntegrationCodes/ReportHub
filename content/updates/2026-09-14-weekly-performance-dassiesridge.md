@@ -382,20 +382,20 @@ Friday's 50.4% BESS contribution was the week's standout, and Saturday (339.8 MW
   <text x="783" y="110" fill="#6b7280" font-size="9" text-anchor="start">90%</text>
   <text x="783" y="27" fill="#6b7280" font-size="9" text-anchor="start">100%</text>
   <line x1="55" y1="55" x2="775" y2="55" stroke="#d1d5db" stroke-width="1" stroke-dasharray="2,3"/>
-  <rect x="58" y="59" width="38" height="131" fill="#3b82f6"><title>WTG01: 552.6 MWh MTD</title></rect>
-  <rect x="110" y="53" width="38" height="137" fill="#3b82f6"><title>WTG16: 578.4 MWh MTD</title></rect>
-  <rect x="162" y="51" width="38" height="139" fill="#3b82f6"><title>WTG20: 587.0 MWh MTD</title></rect>
-  <rect x="214" y="58" width="38" height="132" fill="#3b82f6"><title>WTG21: 555.1 MWh MTD</title></rect>
-  <rect x="266" y="73" width="38" height="117" fill="#3b82f6"><title>WTG25: 492.2 MWh MTD</title></rect>
-  <rect x="318" y="48" width="38" height="142" fill="#3b82f6"><title>WTG30: 600.1 MWh MTD</title></rect>
-  <rect x="370" y="55" width="38" height="135" fill="#3b82f6"><title>WTG52: 569.4 MWh MTD</title></rect>
-  <rect x="422" y="44" width="38" height="146" fill="#3b82f6"><title>WTG54: 614.9 MWh MTD</title></rect>
-  <rect x="474" y="48" width="38" height="142" fill="#3b82f6"><title>WTG60: 599.1 MWh MTD</title></rect>
-  <rect x="526" y="66" width="38" height="124" fill="#3b82f6"><title>WTG61: 524.2 MWh MTD</title></rect>
-  <rect x="578" y="55" width="38" height="135" fill="#3b82f6"><title>WTG63: 570.9 MWh MTD</title></rect>
-  <rect x="630" y="48" width="38" height="142" fill="#3b82f6"><title>WTG64: 596.9 MWh MTD</title></rect>
-  <rect x="682" y="42" width="38" height="148" fill="#3b82f6"><title>WTG65: 624.0 MWh MTD</title></rect>
-  <rect x="734" y="66" width="38" height="124" fill="#3b82f6"><title>WTG67: 521.8 MWh MTD</title></rect>
+  <rect x="58" y="59" width="38" height="131" fill="#3b82f6"><title>WTG01: 552.6 MWh MTD • Wind 7.3 m/s • Running 287.4h • Lost to unavailability: 68.0 MWh</title></rect>
+  <rect x="110" y="53" width="38" height="137" fill="#3b82f6"><title>WTG16: 578.4 MWh MTD • Wind 7.4 m/s • Running 309.8h • Lost to unavailability: 28.1 MWh</title></rect>
+  <rect x="162" y="51" width="38" height="139" fill="#3b82f6"><title>WTG20: 587.0 MWh MTD • Wind 7.5 m/s • Running 310.6h • Lost to unavailability: 32.8 MWh</title></rect>
+  <rect x="214" y="58" width="38" height="132" fill="#3b82f6"><title>WTG21: 555.1 MWh MTD • Wind 7.0 m/s • Running 307.2h • Lost to unavailability: 22.1 MWh</title></rect>
+  <rect x="266" y="73" width="38" height="117" fill="#3b82f6"><title>WTG25: 492.2 MWh MTD • Wind 6.6 m/s • Running 311.2h • Lost to unavailability: 19.6 MWh</title></rect>
+  <rect x="318" y="48" width="38" height="142" fill="#3b82f6"><title>WTG30: 600.1 MWh MTD • Wind 7.6 m/s • Running 266.3h • Lost to unavailability: 57.0 MWh</title></rect>
+  <rect x="370" y="55" width="38" height="135" fill="#3b82f6"><title>WTG52: 569.4 MWh MTD • Wind 7.3 m/s • Running 310.5h • Lost to unavailability: 31.4 MWh</title></rect>
+  <rect x="422" y="44" width="38" height="146" fill="#3b82f6"><title>WTG54: 614.9 MWh MTD • Wind 7.5 m/s • Running 311.7h • Lost to unavailability: 28.2 MWh</title></rect>
+  <rect x="474" y="48" width="38" height="142" fill="#3b82f6"><title>WTG60: 599.1 MWh MTD • Wind 7.3 m/s • Running 311.7h • Lost to unavailability: 3.4 MWh</title></rect>
+  <rect x="526" y="66" width="38" height="124" fill="#3b82f6"><title>WTG61: 524.2 MWh MTD • Wind 6.9 m/s • Running 312.0h • Lost to unavailability: 20.2 MWh</title></rect>
+  <rect x="578" y="55" width="38" height="135" fill="#3b82f6"><title>WTG63: 570.9 MWh MTD • Wind 6.9 m/s • Running 311.3h • Lost to unavailability: 25.8 MWh</title></rect>
+  <rect x="630" y="48" width="38" height="142" fill="#3b82f6"><title>WTG64: 596.9 MWh MTD • Wind 7.4 m/s • Running 311.7h • Lost to unavailability: 30.1 MWh</title></rect>
+  <rect x="682" y="42" width="38" height="148" fill="#3b82f6"><title>WTG65: 624.0 MWh MTD • Wind 7.6 m/s • Running 312.0h • Lost to unavailability: 28.6 MWh</title></rect>
+  <rect x="734" y="66" width="38" height="124" fill="#3b82f6"><title>WTG67: 521.8 MWh MTD • Wind 6.9 m/s • Running 311.0h • Lost to unavailability: 24.3 MWh</title></rect>
   <polyline points="77,90 129,30 181,27 233,36 285,26 337,146 389,28 441,25 493,25 545,24 597,26 649,25 701,24 753,26" fill="none" stroke="#059669" stroke-width="2"/>
   <circle cx="77" cy="90" r="3" fill="#059669"><title>WTG01 Technical Availability: 92.1%</title></circle>
   <circle cx="129" cy="30" r="3" fill="#059669"><title>WTG16 Technical Availability: 99.3%</title></circle>
@@ -450,7 +450,7 @@ Friday's 50.4% BESS contribution was the week's standout, and Saturday (339.8 MW
   <text x="698" y="231" fill="#52525b" font-size="10">Contractual availability (right axis)</text>
 </svg>
 
-The weakest-turbine story has changed: **WTG30** is now the clear outlier (85.3% technical / 86.7% contractual, and the lowest of either measure across the fleet), while **WTG61** — flagged in the prior two reports — has fully recovered to 100.0% on both. Every other turbine sits at 92.1% or better on technical and 93.1% or better on contractual availability. Production is fairly even (WTG65 leads at 624.0 MWh, WTG25 trails at 492.2 MWh).
+The weakest-turbine story has changed: **WTG30** is now the clear outlier (85.3% technical / 86.7% contractual, and the lowest of either measure across the fleet), while **WTG61** — flagged in the prior two reports — has fully recovered to 100.0% on both. Every other turbine sits at 92.1% or better on technical and 93.1% or better on contractual availability. Production is fairly even (WTG65 leads at 624.0 MWh, WTG25 trails at 492.2 MWh) — but that's resource, not performance: hover any bar for wind speed, running hours, and MWh lost to unavailability. By that measure **WTG01** is actually the biggest loss this month (68.0 MWh, more than WTG30's 57.0 MWh) despite ranking second-worst rather than worst on the availability percentage — its 92.1% figure undersells how much energy it left on the table. WTG60 is the cleanest of the fleet at just 3.4 MWh lost.
 
 ### MTD & YTD vs P50/P90 and wind speed
 
