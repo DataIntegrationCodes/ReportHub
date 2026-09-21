@@ -129,11 +129,6 @@ Discharge hours dipped to 9.0h/day (from 10.7h) while the discharge rate rose to
 | BESS contribution to exports | 23.0% | 22.6% | +0.4pp |
 | BESS charge / discharge (MWh) | 1,031.4 / 897.5 | 771.4 / 779.6 | Net charging week (charge exceeded discharge) |
 | Avg. hours to recover from a loss period | 5.45h | 9.80h | -4.34h |
-
-Net MWh, net gain/loss, positive periods and recovery hours use the revised penalty factor (`Penalty Factor_rev`) for both weeks, so last week is restated here (-686.7 MWh, against -1,045.6 as published on the original factor).
-
-Declaration coverage reached 113 of 119 relevant hours (95.0%) — up from 89.9% last week and the best of the series, with no single day below 14 of 17 hours.
-
 ## BESS Daily View
 
 <svg class="report-chart" viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg">
