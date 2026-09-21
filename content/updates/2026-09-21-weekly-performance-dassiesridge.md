@@ -15,11 +15,11 @@ Dassiesridge Hybrid (Wind + BESS) exported 3.90 GWh this week, up 13.1% on last 
 </div>
 
 <div class="callout callout-issue">
-<strong>Alert:</strong> **PCS14** deteriorated every day this week — 95.5% Monday, 86.5% Tuesday, 75% Wednesday, 48.1% Thursday, then pinned at 24-25% from Friday through Sunday. A fractional, steady reading like this has pointed to a module-level loss rather than a whole-unit trip in earlier cases, so it is worth a module-level check. Separately, **WTG60** is the new turbine of concern: 80.7 MWh lost to unavailability this week alone (it had lost only 3.4 MWh MTD a week ago), running at 84.3% availability for the week and producing 191 MWh against an average of 279 MWh for the other 13 turbines.
+<strong>Alert:</strong> **PCS14** deteriorated every day this week — 95.5% Monday, 86.5% Tuesday, 75% Wednesday, 48.1% Thursday, then pinned at 24-25% from Friday through Sunday. A fractional, steady reading like this has pointed to a module-level loss rather than a whole-unit trip in earlier cases, so it is worth a module-level check. Separately, **WTG60** is the new turbine of concern: 80.9 MWh lost to unavailability this week alone (it had lost only 3.4 MWh MTD a week ago), running at 84.3% availability for the week and producing 212 MWh against an average of 301 MWh for the other 13 turbines.
 </div>
 
 <div class="callout callout-win">
-<strong>Fleet-wide PCS dip did not recur</strong>: after the same uniform dip showed up on four different days in four different weeks, every PCS unit except PCS14 and a brief PCS09 soft patch (Fri 97.7%, Sat 93.2%) held at 98.5% or better all week. Also notable: **WTG30**, last week's weakest turbine, was 100.0% available every day, and declaration coverage was the best yet at 95.0% of relevant hours (113 of 119). Wind speed (7.28 m/s) was back above the 6.90 m/s forecast after a soft 6.40 m/s the week before, and turbine output landed at 100.5% of the pro-rated weekly P50.
+<strong>Fleet-wide PCS dip did not recur</strong>: after the same uniform dip showed up on four different days in four different weeks, every PCS unit except PCS14 and a brief PCS09 soft patch (Fri 97.7%, Sat 93.2%) held at 98.5% or better all week. Also notable: **WTG30**, last week's weakest turbine, was 99.8% available for the week, and declaration coverage was the best yet at 95.0% of relevant hours (113 of 119). Wind speed (6.92 m/s) was in line with the 6.90 m/s forecast after a soft 6.40 m/s the week before, and turbine output landed at 108.3% of the pro-rated weekly P50.
 </div>
 
 ## Exported Production — last ~2 months
@@ -127,7 +127,7 @@ Discharge hours dipped to 9.0h/day (from 10.7h) while the discharge rate rose to
 | Wind availability (declared) | 100% | 100% | flat |
 | BESS availability (declared) | 100% | 100% | flat |
 | BESS contribution to exports | 23.0% | 22.6% | +0.4pp |
-| BESS charge / discharge (MWh) | 1,031.4 / 897.5 | 771.4 / 779.6 | Net charging week (charge exceeded discharge) |
+| BESS charge / discharge (MWh) | 1,031.4 / 897.5 | 771.4 / 779.6 | Charge exceeded discharge (normal, given round-trip losses); last week the battery discharged slightly more than it charged |
 | Avg. hours to recover from a loss period | 5.45h | 9.80h | -4.34h |
 ## BESS Daily View
 
@@ -377,46 +377,46 @@ Only Tue and Sun were net-positive BESS days (+88.9 and +91.0 MWh); on the other
   <text x="783" y="193" fill="#6b7280" font-size="9" text-anchor="start">80%</text>
   <text x="783" y="110" fill="#6b7280" font-size="9" text-anchor="start">90%</text>
   <text x="783" y="27" fill="#6b7280" font-size="9" text-anchor="start">100%</text>
-  <line x1="55" y1="49" x2="775" y2="49" stroke="#d1d5db" stroke-width="1" stroke-dasharray="2,3"/>
-  <rect x="58" y="49" width="38" height="141" fill="#3b82f6"><title>WTG01: 846.9 MWh MTD &#8226; Wind 7.3 m/s &#8226; Running 455.1h &#8226; Lost to unavailability: 72.4 MWh</title></rect>
-  <rect x="110" y="44" width="38" height="146" fill="#3b82f6"><title>WTG16: 876.8 MWh MTD &#8226; Wind 7.4 m/s &#8226; Running 476.9h &#8226; Lost to unavailability: 31.3 MWh</title></rect>
-  <rect x="162" y="42" width="38" height="148" fill="#3b82f6"><title>WTG20: 891.2 MWh MTD &#8226; Wind 7.5 m/s &#8226; Running 477.8h &#8226; Lost to unavailability: 35.9 MWh</title></rect>
-  <rect x="214" y="54" width="38" height="136" fill="#3b82f6"><title>WTG21: 821.9 MWh MTD &#8226; Wind 7.0 m/s &#8226; Running 474.5h &#8226; Lost to unavailability: 26.2 MWh</title></rect>
-  <rect x="266" y="70" width="38" height="120" fill="#3b82f6"><title>WTG25: 722.3 MWh MTD &#8226; Wind 6.7 m/s &#8226; Running 478.3h &#8226; Lost to unavailability: 25.4 MWh</title></rect>
-  <rect x="318" y="38" width="38" height="152" fill="#3b82f6"><title>WTG30: 913.8 MWh MTD &#8226; Wind 7.6 m/s &#8226; Running 434.3h &#8226; Lost to unavailability: 57.8 MWh</title></rect>
-  <rect x="370" y="49" width="38" height="141" fill="#3b82f6"><title>WTG52: 852.1 MWh MTD &#8226; Wind 7.2 m/s &#8226; Running 477.2h &#8226; Lost to unavailability: 37.6 MWh</title></rect>
-  <rect x="422" y="37" width="38" height="153" fill="#3b82f6"><title>WTG54: 920.3 MWh MTD &#8226; Wind 7.5 m/s &#8226; Running 475.7h &#8226; Lost to unavailability: 32.8 MWh</title></rect>
-  <rect x="474" y="58" width="38" height="132" fill="#3b82f6"><title>WTG60: 795.6 MWh MTD &#8226; Wind 7.2 m/s &#8226; Running 453.3h &#8226; Lost to unavailability: 84.2 MWh</title></rect>
-  <rect x="526" y="63" width="38" height="127" fill="#3b82f6"><title>WTG61: 768.0 MWh MTD &#8226; Wind 6.8 m/s &#8226; Running 449.3h &#8226; Lost to unavailability: 23.7 MWh</title></rect>
-  <rect x="578" y="47" width="38" height="143" fill="#3b82f6"><title>WTG63: 859.1 MWh MTD &#8226; Wind 6.8 m/s &#8226; Running 478.2h &#8226; Lost to unavailability: 28.5 MWh</title></rect>
-  <rect x="630" y="39" width="38" height="151" fill="#3b82f6"><title>WTG64: 908.0 MWh MTD &#8226; Wind 7.4 m/s &#8226; Running 478.5h &#8226; Lost to unavailability: 33.6 MWh</title></rect>
-  <rect x="682" y="34" width="38" height="156" fill="#3b82f6"><title>WTG65: 937.9 MWh MTD &#8226; Wind 7.6 m/s &#8226; Running 479.3h &#8226; Lost to unavailability: 31.9 MWh</title></rect>
-  <rect x="734" y="61" width="38" height="129" fill="#3b82f6"><title>WTG67: 779.0 MWh MTD &#8226; Wind 6.9 m/s &#8226; Running 478.3h &#8226; Lost to unavailability: 28.2 MWh</title></rect>
-  <polyline points="77,67 129,29 181,28 233,34 285,27 337,103 389,29 441,31 493,70 545,25 597,27 649,27 701,25 753,27" fill="none" stroke="#059669" stroke-width="2"/>
+  <line x1="55" y1="45" x2="775" y2="45" stroke="#d1d5db" stroke-width="1" stroke-dasharray="2,3"/>
+  <rect x="58" y="46" width="38" height="144" fill="#3b82f6"><title>WTG01: 868.3 MWh MTD &#8226; Wind 7.1 m/s &#8226; Running 455.1h &#8226; Lost to unavailability: 72.7 MWh</title></rect>
+  <rect x="110" y="40" width="38" height="150" fill="#3b82f6"><title>WTG16: 902.0 MWh MTD &#8226; Wind 7.3 m/s &#8226; Running 476.5h &#8226; Lost to unavailability: 32.0 MWh</title></rect>
+  <rect x="162" y="38" width="38" height="152" fill="#3b82f6"><title>WTG20: 913.8 MWh MTD &#8226; Wind 7.4 m/s &#8226; Running 477.4h &#8226; Lost to unavailability: 36.2 MWh</title></rect>
+  <rect x="214" y="51" width="38" height="139" fill="#3b82f6"><title>WTG21: 840.2 MWh MTD &#8226; Wind 6.9 m/s &#8226; Running 474.5h &#8226; Lost to unavailability: 26.4 MWh</title></rect>
+  <rect x="266" y="68" width="38" height="122" fill="#3b82f6"><title>WTG25: 735.7 MWh MTD &#8226; Wind 6.5 m/s &#8226; Running 473.6h &#8226; Lost to unavailability: 33.3 MWh</title></rect>
+  <rect x="318" y="35" width="38" height="155" fill="#3b82f6"><title>WTG30: 934.6 MWh MTD &#8226; Wind 7.4 m/s &#8226; Running 433.9h &#8226; Lost to unavailability: 58.0 MWh</title></rect>
+  <rect x="370" y="45" width="38" height="145" fill="#3b82f6"><title>WTG52: 873.2 MWh MTD &#8226; Wind 7.1 m/s &#8226; Running 476.9h &#8226; Lost to unavailability: 37.8 MWh</title></rect>
+  <rect x="422" y="33" width="38" height="157" fill="#3b82f6"><title>WTG54: 945.1 MWh MTD &#8226; Wind 7.3 m/s &#8226; Running 475.2h &#8226; Lost to unavailability: 33.1 MWh</title></rect>
+  <rect x="474" y="54" width="38" height="136" fill="#3b82f6"><title>WTG60: 816.6 MWh MTD &#8226; Wind 7.1 m/s &#8226; Running 453.3h &#8226; Lost to unavailability: 84.4 MWh</title></rect>
+  <rect x="526" y="59" width="38" height="131" fill="#3b82f6"><title>WTG61: 787.2 MWh MTD &#8226; Wind 6.7 m/s &#8226; Running 479.0h &#8226; Lost to unavailability: 24.2 MWh</title></rect>
+  <rect x="578" y="44" width="38" height="146" fill="#3b82f6"><title>WTG63: 881.0 MWh MTD &#8226; Wind 6.7 m/s &#8226; Running 477.8h &#8226; Lost to unavailability: 28.8 MWh</title></rect>
+  <rect x="630" y="35" width="38" height="155" fill="#3b82f6"><title>WTG64: 931.0 MWh MTD &#8226; Wind 7.3 m/s &#8226; Running 478.2h &#8226; Lost to unavailability: 34.0 MWh</title></rect>
+  <rect x="682" y="30" width="38" height="160" fill="#3b82f6"><title>WTG65: 962.7 MWh MTD &#8226; Wind 7.5 m/s &#8226; Running 479.3h &#8226; Lost to unavailability: 32.3 MWh</title></rect>
+  <rect x="734" y="57" width="38" height="133" fill="#3b82f6"><title>WTG67: 802.1 MWh MTD &#8226; Wind 6.8 m/s &#8226; Running 477.9h &#8226; Lost to unavailability: 28.6 MWh</title></rect>
+  <polyline points="77,67 129,30 181,28 233,34 285,35 337,104 389,29 441,32 493,70 545,26 597,28 649,27 701,25 753,28" fill="none" stroke="#059669" stroke-width="2"/>
   <circle cx="77" cy="67" r="3" fill="#059669"><title>WTG01 Technical Availability: 94.8%</title></circle>
-  <circle cx="129" cy="29" r="3" fill="#059669"><title>WTG16 Technical Availability: 99.4%</title></circle>
+  <circle cx="129" cy="30" r="3" fill="#059669"><title>WTG16 Technical Availability: 99.3%</title></circle>
   <circle cx="181" cy="28" r="3" fill="#059669"><title>WTG20 Technical Availability: 99.5%</title></circle>
   <circle cx="233" cy="34" r="3" fill="#059669"><title>WTG21 Technical Availability: 98.9%</title></circle>
-  <circle cx="285" cy="27" r="3" fill="#059669"><title>WTG25 Technical Availability: 99.6%</title></circle>
-  <circle cx="337" cy="103" r="3" fill="#059669"><title>WTG30 Technical Availability: 90.5%</title></circle>
+  <circle cx="285" cy="35" r="3" fill="#059669"><title>WTG25 Technical Availability: 98.7%</title></circle>
+  <circle cx="337" cy="104" r="3" fill="#059669"><title>WTG30 Technical Availability: 90.4%</title></circle>
   <circle cx="389" cy="29" r="3" fill="#059669"><title>WTG52 Technical Availability: 99.4%</title></circle>
-  <circle cx="441" cy="31" r="3" fill="#059669"><title>WTG54 Technical Availability: 99.1%</title></circle>
+  <circle cx="441" cy="32" r="3" fill="#059669"><title>WTG54 Technical Availability: 99.0%</title></circle>
   <circle cx="493" cy="70" r="3" fill="#059669"><title>WTG60 Technical Availability: 94.4%</title></circle>
-  <circle cx="545" cy="25" r="3" fill="#059669"><title>WTG61 Technical Availability: 99.8%</title></circle>
-  <circle cx="597" cy="27" r="3" fill="#059669"><title>WTG63 Technical Availability: 99.6%</title></circle>
-  <circle cx="649" cy="27" r="3" fill="#059669"><title>WTG64 Technical Availability: 99.7%</title></circle>
+  <circle cx="545" cy="26" r="3" fill="#059669"><title>WTG61 Technical Availability: 99.8%</title></circle>
+  <circle cx="597" cy="28" r="3" fill="#059669"><title>WTG63 Technical Availability: 99.5%</title></circle>
+  <circle cx="649" cy="27" r="3" fill="#059669"><title>WTG64 Technical Availability: 99.6%</title></circle>
   <circle cx="701" cy="25" r="3" fill="#059669"><title>WTG65 Technical Availability: 99.8%</title></circle>
-  <circle cx="753" cy="27" r="3" fill="#059669"><title>WTG67 Technical Availability: 99.6%</title></circle>
-  <polyline points="77,61 129,25 181,25 233,32 285,26 337,95 389,27 441,26 493,73 545,25 597,25 649,25 701,25 753,25" fill="none" stroke="#7c3aed" stroke-width="2"/>
-  <circle cx="77" cy="61" r="3" fill="#7c3aed"><title>WTG01 Contractual Availability: 95.5%</title></circle>
+  <circle cx="753" cy="28" r="3" fill="#059669"><title>WTG67 Technical Availability: 99.6%</title></circle>
+  <polyline points="77,62 129,25 181,25 233,32 285,27 337,96 389,27 441,26 493,74 545,25 597,25 649,25 701,25 753,25" fill="none" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="77" cy="62" r="3" fill="#7c3aed"><title>WTG01 Contractual Availability: 95.4%</title></circle>
   <circle cx="129" cy="25" r="3" fill="#7c3aed"><title>WTG16 Contractual Availability: 99.9%</title></circle>
   <circle cx="181" cy="25" r="3" fill="#7c3aed"><title>WTG20 Contractual Availability: 99.9%</title></circle>
   <circle cx="233" cy="32" r="3" fill="#7c3aed"><title>WTG21 Contractual Availability: 99.1%</title></circle>
-  <circle cx="285" cy="26" r="3" fill="#7c3aed"><title>WTG25 Contractual Availability: 99.8%</title></circle>
-  <circle cx="337" cy="95" r="3" fill="#7c3aed"><title>WTG30 Contractual Availability: 91.5%</title></circle>
+  <circle cx="285" cy="27" r="3" fill="#7c3aed"><title>WTG25 Contractual Availability: 99.6%</title></circle>
+  <circle cx="337" cy="96" r="3" fill="#7c3aed"><title>WTG30 Contractual Availability: 91.3%</title></circle>
   <circle cx="389" cy="27" r="3" fill="#7c3aed"><title>WTG52 Contractual Availability: 99.7%</title></circle>
   <circle cx="441" cy="26" r="3" fill="#7c3aed"><title>WTG54 Contractual Availability: 99.8%</title></circle>
-  <circle cx="493" cy="73" r="3" fill="#7c3aed"><title>WTG60 Contractual Availability: 94.1%</title></circle>
+  <circle cx="493" cy="74" r="3" fill="#7c3aed"><title>WTG60 Contractual Availability: 94.0%</title></circle>
   <circle cx="545" cy="25" r="3" fill="#7c3aed"><title>WTG61 Contractual Availability: 99.9%</title></circle>
   <circle cx="597" cy="25" r="3" fill="#7c3aed"><title>WTG63 Contractual Availability: 99.9%</title></circle>
   <circle cx="649" cy="25" r="3" fill="#7c3aed"><title>WTG64 Contractual Availability: 99.9%</title></circle>
@@ -439,21 +439,21 @@ Only Tue and Sun were net-positive BESS days (+88.9 and +91.0 MWh); on the other
   <rect x="60" y="222" width="12" height="10" fill="#3b82f6"/>
   <text x="76" y="231" fill="#52525b" font-size="10">MTD production (MWh)</text>
   <line x1="230" y1="227" x2="252" y2="227" stroke="#111827" stroke-width="1.5" stroke-dasharray="2,3"/>
-  <text x="258" y="231" fill="#52525b" font-size="10">Fleet avg production (849.5 MWh)</text>
+  <text x="258" y="231" fill="#52525b" font-size="10">Fleet avg production (871.0 MWh)</text>
   <line x1="470" y1="227" x2="492" y2="227" stroke="#059669" stroke-width="2"/>
   <text x="498" y="231" fill="#52525b" font-size="10">Technical availability (right axis)</text>
   <line x1="670" y1="227" x2="692" y2="227" stroke="#7c3aed" stroke-width="2"/>
   <text x="698" y="231" fill="#52525b" font-size="10">Contractual availability (right axis)</text>
 </svg>
 
-**WTG30**, last week's weakest turbine, is still the lowest MTD on both measures (90.5% technical / 91.5% contractual) but was 100.0% available every day this week, so the gap is entirely from earlier in the month. The new watch item is **WTG60**: it has dropped from 99.9% / 100.0% a week ago to 94.4% / 94.1% MTD, and its 84.2 MWh MTD loss is now the largest in the fleet, ahead of WTG01 (72.4 MWh, itself improved to 94.8% technical) and WTG30 (57.8 MWh). Every other turbine sits at 98.9% or better on technical and 99.1% or better on contractual availability. Production is fairly even (WTG65 leads at 937.9 MWh, WTG25 trails at 722.3 MWh) — but that's resource, not performance: hover any bar for wind speed, running hours, and MWh lost to unavailability.
+**WTG30**, last week's weakest turbine, is still the lowest MTD on both measures (90.4% technical / 91.3% contractual) but was 99.8% available this week, so the gap is almost entirely from earlier in the month. The new watch item is **WTG60**: it has dropped from 99.9% / 100.0% a week ago to 94.4% / 94.0% MTD, and its 84.4 MWh MTD loss is now the largest in the fleet, ahead of WTG01 (72.7 MWh, itself improved to 94.8% technical) and WTG30 (58.0 MWh). Every other turbine sits at 98.7% or better on technical and 99.1% or better on contractual availability. Production is fairly even (WTG65 leads at 962.7 MWh, WTG25 trails at 735.7 MWh) — but that's resource, not performance: hover any bar for wind speed, running hours, and MWh lost to unavailability.
 
 ### MTD & YTD vs P50/P90 and wind speed
 
 | Period | Production (turbines) | P50 target | P90 target | Technical availability | Contractual availability | Measured wind speed | Forecasted wind speed |
 |---|---|---|---|---|---|---|---|
-| MTD (1-20 Sep) | 11,892.9 MWh | 10,876.0 MWh (+9.4%) | 9,469.3 MWh (+25.6%) | 98.2% | 98.5% | 7.21 m/s | 6.90 m/s |
-| YTD (Jan-20 Sep) | 115,285.8 MWh | 149,309.0 MWh (-22.8%) | 130,001.3 MWh (-11.3%) | 90.4% | 94.0% | 6.43 m/s | 7.15 m/s |
+| MTD (1-20 Sep) | 12,193.6 MWh | 10,876.0 MWh (+12.1%) | 9,469.3 MWh (+28.8%) | 98.0% | 98.4% | 7.09 m/s | 6.90 m/s |
+| YTD (Jan-20 Sep) | 115,586.4 MWh | 149,309.0 MWh (-22.6%) | 130,001.3 MWh (-11.1%) | 90.4% | 94.0% | 6.43 m/s | 7.15 m/s |
 
 Production is the sum of the 14 turbines' technical output. Targets are pro-rated to elapsed days in the period (20 of 30 days for MTD).
 
@@ -464,15 +464,15 @@ Production is the sum of the 14 turbines' technical output. Targets are pro-rate
   <text x="45" y="75" fill="#6b7280" font-size="9" text-anchor="end">100%</text>
   <line x1="50" y1="71" x2="370" y2="71" stroke="#111827" stroke-width="1.5" stroke-dasharray="4,3"/>
   <text x="370" y="65" fill="#111827" font-size="9" text-anchor="end">on target</text>
-  <rect x="70" y="60" width="40" height="130" fill="#3b82f6"><title>MTD vs P50: 109.4%</title></rect>
-  <text x="90" y="54" fill="#52525b" font-size="10" text-anchor="middle">109.4%</text>
-  <rect x="120" y="41" width="40" height="149" fill="#7c3aed"><title>MTD vs P90: 125.6%</title></rect>
-  <text x="140" y="35" fill="#52525b" font-size="10" text-anchor="middle">125.6%</text>
+  <rect x="70" y="57" width="40" height="133" fill="#3b82f6"><title>MTD vs P50: 112.1%</title></rect>
+  <text x="90" y="51" fill="#52525b" font-size="10" text-anchor="middle">112.1%</text>
+  <rect x="120" y="37" width="40" height="153" fill="#7c3aed"><title>MTD vs P90: 128.8%</title></rect>
+  <text x="140" y="31" fill="#52525b" font-size="10" text-anchor="middle">128.8%</text>
   <text x="115" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">MTD</text>
-  <rect x="230" y="98" width="40" height="92" fill="#3b82f6"><title>YTD vs P50: 77.2%</title></rect>
-  <text x="250" y="92" fill="#52525b" font-size="10" text-anchor="middle">77.2%</text>
-  <rect x="280" y="84" width="40" height="106" fill="#7c3aed"><title>YTD vs P90: 88.7%</title></rect>
-  <text x="300" y="78" fill="#52525b" font-size="10" text-anchor="middle">88.7%</text>
+  <rect x="230" y="98" width="40" height="92" fill="#3b82f6"><title>YTD vs P50: 77.4%</title></rect>
+  <text x="250" y="92" fill="#52525b" font-size="10" text-anchor="middle">77.4%</text>
+  <rect x="280" y="84" width="40" height="106" fill="#7c3aed"><title>YTD vs P90: 88.9%</title></rect>
+  <text x="300" y="78" fill="#52525b" font-size="10" text-anchor="middle">88.9%</text>
   <text x="275" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">YTD</text>
   <rect x="70" y="222" width="12" height="10" fill="#3b82f6"/>
   <text x="86" y="231" fill="#52525b" font-size="10">vs P50</text>
@@ -485,13 +485,13 @@ Production is the sum of the 14 turbines' technical output. Targets are pro-rate
   <line x1="50" y1="190" x2="370" y2="190" stroke="#d1d5db" stroke-width="1"/>
   <text x="45" y="193" fill="#6b7280" font-size="9" text-anchor="end">0</text>
   <text x="45" y="24" fill="#6b7280" font-size="9" text-anchor="end">8 m/s</text>
-  <rect x="70" y="55" width="40" height="135" fill="#3b82f6"><title>MTD Measured: 7.21</title></rect>
-  <text x="90" y="49" fill="#52525b" font-size="10" text-anchor="middle">7.21</text>
+  <rect x="70" y="57" width="40" height="133" fill="#3b82f6"><title>MTD Measured: 7.09</title></rect>
+  <text x="90" y="51" fill="#52525b" font-size="10" text-anchor="middle">7.09</text>
   <rect x="120" y="61" width="40" height="129" fill="#b45309"><title>MTD Forecasted: 6.90</title></rect>
   <text x="140" y="55" fill="#52525b" font-size="10" text-anchor="middle">6.90</text>
   <text x="115" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">MTD</text>
-  <rect x="230" y="69" width="40" height="121" fill="#3b82f6"><title>YTD Measured: 6.43</title></rect>
-  <text x="250" y="63" fill="#52525b" font-size="10" text-anchor="middle">6.43</text>
+  <rect x="230" y="70" width="40" height="120" fill="#3b82f6"><title>YTD Measured: 6.43</title></rect>
+  <text x="250" y="64" fill="#52525b" font-size="10" text-anchor="middle">6.43</text>
   <rect x="280" y="56" width="40" height="134" fill="#b45309"><title>YTD Forecasted: 7.15</title></rect>
   <text x="300" y="50" fill="#52525b" font-size="10" text-anchor="middle">7.15</text>
   <text x="275" y="205" fill="#374151" font-size="10" font-weight="600" text-anchor="middle">YTD</text>
@@ -501,7 +501,7 @@ Production is the sum of the 14 turbines' technical output. Targets are pro-rate
   <text x="166" y="231" fill="#52525b" font-size="10">Forecasted</text>
 </svg>
 
-Measured wind speed is still above forecast for the month (+4.5% MTD), and production is ahead of plan at 109.4% of P50 and 125.6% of P90 MTD, easing from 113.0% / 129.7% a week ago as this week's output (100.5% of the pro-rated weekly P50) only kept pace with plan. YTD remains below plan (77.2% of P50).
+Measured wind speed is still above forecast for the month (+2.7% MTD), and production is ahead of plan at 112.1% of P50 and 128.8% of P90 MTD, easing from 113.0% / 129.7% a week ago because this week's output (108.3% of the pro-rated weekly P50) ran below the month's earlier pace. YTD remains below plan (77.4% of P50).
 
 ## Month- and year-to-date
 
