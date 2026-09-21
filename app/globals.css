@@ -275,3 +275,178 @@ svg.report-chart {
   font-size: 0.85rem;
   margin-top: 0.75rem;
 }
+
+main.wide {
+  max-width: 1100px;
+}
+
+.folder-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.folder-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #171717;
+}
+
+.folder-card:hover {
+  border-color: #93c5fd;
+  background: #f8fafc;
+}
+
+.folder-icon {
+  flex: none;
+}
+
+.folder-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.folder-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.folder-meta {
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+.month-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.month-nav .tab-button {
+  text-decoration: none;
+}
+
+.folder-heading {
+  font-size: 1rem;
+  margin: 1.5rem 0 0.5rem;
+  color: #52525b;
+}
+
+.folder-empty {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.monthly-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.9rem 1rem;
+  border: 1px solid #bfdbfe;
+  background: rgba(37, 99, 235, 0.05);
+  border-radius: 8px;
+}
+
+.monthly-card a:first-child {
+  text-decoration: none;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.download-btn:hover {
+  background: #1d4ed8;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.kpi-table {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.kpi-table th,
+.kpi-table td {
+  padding: 0.35rem 0.45rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.kpi-table td.kpi-text {
+  white-space: normal;
+  font-size: 0.74rem;
+  line-height: 1.25;
+}
+
+.kpi-table thead th {
+  background: #eff6ff;
+  color: #1e3a8a;
+}
+
+.kpi-table thead th:first-child,
+.kpi-table td.kpi-name {
+  text-align: left;
+}
+
+.kpi-table td.kpi-name {
+  font-weight: 600;
+  white-space: normal;
+  min-width: 200px;
+}
+
+.kpi-table td.kpi-total {
+  font-weight: 700;
+}
+
+.kpi-table td.kpi-unit {
+  color: #6b7280;
+  font-size: 0.72rem;
+}
+
+.kpi-table td.kpi-na {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.kpi-table td[title] {
+  cursor: help;
+}
+
+.kpi-info {
+  color: #60a5fa;
+}
+
+.kpi-table tr.kpi-cat td {
+  background: #334155;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+}
+
+.kpi-table tr.kpi-cat .kpi-info {
+  color: #bfdbfe;
+}
