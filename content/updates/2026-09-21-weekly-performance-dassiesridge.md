@@ -569,9 +569,6 @@ Measured wind speed is still above forecast for the month (+2.7% MTD), and produ
   <text x="685" y="60" fill="#b45309" font-size="10" text-anchor="middle">1.34x</text>
   <text x="685" y="125" fill="#52525b" font-size="10" text-anchor="middle">Sep (MTD)</text>
 </svg>
-
-April to August are the official monthly averages of the weighting factor from the FY27 billing workbook; September (MTD) applies the same calculation to the model's revised penalty factor, which reproduces the workbook exactly for August (1.35x). Earlier months are left out because no official workbook exists for them.
-
 ## Weighting (ALP penalty factor) this week
 
 This week's 119 relevant hours (excluding 21:30-05:00) split as:
